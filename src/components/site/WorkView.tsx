@@ -72,6 +72,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
           <div
             role="group"
             aria-label="Work build status"
+            className="wk-status"
             style={{
               position: "sticky",
               top: "12px",
@@ -92,7 +93,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+            <span aria-hidden="true" className="wk-dots" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
               <span
                 style={{
                   width: "8px",
@@ -174,14 +175,15 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                 }}
               />
             </span>
-            <span>
+            <span className="wk-agents">
               <span style={{ color: "var(--perron-color-text-primary)" }}>8</span> agents
             </span>
             <span
               aria-hidden="true"
+              className="wk-sep"
               style={{ width: "1px", height: "14px", background: "var(--perron-color-border-strong)" }}
             />
-            <span style={{ whiteSpace: "nowrap" }}>
+            <span className="wk-count" style={{ whiteSpace: "nowrap" }}>
               <span
                 style={{
                   display: "inline-block",
@@ -197,10 +199,12 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
             </span>
             <span
               aria-hidden="true"
+              className="wk-sep"
               style={{ width: "1px", height: "14px", background: "var(--perron-color-border-strong)" }}
             />
             <ul
               aria-label="System checks"
+              className="wk-checks"
               style={{
                 margin: "0",
                 padding: "0",
@@ -554,6 +558,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
               </li>
             </ul>
             <span
+              className="wk-state"
               style={{
                 display: "inline-block",
                 minWidth: "62px",
@@ -569,6 +574,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
             </span>
             <button
               type="button"
+              className="wk-replay"
               onClick={v.worksReplay}
               style={{
                 display: "flex",

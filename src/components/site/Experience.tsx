@@ -70,6 +70,7 @@ export function Experience() {
         </div>
       </div>
       <ol
+        className="xp-line"
         style={{
           margin: "0",
           padding: "0",
@@ -80,6 +81,7 @@ export function Experience() {
         }}
       >
         <li
+          className="xp-stop"
           style={{
             position: "relative",
             boxSizing: "border-box",
@@ -92,6 +94,7 @@ export function Experience() {
         >
           <span
             aria-hidden="true"
+            className="xp-dot"
             style={{
               position: "absolute",
               left: "0",
@@ -146,6 +149,7 @@ export function Experience() {
           </ul>
         </li>
         <li
+          className="xp-stop"
           style={{
             position: "relative",
             boxSizing: "border-box",
@@ -158,6 +162,7 @@ export function Experience() {
         >
           <span
             aria-hidden="true"
+            className="xp-dot"
             style={{
               position: "absolute",
               left: "0",
@@ -214,6 +219,7 @@ export function Experience() {
           </ul>
         </li>
         <li
+          className="xp-stop"
           style={{
             position: "relative",
             boxSizing: "border-box",
@@ -226,7 +232,7 @@ export function Experience() {
         >
           <span
             aria-hidden="true"
-            className="mv"
+            className="mv xp-dot"
             style={{
               position: "absolute",
               left: "0",
@@ -240,6 +246,7 @@ export function Experience() {
           />
           <span
             aria-hidden="true"
+            className="xp-dot"
             style={{
               position: "absolute",
               left: "0",
@@ -294,6 +301,7 @@ export function Experience() {
           </ul>
         </li>
         <li
+          className="xp-stop xp-next"
           style={{
             position: "relative",
             boxSizing: "border-box",
@@ -306,6 +314,7 @@ export function Experience() {
         >
           <span
             aria-hidden="true"
+            className="xp-dot"
             style={{
               position: "absolute",
               left: "0",

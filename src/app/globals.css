@@ -411,3 +411,76 @@ a:hover {
     transition: none;
   }
 }
+
+/* ---------- Phones ---------- */
+@media (max-width: 640px) {
+  /* Work status bar: a rounded card in three tidy rows instead of a stretched pill. */
+  .wk-status {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "dots count" "checks checks" "state replay";
+    align-items: center;
+    gap: 12px 12px !important;
+    padding: 12px !important;
+    border-radius: var(--perron-radius-xl) !important;
+    align-self: stretch !important;
+  }
+  .wk-status .wk-agents,
+  .wk-status .wk-sep {
+    display: none !important;
+  }
+  .wk-status .wk-dots {
+    grid-area: dots;
+  }
+  .wk-status .wk-count {
+    grid-area: count;
+    justify-self: end;
+  }
+  .wk-status .wk-checks {
+    grid-area: checks;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px !important;
+  }
+  .wk-status .wk-checks > li {
+    justify-content: center;
+  }
+  .wk-status .wk-state {
+    grid-area: state;
+    padding-left: 4px;
+  }
+  .wk-status .wk-replay {
+    grid-area: replay;
+    justify-self: end;
+    min-height: 36px !important;
+    padding: 0 14px !important;
+  }
+
+  /* Experience: the timeline runs down the left edge. */
+  .xp-line {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+  }
+  .xp-stop {
+    border-top: 0 !important;
+    border-left: 3px solid var(--perron-color-status-info);
+    padding: 0 0 48px 28px !important;
+  }
+  .xp-stop.xp-next {
+    border-left: 3px dashed var(--perron-color-border-control);
+    padding-bottom: 0 !important;
+  }
+  .xp-dot {
+    left: -11px !important;
+    top: -1px !important;
+  }
+
+  /* Contact: the email address fits on one line. */
+  .ct-email {
+    padding: 0 16px !important;
+    font-size: clamp(14px, 4vw, 17px) !important;
+    gap: 8px !important;
+    overflow-wrap: normal !important;
+    white-space: nowrap;
+  }
+}

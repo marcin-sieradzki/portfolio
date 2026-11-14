@@ -81,6 +81,7 @@ export function ContactView({ v }: { v: ContactVals }) {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "8px" }}>
             <a
               href="mailto:marcin.sieradzki97@gmail.com"
+              className="ct-email"
               style={{
                 display: "flex",
                 alignItems: "center",

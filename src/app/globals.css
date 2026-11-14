@@ -1,26 +1,413 @@
-@import "tailwindcss";
+/* Tailwind without its preflight reset: the page is styled inline, on top of the browser's defaults, as in the prototype. */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
 
+/* ---------- From the Version E prototype ---------- */
+/* Portfolio night theme. Token names are Perron's (0.10.1), so the real build can ship this as a Perron theme. Colour values are this site's own palette. Type, radius and spacing are Perron's. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --perron-palette-neutral-0: #ffffff;
+  --perron-palette-neutral-100: #f2f4f7;
+  --perron-palette-neutral-300: #a4adbb;
+  --perron-palette-neutral-400: #8d97a6;
+  --perron-palette-neutral-500: #7c8696;
+  --perron-palette-neutral-600: #3a4557;
+  --perron-palette-neutral-700: #1a202b;
+  --perron-palette-neutral-800: #10141b;
+  --perron-palette-neutral-900: #0a0c10;
+  --perron-palette-neutral-950: #07090c;
+  --perron-palette-blue-300: #4c8dff;
+  --perron-palette-blue-900: #121e36;
+  --perron-palette-green-300: #3ddc97;
+  --perron-palette-green-900: #102520;
+  --perron-palette-orange-300: #ffd166;
+  --perron-palette-orange-900: #33290f;
+  --perron-palette-red-300: #ff8a5b;
+  --perron-palette-red-900: #3a1d12;
+  --perron-palette-yellow-300: #ffd166;
+  --perron-palette-yellow-500: #e0b24a;
+  --perron-palette-yellow-900: #33290f;
+  --perron-color-text-primary: var(--perron-palette-neutral-100);
+  --perron-color-text-secondary: var(--perron-palette-neutral-300);
+  --perron-color-text-tertiary: var(--perron-palette-neutral-500);
+  --perron-color-text-inverse: var(--perron-palette-neutral-900);
+  --perron-color-text-success: var(--perron-palette-green-300);
+  --perron-color-text-warning: var(--perron-palette-orange-300);
+  --perron-color-text-danger: var(--perron-palette-red-300);
+  --perron-color-text-info: #8fb8ff;
+  --perron-color-text-brand: var(--perron-palette-green-300);
+  --perron-color-text-on-color-dark: var(--perron-palette-neutral-900);
+  --perron-color-text-on-color-light: var(--perron-palette-neutral-0);
+  --perron-color-surface-default: var(--perron-palette-neutral-900);
+  --perron-color-surface-raised: var(--perron-palette-neutral-800);
+  --perron-color-surface-inset: var(--perron-palette-neutral-700);
+  --perron-color-surface-overlay: rgba(10, 12, 16, 0.88);
+  --perron-color-surface-hover: rgba(242, 244, 247, 0.06);
+  --perron-color-surface-selected: rgba(242, 244, 247, 0.09);
+  --perron-color-surface-inverse: var(--perron-palette-neutral-100);
+  --perron-color-surface-inverse-hover: var(--perron-palette-neutral-300);
+  --perron-color-surface-success: rgba(61, 220, 151, 0.12);
+  --perron-color-surface-warning: var(--perron-palette-orange-900);
+  --perron-color-surface-danger: var(--perron-palette-red-900);
+  --perron-color-surface-info: rgba(76, 141, 255, 0.16);
+  --perron-color-surface-brand: var(--perron-palette-green-300);
+  --perron-color-surface-brand-hover: #35c487;
+  --perron-color-surface-brand-subtle: rgba(61, 220, 151, 0.12);
+  --perron-color-border-subtle: #232a36;
+  --perron-color-border-strong: #2e3746;
+  --perron-color-border-control: #4a5568;
+  --perron-color-border-brand: var(--perron-palette-green-300);
+  --perron-color-border-focus: var(--perron-palette-neutral-100);
+  --perron-color-status-success: var(--perron-palette-green-300);
+  --perron-color-status-warning: var(--perron-palette-orange-300);
+  --perron-color-status-danger: var(--perron-palette-red-300);
+  --perron-color-status-info: var(--perron-palette-blue-300);
+  --perron-color-transit-line-m1: #0b8a44;
+  --perron-color-transit-line-m2: #f0b400;
+  --perron-color-transit-line-m3: #e2231a;
+  --perron-color-transit-line-m4: #0090d0;
+  --perron-color-transit-line-a: #00a1de;
+  --perron-color-transit-line-b: #4ba046;
+  --perron-color-transit-line-c: #f18a00;
+  --perron-color-transit-line-e: #7d5aa6;
+  --perron-color-transit-line-f: #f5c200;
+  --perron-color-transit-line-h: #dd1f2a;
+  --perron-color-map-water: #0d1827;
+  --perron-color-map-land: #0b0f16;
+  --perron-color-map-park: #0e1a16;
+  --perron-color-map-street: #141a25;
+  --perron-color-map-rail: #2e3746;
+  --perron-color-map-label: #7c8696;
+  --perron-color-map-aircraft: #ff7eb6;
+  --perron-color-data-state-no-signal: #5a6474;
+  /* The three families are self-hosted by next/font (see layout.tsx), which sets --font-familjen, --font-schibsted and --font-jetbrains on <html>. */
+  --perron-font-family-display: var(--font-familjen), var(--font-schibsted), system-ui, sans-serif;
+  --perron-font-family-body: var(--font-schibsted), system-ui, -apple-system, "Segoe UI", "Roboto", sans-serif;
+  --perron-font-family-data: var(--font-jetbrains), ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
+  --perron-radius-xs: 4px;
+  --perron-radius-sm: 6px;
+  --perron-radius-md: 8px;
+  --perron-radius-lg: 12px;
+  --perron-radius-xl: 16px;
+  --perron-radius-full: 9999px;
+  --perron-space-050: 2px;
+  --perron-space-100: 4px;
+  --perron-space-150: 6px;
+  --perron-space-200: 8px;
+  --perron-space-300: 12px;
+  --perron-space-400: 16px;
+  --perron-space-500: 20px;
+  --perron-space-600: 24px;
+  --perron-space-800: 32px;
+  --perron-shadow-panel: 0px 1px 2px 0px rgba(0, 0, 0, 0.35), 0px 14px 40px 0px rgba(0, 0, 0, 0.5);
+  --perron-easing-sheet: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --perron-easing-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body {
+  margin: 0;
+  background: #0a0c10;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+a {
+  color: #8fb8ff;
+}
+a:hover {
+  color: #ffffff;
+}
+@keyframes sway {
+  from {
+    transform: rotateX(56deg) rotateZ(-46deg);
+  }
+  to {
+    transform: rotateX(56deg) rotateZ(-36deg);
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+@keyframes badgeSway {
+  from {
+    transform: rotate(-1.8deg);
+  }
+  to {
+    transform: rotate(1.8deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mv {
+    animation: none !important;
+  }
+}
+/* Project modals. The cs keyframes move the eight project graphics, and the last rules are the hover and focus states of the new buttons. */
+@keyframes csFlow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+@keyframes csSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes csBob {
+  from {
+    transform: translateY(-2px) rotate(-0.3deg);
+  }
+  to {
+    transform: translateY(2px) rotate(0.3deg);
+  }
+}
+@keyframes csDrift {
+  to {
+    transform: translateX(-80px);
+  }
+}
+@keyframes csRunR {
+  from {
+    transform: translateX(-460px);
+  }
+  to {
+    transform: translateX(1100px);
+  }
+}
+@keyframes csRunL {
+  from {
+    transform: translateX(1100px);
+  }
+  to {
+    transform: translateX(-200px);
+  }
+}
+@keyframes csMetro {
+  0% {
+    transform: translateX(-760px);
+  }
+  26%,
+  60% {
+    transform: translateX(0);
+  }
+  88%,
+  100% {
+    transform: translateX(900px);
+  }
+}
+@keyframes csPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes csAppear {
+  0%,
+  8% {
+    opacity: 0;
+  }
+  16%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes csSail {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+.cs-sail {
+  transform: translate(388px, 178px);
+}
+@supports (offset-path: path("M0 0L1 1")) {
+  .cs-sail {
+    transform: none;
+    offset-path: path("M118 92C176 168 300 204 388 178S560 96 660 138S860 150 922 66");
+    offset-rotate: auto;
+    animation: csSail 18s linear infinite;
+  }
+  .cs-sail-a {
+    offset-distance: 30%;
+  }
+  .cs-sail-b {
+    offset-distance: 74%;
+  }
+}
+@keyframes csSweep {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--cs-d));
+  }
+}
+@keyframes csGate {
+  0%,
+  48% {
+    transform: rotate(0deg);
+  }
+  62%,
+  90% {
+    transform: rotate(-64deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes csLamp {
+  0%,
+  40% {
+    opacity: 0.25;
+  }
+  52%,
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes csShift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--cs-d));
+  }
+}
+@keyframes csHoist {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(14px);
+  }
+}
+@keyframes csRise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  18%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-58px);
+    opacity: 0;
+  }
+}
+@keyframes csDrop {
+  0% {
+    transform: translateY(-46px);
+    opacity: 0;
+  }
+  20%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(22px);
+    opacity: 0;
+  }
+}
+@keyframes csDraw {
+  0% {
+    stroke-dashoffset: 320;
+  }
+  70%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.wk-card:hover {
+  border-color: var(--perron-color-border-control) !important;
+}
+.wk-open {
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+.wk-card:hover .wk-open,
+.wk-open:hover {
+  background: var(--perron-color-surface-inverse) !important;
+  color: var(--perron-color-text-inverse) !important;
+  border-color: transparent !important;
+}
+.cs-btn {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+.cs-btn:hover {
+  background: var(--perron-color-surface-hover) !important;
+  border-color: var(--perron-color-border-strong) !important;
+}
+.cs-x {
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+.cs-x:hover {
+  background: var(--perron-color-surface-inverse) !important;
+  color: var(--perron-color-text-inverse) !important;
+}
+.wk-open:focus-visible,
+.cs-btn:focus-visible,
+.cs-x:focus-visible {
+  outline: 2px solid var(--perron-color-border-focus);
+  outline-offset: 2px;
+}
+.cs-panel:focus {
+  outline: none;
+}
+.cs-scroll:focus {
+  outline: none;
+}
+.cs-scroll:focus-visible {
+  outline: 2px solid var(--perron-color-border-focus);
+  outline-offset: -2px;
+}
+.cs-stage {
+  scrollbar-width: thin;
+  scrollbar-color: var(--perron-color-border-control) transparent;
+}
+.cs-swipe {
+  display: none;
+}
+@media (max-width: 800px) {
+  .cs-swipe {
+    display: inline;
+  }
+}
+@media (max-width: 640px) {
+  .cs-wide {
+    display: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wk-open,
+  .cs-btn,
+  .cs-x {
+    transition: none;
+  }
 }

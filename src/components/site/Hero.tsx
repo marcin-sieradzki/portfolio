@@ -26,17 +26,7 @@ export function Hero() {
         }}
       >
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "56px" }}>
-          {/* A size container, so the headline can scale with this column and each of its lines stays on one line. */}
-          <div
-            style={{
-              flex: "1 1 520px",
-              minWidth: "0",
-              display: "flex",
-              flexDirection: "column",
-              gap: "28px",
-              containerType: "inline-size",
-            }}
-          >
+          <div style={{ flex: "1 1 520px", minWidth: "0", display: "flex", flexDirection: "column", gap: "28px" }}>
             <p
               style={{
                 margin: "0",
@@ -52,7 +42,7 @@ export function Hero() {
               style={{
                 fontFamily: "var(--perron-font-family-display)",
                 margin: "0",
-                fontSize: "clamp(28px, 9.3cqi, 60px)",
+                fontSize: "clamp(38px, 5vw, 68px)",
                 lineHeight: "1.02",
                 letterSpacing: "-0.03em",
                 fontWeight: "700",
@@ -61,10 +51,10 @@ export function Hero() {
               <span style={{ display: "block", color: "var(--perron-color-text-secondary)" }}>
                 Hi, I&apos;m Marcin.
               </span>
-              <span style={{ display: "block" }}>Agents write the code.</span>
+              <span style={{ display: "block" }}>I ship software</span>
               <span style={{ display: "block", color: "var(--perron-color-text-success)" }}>
                 <span style={{ position: "relative", display: "inline-block" }}>
-                  I make it safe to ship.
+                  with AI agents.
                   <span
                     aria-hidden="true"
                     className="mv"
@@ -91,7 +81,7 @@ export function Hero() {
               }}
             >
               I&apos;m a lead software engineer in Copenhagen. I put AI agents into the software lifecycle and the
-              design system, with the checks and evals their work has to pass.
+              design system, with checks and evals that make their work safe to ship.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
               <a

@@ -11,6 +11,7 @@ import { CaseVendorMasterData } from "./cases/CaseVendorMasterData";
 import { CaseMicroFrontends } from "./cases/CaseMicroFrontends";
 import { PROJECTS, type ProjectId } from "@/lib/works";
 import { WorkCard } from "./WorkCard";
+import { MotionToggle } from "./MotionToggle";
 
 /* The modal of each project: its drawing and its copy. */
 const CASE_VIEWS: Record<ProjectId, () => ReactNode> = {
@@ -669,6 +670,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                     <path d="M3.5 3.5l9 9M12.5 3.5l-9 9" />
                   </svg>
                 </button>
+                <MotionToggle look="round" />
                 <div
                   ref={v.caseScroll}
                   className="cs-scroll"

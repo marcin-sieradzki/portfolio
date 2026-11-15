@@ -854,7 +854,7 @@ export function CasePerronMylder() {
               }}
             >
               <a
-                href="https://mylder-liard.vercel.app/en"
+                href="https://mylder.marcinsieradzki.com/en"
                 style={{ display: "flex", alignItems: "center", gap: "6px", padding: "11px 0", textDecoration: "none" }}
               >
                 Open Mylder{" "}
@@ -873,7 +873,7 @@ export function CasePerronMylder() {
                 </svg>
               </a>
               <a
-                href="https://perron-pearl.vercel.app/"
+                href="https://perron.marcinsieradzki.com/"
                 style={{ display: "flex", alignItems: "center", gap: "6px", padding: "11px 0", textDecoration: "none" }}
               >
                 Perron docs{" "}

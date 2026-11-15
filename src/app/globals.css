@@ -413,6 +413,65 @@ a:hover {
 .cs-scroll:focus {
   outline: none;
 }
+/* Pause motion (src/lib/motion.ts, MotionToggle.tsx). The round one sits left of the modal's close button and
+   copies its look; the text one sits under the badge's hint. Nothing loops under reduced motion, so both go then. */
+html[data-motion="paused"] .mv,
+html[data-motion="paused"] .cs-panel *,
+html[data-motion="paused"] .cs-panel *::before,
+html[data-motion="paused"] .cs-panel *::after {
+  animation-play-state: paused !important;
+}
+.mo-round {
+  position: absolute;
+  right: 68px;
+  top: 14px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--perron-color-border-strong);
+  border-radius: 50%;
+  background: var(--perron-color-surface-overlay);
+  box-shadow: 0 0 0 6px rgba(10, 12, 16, 0.7);
+  color: var(--perron-color-text-primary);
+  cursor: pointer;
+}
+.mo-text {
+  display: block;
+  min-height: 24px;
+  margin: 2px auto 0;
+  padding: 0 8px;
+  border: 0;
+  border-radius: var(--perron-radius-sm);
+  background: none;
+  font: 500 12.5px/1.5 var(--perron-font-family-data);
+  color: var(--perron-color-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.mo-text:hover {
+  color: var(--perron-color-text-primary);
+}
+.mo-text:focus-visible {
+  outline: 2px solid var(--perron-color-border-focus);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mo-toggle {
+    display: none !important;
+  }
+}
+/* The badge's own button covers the card, so its ring sits outside the card, on the dark stage, where it shows on both faces. */
+.ct-badge-btn:focus-visible {
+  outline: 2px solid var(--perron-color-border-focus);
+  outline-offset: 4px;
+}
 /* The modal puts focus on its text when it opens (data-quiet). The ring is for focus someone moved there. */
 .cs-scroll:focus-visible:not([data-quiet]) {
   outline: 2px solid var(--perron-color-border-focus);

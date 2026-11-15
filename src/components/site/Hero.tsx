@@ -48,9 +48,7 @@ export function Hero() {
                 fontWeight: "700",
               }}
             >
-              <span style={{ display: "block", color: "var(--perron-color-text-secondary)" }}>
-                Hi, I&apos;m Marcin.
-              </span>
+              <span style={{ display: "block" }}>Hi, I&apos;m Marcin.</span>
               <span style={{ display: "block" }}>I ship software</span>
               <span style={{ display: "block", color: "var(--perron-color-text-success)" }}>
                 <span style={{ position: "relative", display: "inline-block" }}>

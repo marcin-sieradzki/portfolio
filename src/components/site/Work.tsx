@@ -466,7 +466,7 @@ export class Work extends Component<{ children?: ReactNode }, State> {
       const sc = this.caseScrollRef.current;
       const panel = this.casePanelRef.current;
       if (sc) sc.scrollTop = 0;
-      if (was >= 0 && sc && panel && !panel.contains(document.activeElement)) sc.focus({ preventScroll: true });
+      if (was >= 0 && sc && panel && !panel.contains(document.activeElement)) this.caseTakeFocus(sc);
     }
   }
 
@@ -532,8 +532,22 @@ export class Work extends Component<{ children?: ReactNode }, State> {
     const sc = this.caseScrollRef.current;
     this.caseSeen = this.state.caseAt;
     this.caseLockScroll();
-    if (sc) sc.focus({ preventScroll: true });
+    if (sc) this.caseTakeFocus(sc);
     this.caseLater(() => this.caseReveal(), 20);
+  }
+
+  /* Put focus on the modal's text, so the arrow keys scroll it straight away, without drawing a focus ring:
+     nobody moved there on purpose. The mark goes when focus moves on to something else, so tabbing back to the
+     text shows the ring. Leaving the window and coming back is not moving on (no relatedTarget). */
+  caseTakeFocus(el: HTMLElement) {
+    const moved = (e: FocusEvent) => {
+      if (!e.relatedTarget) return;
+      el.removeAttribute("data-quiet");
+      el.removeEventListener("blur", moved);
+    };
+    if (!el.hasAttribute("data-quiet")) el.addEventListener("blur", moved);
+    el.setAttribute("data-quiet", "");
+    el.focus({ preventScroll: true });
   }
 
   /* Show the modal. */

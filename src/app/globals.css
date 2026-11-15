@@ -413,7 +413,8 @@ a:hover {
 .cs-scroll:focus {
   outline: none;
 }
-.cs-scroll:focus-visible {
+/* The modal puts focus on its text when it opens (data-quiet). The ring is for focus someone moved there. */
+.cs-scroll:focus-visible:not([data-quiet]) {
   outline: 2px solid var(--perron-color-border-focus);
   outline-offset: -2px;
 }

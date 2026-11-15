@@ -1,6 +1,10 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
-export function Experience() {
+import type { Locale } from "@/i18n/config";
+import { translator } from "@/i18n/translate";
+
+export function Experience({ lang }: { lang: Locale }) {
+  const t = translator(lang);
   return (
     <section
       id="experience"
@@ -25,7 +29,7 @@ export function Experience() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span style={{ color: "var(--perron-color-text-brand)" }}>02</span> / Experience
+            <span style={{ color: "var(--perron-color-text-brand)" }}>02</span> {t("/ Experience")}
           </span>
           <h2
             style={{
@@ -38,7 +42,7 @@ export function Experience() {
               textWrap: "balance",
             }}
           >
-            The journey so far.
+            {t("The journey so far.")}
           </h2>
         </div>
         <div
@@ -66,7 +70,7 @@ export function Experience() {
           >
             M
           </span>
-          <span>Line M · Copenhagen · 2020 to now</span>
+          <span>{t("Line M · Copenhagen · 2020 to now")}</span>
         </div>
       </div>
       <ol
@@ -113,7 +117,7 @@ export function Experience() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            Jan 2020 to Nov 2021
+            {t("Jan 2020 to Nov 2021")}
           </span>
           <h3
             style={{
@@ -143,10 +147,12 @@ export function Experience() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <li>Apps for email marketing automation and observability: Vue 2, .NET APIs and Azure Functions.</li>
-            <li>Micro-frontends with Module Federation: 35% smaller bundles, independent deployments per team.</li>
-            <li>Campaign statistics dashboards with a live campaign view.</li>
-            <li>Mentored two interns.</li>
+            <li>{t("Apps for email marketing automation and observability: Vue 2, .NET APIs and Azure Functions.")}</li>
+            <li>
+              {t("Micro-frontends with Module Federation: 35% smaller bundles, independent deployments per team.")}
+            </li>
+            <li>{t("Campaign statistics dashboards with a live campaign view.")}</li>
+            <li>{t("Mentored two interns.")}</li>
           </ul>
         </li>
         <li
@@ -182,7 +188,7 @@ export function Experience() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            Nov 2021 to Dec 2024
+            {t("Nov 2021 to Dec 2024")}
           </span>
           <h3
             style={{
@@ -212,11 +218,11 @@ export function Experience() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <li>Maersk Design System: 70 web components in 467+ repositories.</li>
-            <li>Schedules, with millions of views every day.</li>
-            <li>Vendor Master Data: APIs, ruleset UI and approval workflow.</li>
-            <li>Led technical interviews and mentored a junior developer to key contributor.</li>
-            <li>Early adopter of agentic development in a 10-person team.</li>
+            <li>{t("Maersk Design System: 70 web components in 467+ repositories.")}</li>
+            <li>{t("Schedules, with millions of views every day.")}</li>
+            <li>{t("Vendor Master Data: APIs, ruleset UI and approval workflow.")}</li>
+            <li>{t("Led technical interviews and mentored a junior developer to key contributor.")}</li>
+            <li>{t("Early adopter of agentic development in a 10-person team.")}</li>
           </ul>
         </li>
         <li
@@ -263,7 +269,7 @@ export function Experience() {
           <span
             style={{ font: "500 12.5px/1.4 var(--perron-font-family-data)", color: "var(--perron-color-text-success)" }}
           >
-            Dec 2024 to now
+            {t("Dec 2024 to now")}
           </span>
           <h3
             style={{
@@ -293,12 +299,13 @@ export function Experience() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <li>Lead developer in a team of 5 on a design system built from zero.</li>
+            <li>{t("Lead developer in a team of 5 on a design system built from zero.")}</li>
             <li>
-              GDS Studio and the software factory built for it: a spec goes in, pull requests for review come out. The
-              Component Factory does the same for design system components.
+              {t(
+                "GDS Studio and the software factory built for it: a spec goes in, pull requests for review come out. The Component Factory does the same for design system components.",
+              )}
             </li>
-            <li>Weekly design system adoption audit across 30 UI repositories, on local models.</li>
+            <li>{t("Weekly design system adoption audit across 30 UI repositories, on local models.")}</li>
           </ul>
         </li>
         <li
@@ -334,7 +341,7 @@ export function Experience() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            Next stop
+            {t("Next stop")}
           </span>
           <h3
             style={{
@@ -346,11 +353,12 @@ export function Experience() {
               fontWeight: "700",
             }}
           >
-            Your team?
+            {t("Your team?")}
           </h3>
           <p style={{ margin: "0", fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-            Open to lead, staff and senior software engineering roles where AI agents become part of how the team ships.
-            Copenhagen or remote.
+            {t(
+              "Open to lead, staff and senior software engineering roles where AI agents become part of how the team ships. Copenhagen or remote.",
+            )}
           </p>
           <a
             href="#contact"
@@ -364,7 +372,7 @@ export function Experience() {
               textDecoration: "none",
             }}
           >
-            Get in touch{" "}
+            {t("Get in touch")}{" "}
             <svg
               width="16"
               height="16"

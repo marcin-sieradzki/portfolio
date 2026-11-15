@@ -1,6 +1,8 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
+import { useT } from "@/i18n/LocaleProvider";
 export function CaseVendorMasterData() {
+  const t = useT();
   return (
     <article style={{ display: "flex", flexDirection: "column" }}>
       <figure style={{ margin: "0", flex: "none" }}>
@@ -27,7 +29,9 @@ export function CaseVendorMasterData() {
               viewBox="0 0 1040 380"
               preserveAspectRatio="xMidYMid slice"
               role="img"
-              aria-label="A quay at night. A crane lifts a pink container off a ship. In the middle a vendor record shows form fields for Denmark: two are marked as changed and one is dashed because the ruleset leaves it out. On the right a gate with two lamps, maker and checker, opens its barrier to the master data once both are green."
+              aria-label={t(
+                "A quay at night. A crane lifts a pink container off a ship. In the middle a vendor record shows form fields for Denmark: two are marked as changed and one is dashed because the ruleset leaves it out. On the right a gate with two lamps, maker and checker, opens its barrier to the master data once both are green.",
+              )}
               style={{ display: "block", width: "100%", height: "100%" }}
             >
               <rect x="0" y="296" width="132" height="84" fill="#0D1827" />
@@ -102,7 +106,7 @@ export function CaseVendorMasterData() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                ruleset engine · fields per country and entity
+                {t("ruleset engine · fields per country and entity")}
               </text>
               <rect x="376" y="78" width="330" height="226" rx="10" fill="#10141B" stroke="#3A4557" strokeWidth="1.5" />
               <path d="M376 114H706" fill="none" stroke="#2E3746" strokeWidth="1.5" />
@@ -114,7 +118,7 @@ export function CaseVendorMasterData() {
                 fontWeight="600"
                 fill="#F2F4F7"
               >
-                vendor record
+                {t("vendor record")}
               </text>
               <rect
                 x="588"
@@ -248,7 +252,7 @@ export function CaseVendorMasterData() {
                 fontWeight="600"
                 fill="#FF7EB6"
               >
-                delta · 2 changed
+                {t("delta · 2 changed")}
               </text>
               <text
                 x="690"
@@ -259,7 +263,7 @@ export function CaseVendorMasterData() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                dashed: not in this ruleset
+                {t("dashed: not in this ruleset")}
               </text>
               <path
                 d="M716 190H744"
@@ -305,7 +309,7 @@ export function CaseVendorMasterData() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                maker-checker approval
+                {t("maker-checker approval")}
               </text>
               <rect x="772" y="176" width="12" height="140" rx="2" fill="#1A202B" stroke="#4A5568" strokeWidth="1.5" />
               <circle cx="778" cy="158" r="16" fill="#10141B" stroke="#4A5568" strokeWidth="1.5" />
@@ -380,7 +384,7 @@ export function CaseVendorMasterData() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                master data
+                {t("master data")}
               </text>
             </svg>
           </div>
@@ -411,9 +415,10 @@ export function CaseVendorMasterData() {
             }}
           />
           <span>
-            A quay. The ruleset decides which fields a vendor record has, the delta marks what changed, and the gate
-            opens once maker and checker have both signed.
-            <span className="cs-swipe"> Swipe sideways to see all of it.</span>
+            {t(
+              "A quay. The ruleset decides which fields a vendor record has, the delta marks what changed, and the gate opens once maker and checker have both signed.",
+            )}
+            <span className="cs-swipe"> {t("Swipe sideways to see all of it.")}</span>
           </span>
         </figcaption>
       </figure>
@@ -439,7 +444,7 @@ export function CaseVendorMasterData() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span>Maersk · 2021 to 2024</span>
+            <span>{t("Maersk · 2021 to 2024")}</span>
           </div>
           <h2
             id="case-title-vendor"
@@ -465,7 +470,7 @@ export function CaseVendorMasterData() {
               textWrap: "balance",
             }}
           >
-            The rules decide the form. The delta shows what changed.
+            {t("The rules decide the form. The delta shows what changed.")}
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -480,7 +485,7 @@ export function CaseVendorMasterData() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What it is
+                {t("What it is")}
               </h3>
               <p
                 style={{
@@ -490,9 +495,9 @@ export function CaseVendorMasterData() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                I took what the business needed from the app, turned it into requirements, and built it: the RESTful
-                APIs and the UI on top of a ruleset engine that decides at runtime, per country and entity, which fields
-                exist and how they validate. A delta engine shows approvers exactly what changed.
+                {t(
+                  "I took what the business needed from the app, turned it into requirements, and built it: the RESTful APIs and the UI on top of a ruleset engine that decides at runtime, per country and entity, which fields exist and how they validate. A delta engine shows approvers exactly what changed.",
+                )}
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -505,7 +510,7 @@ export function CaseVendorMasterData() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                How it works
+                {t("How it works")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -536,43 +541,10 @@ export function CaseVendorMasterData() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Ruleset engine
+                      {t("Ruleset engine")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Decides at runtime, per country and entity, which fields exist and how they validate.
-                    </span>
-                  </div>
-                </li>
-                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
-                  <span
-                    aria-hidden="true"
-                    style={{
-                      position: "absolute",
-                      left: "6px",
-                      top: "14px",
-                      bottom: "-8px",
-                      width: "2px",
-                      background: "#FF7EB6",
-                    }}
-                  />
-                  <span
-                    aria-hidden="true"
-                    style={{
-                      position: "relative",
-                      flex: "none",
-                      width: "14px",
-                      height: "14px",
-                      marginTop: "5px",
-                      boxSizing: "border-box",
-                      borderRadius: "50%",
-                      background: "var(--perron-color-surface-raised)",
-                      border: "3px solid var(--perron-color-text-primary)",
-                    }}
-                  />
-                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Delta engine</strong>
-                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Shows approvers exactly what changed.
+                      {t("Decides at runtime, per country and entity, which fields exist and how they validate.")}
                     </span>
                   </div>
                 </li>
@@ -604,10 +576,45 @@ export function CaseVendorMasterData() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Maker-checker approvals
+                      {t("Delta engine")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      One person makes a change, and a second person approves it.
+                      {t("Shows approvers exactly what changed.")}
+                    </span>
+                  </div>
+                </li>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "6px",
+                      top: "14px",
+                      bottom: "-8px",
+                      width: "2px",
+                      background: "#FF7EB6",
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("Maker-checker approvals")}
+                    </strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      {t("One person makes a change, and a second person approves it.")}
                     </span>
                   </div>
                 </li>
@@ -627,10 +634,13 @@ export function CaseVendorMasterData() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>My part</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("My part")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      I talked with the business people about what the app had to do, turned that into requirements, and
-                      built it: the RESTful APIs, the ruleset UI and the approval workflow.
+                      {t(
+                        "I talked with the business people about what the app had to do, turned that into requirements, and built it: the RESTful APIs, the ruleset UI and the approval workflow.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -638,7 +648,7 @@ export function CaseVendorMasterData() {
             </section>
           </div>
           <aside
-            aria-label="Project facts"
+            aria-label={t("Project facts")}
             style={{
               flex: "2 1 300px",
               minWidth: "0",
@@ -662,7 +672,7 @@ export function CaseVendorMasterData() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Where
+                  {t("Where")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   A.P. Moller - Maersk
@@ -677,10 +687,10 @@ export function CaseVendorMasterData() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  When
+                  {t("When")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
-                  Nov 2021 to Dec 2024
+                  {t("Nov 2021 to Dec 2024")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
@@ -692,7 +702,7 @@ export function CaseVendorMasterData() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Role
+                  {t("Role")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   Senior Software Engineer
@@ -700,7 +710,7 @@ export function CaseVendorMasterData() {
               </div>
             </dl>
             <ul
-              aria-label="Keywords"
+              aria-label={t("Keywords")}
               style={{
                 margin: "0",
                 padding: "22px 0 0",
@@ -722,7 +732,7 @@ export function CaseVendorMasterData() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                .NET APIs
+                {t(".NET APIs")}
               </li>
               <li
                 style={{
@@ -735,7 +745,7 @@ export function CaseVendorMasterData() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                RESTful APIs
+                {t("RESTful APIs")}
               </li>
               <li
                 style={{
@@ -748,7 +758,7 @@ export function CaseVendorMasterData() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Ruleset engine
+                {t("Ruleset engine")}
               </li>
               <li
                 style={{

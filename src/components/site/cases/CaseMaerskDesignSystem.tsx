@@ -1,6 +1,8 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
+import { useT } from "@/i18n/LocaleProvider";
 export function CaseMaerskDesignSystem() {
+  const t = useT();
   return (
     <article style={{ display: "flex", flexDirection: "column" }}>
       <figure style={{ margin: "0", flex: "none" }}>
@@ -27,7 +29,9 @@ export function CaseMaerskDesignSystem() {
               viewBox="0 0 1040 380"
               preserveAspectRatio="xMidYMid slice"
               role="img"
-              aria-label="A container ship at night. Its hull reads One token source and it carries 70 containers in five colours, one for each component and brand."
+              aria-label={t(
+                "A container ship at night. Its hull reads One token source and it carries 70 containers in five colours, one for each component and brand.",
+              )}
               style={{ display: "block", width: "100%", height: "100%" }}
             >
               <g aria-hidden="true">
@@ -71,7 +75,7 @@ export function CaseMaerskDesignSystem() {
                   fill="#F2F4F7"
                   letterSpacing="7"
                 >
-                  ONE TOKEN SOURCE
+                  {t("ONE TOKEN SOURCE")}
                 </text>
                 <circle cx="892" cy="256" r="3" fill="none" stroke="#4A5568" strokeWidth="1.5" />
                 <path d="M888 238L888 204" fill="none" stroke="#4A5568" strokeWidth="2" />
@@ -751,7 +755,7 @@ export function CaseMaerskDesignSystem() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                70 containers, 70 components
+                {t("70 containers, 70 components")}
               </text>
               <path d="M782 190L836 150H862" fill="none" stroke="#4A5568" strokeWidth="1" />
               <circle cx="780" cy="191.5" r="2.5" fill="#F2F4F7" />
@@ -763,7 +767,7 @@ export function CaseMaerskDesignSystem() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                5 colours, 5 brands
+                {t("5 colours, 5 brands")}
               </text>
             </svg>
           </div>
@@ -794,8 +798,8 @@ export function CaseMaerskDesignSystem() {
             }}
           />
           <span>
-            One hull, one token source. The 70 containers are the 70 components, in five colours for five brands.
-            <span className="cs-swipe"> Swipe sideways to see all of it.</span>
+            {t("One hull, one token source. The 70 containers are the 70 components, in five colours for five brands.")}
+            <span className="cs-swipe"> {t("Swipe sideways to see all of it.")}</span>
           </span>
         </figcaption>
       </figure>
@@ -821,7 +825,7 @@ export function CaseMaerskDesignSystem() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span>Maersk · 2021 to 2024</span>
+            <span>{t("Maersk · 2021 to 2024")}</span>
           </div>
           <h2
             id="case-title-maersk-ds"
@@ -847,7 +851,7 @@ export function CaseMaerskDesignSystem() {
               textWrap: "balance",
             }}
           >
-            One token source, five brands, any framework.
+            {t("One token source, five brands, any framework.")}
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -862,7 +866,7 @@ export function CaseMaerskDesignSystem() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What it is
+                {t("What it is")}
               </h3>
               <p
                 style={{
@@ -872,8 +876,9 @@ export function CaseMaerskDesignSystem() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Framework-agnostic web components from one token source for 5 brands, light and dark, 3 densities. I was
-                a developer on it from its early days, with 2,600+ commits, and I led the v1 to v2 upgrade.
+                {t(
+                  "Framework-agnostic web components from one token source for 5 brands, light and dark, 3 densities. I was a developer on it from its early days, with 2,600+ commits, and I led the v1 to v2 upgrade.",
+                )}
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -886,7 +891,7 @@ export function CaseMaerskDesignSystem() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What I did
+                {t("What I did")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -917,10 +922,10 @@ export function CaseMaerskDesignSystem() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      One token source
+                      {t("One token source")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      It feeds 5 brands, light and dark, in 3 densities.
+                      {t("It feeds 5 brands, light and dark, in 3 densities.")}
                     </span>
                   </div>
                 </li>
@@ -952,10 +957,10 @@ export function CaseMaerskDesignSystem() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Web components
+                      {t("Web components")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Framework-agnostic, so the same 70 components run in 467+ UI repositories.
+                      {t("Framework-agnostic, so the same 70 components run in 467+ UI repositories.")}
                     </span>
                   </div>
                 </li>
@@ -986,9 +991,11 @@ export function CaseMaerskDesignSystem() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Contributor</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("Contributor")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A developer on the system from its early days, with 2,600+ commits.
+                      {t("A developer on the system from its early days, with 2,600+ commits.")}
                     </span>
                   </div>
                 </li>
@@ -1008,9 +1015,11 @@ export function CaseMaerskDesignSystem() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>v1 to v2</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("v1 to v2")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      I led the upgrade from v1 to v2.
+                      {t("I led the upgrade from v1 to v2.")}
                     </span>
                   </div>
                 </li>
@@ -1018,7 +1027,7 @@ export function CaseMaerskDesignSystem() {
             </section>
           </div>
           <aside
-            aria-label="Project facts"
+            aria-label={t("Project facts")}
             style={{
               flex: "2 1 300px",
               minWidth: "0",
@@ -1042,7 +1051,7 @@ export function CaseMaerskDesignSystem() {
             >
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  components
+                  {t("components")}
                 </dt>
                 <dd
                   style={{
@@ -1056,7 +1065,7 @@ export function CaseMaerskDesignSystem() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  repositories
+                  {t("repositories")}
                 </dt>
                 <dd
                   style={{
@@ -1070,7 +1079,7 @@ export function CaseMaerskDesignSystem() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  adoption
+                  {t("adoption")}
                 </dt>
                 <dd
                   style={{
@@ -1084,7 +1093,7 @@ export function CaseMaerskDesignSystem() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  commits
+                  {t("commits")}
                 </dt>
                 <dd
                   style={{
@@ -1093,7 +1102,7 @@ export function CaseMaerskDesignSystem() {
                     letterSpacing: "-0.78px",
                   }}
                 >
-                  2,600+
+                  {t("2,600+")}
                 </dd>
               </div>
             </dl>
@@ -1116,7 +1125,7 @@ export function CaseMaerskDesignSystem() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Where
+                  {t("Where")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   A.P. Moller - Maersk
@@ -1131,10 +1140,10 @@ export function CaseMaerskDesignSystem() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  When
+                  {t("When")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
-                  Nov 2021 to Dec 2024
+                  {t("Nov 2021 to Dec 2024")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
@@ -1146,7 +1155,7 @@ export function CaseMaerskDesignSystem() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Role
+                  {t("Role")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   Senior Software Engineer
@@ -1154,7 +1163,7 @@ export function CaseMaerskDesignSystem() {
               </div>
             </dl>
             <ul
-              aria-label="Keywords"
+              aria-label={t("Keywords")}
               style={{
                 margin: "0",
                 padding: "22px 0 0",
@@ -1176,7 +1185,7 @@ export function CaseMaerskDesignSystem() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Web components
+                {t("Web components")}
               </li>
               <li
                 style={{
@@ -1189,7 +1198,7 @@ export function CaseMaerskDesignSystem() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Design tokens
+                {t("Design tokens")}
               </li>
               <li
                 style={{
@@ -1202,7 +1211,7 @@ export function CaseMaerskDesignSystem() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                5 brands
+                {t("5 brands")}
               </li>
               <li
                 style={{
@@ -1215,7 +1224,7 @@ export function CaseMaerskDesignSystem() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                3 densities
+                {t("3 densities")}
               </li>
             </ul>
             <div

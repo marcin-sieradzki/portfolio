@@ -4,6 +4,7 @@
    The whole card opens the project. Once it is built, hovering it lifts it, lights its edge and nudges the arrow
    in its corner (the wk- rules in globals.css). "View project" is the same action for the keyboard, drawn as text. */
 import type { CSSProperties, MouseEvent, RefObject } from "react";
+import { useT } from "@/i18n/LocaleProvider";
 import { AGENTS, type AgentKey, type WorkProject } from "@/lib/works";
 import type { Move, WorkUnit } from "./Work";
 
@@ -29,6 +30,7 @@ function at(m: Move | undefined, transition: string): CSSProperties {
 
 /* An agent's pointer with its name tag, on the left or the right of the pointer. */
 function Agent({ agent, side }: { agent: AgentKey; side: "left" | "right" }) {
+  const t = useT();
   const a = AGENTS[agent];
   return (
     <>
@@ -54,7 +56,7 @@ function Agent({ agent, side }: { agent: AgentKey; side: "left" | "right" }) {
           whiteSpace: "nowrap",
         }}
       >
-        {a.name}
+        {t(a.name)}
       </span>
     </>
   );
@@ -115,6 +117,7 @@ export function WorkCard({
   onOpen: () => void;
   onCard: (e: MouseEvent<HTMLElement>) => void;
 }) {
+  const t = useT();
   const lead = AGENTS[p.lead];
   const typed = p.build.parts.h?.[0] === "type"; /* a typed title is as wide as its text, so the caret stops there */
   const down = p.sweep.dir === "down";
@@ -156,7 +159,7 @@ export function WorkCard({
           }}
         >
           <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: lead.color }} />
-          {lead.name} · queued
+          {t("{agent} · queued", { agent: t(lead.name) })}
         </span>
       </div>
       <article
@@ -193,7 +196,7 @@ export function WorkCard({
             ...at(u.k, u.tr),
           }}
         >
-          {p.kicker}
+          {t(p.kicker)}
         </span>
         <h3
           style={{
@@ -207,7 +210,7 @@ export function WorkCard({
             ...at(u.h, typed ? u.tt : u.tr),
           }}
         >
-          {p.name}
+          {t(p.name)}
         </h3>
         <p
           style={{
@@ -218,7 +221,7 @@ export function WorkCard({
             ...at(u.p, u.tr),
           }}
         >
-          {p.body}
+          {t(p.body)}
         </p>
         <div
           style={{
@@ -242,7 +245,7 @@ export function WorkCard({
                 color: "var(--perron-color-text-primary)",
               }}
             >
-              {chip}
+              {t(chip)}
             </span>
           ))}
         </div>
@@ -262,7 +265,7 @@ export function WorkCard({
                   textDecoration: "none",
                 }}
               >
-                {l.label} <LinkArrow />
+                {t(l.label)} <LinkArrow />
               </a>
             ))}
           </div>
@@ -275,7 +278,7 @@ export function WorkCard({
             className="wk-open"
             onClick={onOpen}
             aria-haspopup="dialog"
-            aria-label={`View project: ${p.name}`}
+            aria-label={t("View project: {name}", { name: t(p.name) })}
             style={{
               display: "flex",
               alignItems: "center",
@@ -292,7 +295,7 @@ export function WorkCard({
               cursor: "pointer",
             }}
           >
-            View project <Arrow size={15} />
+            {t("View project")} <Arrow size={15} />
           </button>
         </div>
       </article>
@@ -427,7 +430,7 @@ export function WorkCard({
         >
           <path d="M3 8.5l3.2 3.2L13 4.8" />
         </svg>{" "}
-        verified
+        {t("verified")}
       </span>
     </div>
   );

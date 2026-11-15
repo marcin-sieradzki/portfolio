@@ -1,8 +1,10 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
+import { useT } from "@/i18n/LocaleProvider";
 import { FactoryDrawing } from "./FactoryDrawing";
 
 export function CaseSoftwareFactory() {
+  const t = useT();
   return (
     <article style={{ display: "flex", flexDirection: "column" }}>
       <figure style={{ margin: "0", flex: "none" }}>
@@ -54,10 +56,10 @@ export function CaseSoftwareFactory() {
             }}
           />
           <span>
-            Underneath, the five layers of trust the factory stands on, built from the bottom up. On top, the factory: a
-            spec, its tickets, the implementer, three brakes and the human review. The triage pipe carries what a run
-            learned back into the layers.
-            <span className="cs-swipe"> Swipe sideways to see all of it.</span>
+            {t(
+              "Underneath, the five layers of trust the factory stands on, built from the bottom up. On top, the factory: a spec, its tickets, the implementer, three brakes and the human review. The triage pipe carries what a run learned back into the layers.",
+            )}
+            <span className="cs-swipe"> {t("Swipe sideways to see all of it.")}</span>
           </span>
         </figcaption>
       </figure>
@@ -83,7 +85,7 @@ export function CaseSoftwareFactory() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span>Grundfos · 2025 to now</span>
+            <span>{t("Grundfos · 2025 to now")}</span>
           </div>
           <h2
             id="case-title-factory"
@@ -97,7 +99,7 @@ export function CaseSoftwareFactory() {
               textWrap: "balance",
             }}
           >
-            Software factory
+            {t("Software factory")}
           </h2>
           <p
             style={{
@@ -109,7 +111,9 @@ export function CaseSoftwareFactory() {
               textWrap: "balance",
             }}
           >
-            Trust first, automation second. Then a spec goes in, and pull requests for a person to review come out.
+            {t(
+              "Trust first, automation second. Then a spec goes in, and pull requests for a person to review come out.",
+            )}
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -124,7 +128,7 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What it is
+                {t("What it is")}
               </h3>
               <p
                 style={{
@@ -134,10 +138,9 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                A system of agents that turns a spec into pull requests. I built it for the GDS Studio work, and I built
-                the ground under it first: five layers that make an agent&apos;s work worth trusting before any of it is
-                automated. Every ticket then passes three brakes before a person reviews it, and every run ends with a
-                triage of what went wrong, so the factory gets better over time.
+                {t(
+                  "A system of agents that turns a spec into pull requests. I built it for the GDS Studio work, and I built the ground under it first: five layers that make an agent's work worth trusting before any of it is automated. Every ticket then passes three brakes before a person reviews it, and every run ends with a triage of what went wrong, so the factory gets better over time.",
+                )}
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -150,7 +153,7 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                First, five layers of trust
+                {t("First, five layers of trust")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -180,10 +183,13 @@ export function CaseSoftwareFactory() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>1. Codebase</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("1. Codebase")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Clear APIs, a firm architecture and constant refactoring. Agents copy what they find, so what they
-                      find has to be good.
+                      {t(
+                        "Clear APIs, a firm architecture and constant refactoring. Agents copy what they find, so what they find has to be good.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -215,11 +221,12 @@ export function CaseSoftwareFactory() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      2. Static analysis
+                      {t("2. Static analysis")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Lint rules, types, tests and CI. When I correct an agent, I turn the correction into a check, so
-                      it holds for every agent after it.
+                      {t(
+                        "Lint rules, types, tests and CI. When I correct an agent, I turn the correction into a check, so it holds for every agent after it.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -251,10 +258,12 @@ export function CaseSoftwareFactory() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      3. Verification
+                      {t("3. Verification")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Agents run the app themselves and show that a change works, with evidence a person can look at.
+                      {t(
+                        "Agents run the app themselves and show that a change works, with evidence a person can look at.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -285,9 +294,11 @@ export function CaseSoftwareFactory() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>4. Prose</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("4. Prose")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Rules, skills and AGENTS.md, kept for the few things that need judgement.
+                      {t("Rules, skills and AGENTS.md, kept for the few things that need judgement.")}
                     </span>
                   </div>
                 </li>
@@ -308,10 +319,12 @@ export function CaseSoftwareFactory() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      5. Human review
+                      {t("5. Human review")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      The most expensive layer, so it comes last. The four layers under it leave a person less to catch.
+                      {t(
+                        "The most expensive layer, so it comes last. The four layers under it leave a person less to catch.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -327,7 +340,7 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Then, the factory
+                {t("Then, the factory")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -358,10 +371,10 @@ export function CaseSoftwareFactory() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Spec to tickets
+                      {t("Spec to tickets")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A spec is cut into small tickets for the factory to build.
+                      {t("A spec is cut into small tickets for the factory to build.")}
                     </span>
                   </div>
                 </li>
@@ -393,44 +406,10 @@ export function CaseSoftwareFactory() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      An implementer builds it
+                      {t("An implementer builds it")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Each ticket gets its own branch and pull request, and is built test-first.
-                    </span>
-                  </div>
-                </li>
-                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
-                  <span
-                    aria-hidden="true"
-                    style={{
-                      position: "absolute",
-                      left: "6px",
-                      top: "14px",
-                      bottom: "-8px",
-                      width: "2px",
-                      background: "#FF8A5B",
-                    }}
-                  />
-                  <span
-                    aria-hidden="true"
-                    style={{
-                      position: "relative",
-                      flex: "none",
-                      width: "14px",
-                      height: "14px",
-                      marginTop: "5px",
-                      boxSizing: "border-box",
-                      borderRadius: "50%",
-                      background: "var(--perron-color-surface-raised)",
-                      border: "3px solid var(--perron-color-text-primary)",
-                    }}
-                  />
-                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Three brakes</strong>
-                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Automated checks, a reviewer that reads the diff cold, and a verifier that never sees the code: it
-                      drives the running app and gives a verdict.
+                      {t("Each ticket gets its own branch and pull request, and is built test-first.")}
                     </span>
                   </div>
                 </li>
@@ -462,11 +441,12 @@ export function CaseSoftwareFactory() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Rework is capped
+                      {t("Three brakes")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A ticket that fails a brake goes back to the implementer. After two rounds it stops and waits for
-                      a person.
+                      {t(
+                        "Automated checks, a reviewer that reads the diff cold, and a verifier that never sees the code: it drives the running app and gives a verdict.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -498,12 +478,49 @@ export function CaseSoftwareFactory() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Triage after every run
+                      {t("Rework is capped")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Each run ends by going through what went wrong and ranking it. A fix goes into the lowest layer
-                      that can hold it: the codebase or a check first, a rule in prose last. That is how the factory
-                      improves over time.
+                      {t(
+                        "A ticket that fails a brake goes back to the implementer. After two rounds it stops and waits for a person.",
+                      )}
+                    </span>
+                  </div>
+                </li>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "6px",
+                      top: "14px",
+                      bottom: "-8px",
+                      width: "2px",
+                      background: "#FF8A5B",
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("Triage after every run")}
+                    </strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      {t(
+                        "Each run ends by going through what went wrong and ranking it. A fix goes into the lowest layer that can hold it: the codebase or a check first, a rule in prose last. That is how the factory improves over time.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -524,12 +541,12 @@ export function CaseSoftwareFactory() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      A side line: the Component Factory
+                      {t("A side line: the Component Factory")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      The same idea for design system components. An agreed Figma component and its docs page go in,
-                      eight agents with one job each build it, a system check decides, and a draft pull request with
-                      code, tests, stories and docs comes out. 22 components merged, about 60 minutes each.
+                      {t(
+                        "The same idea for design system components. An agreed Figma component and its docs page go in, eight agents with one job each build it, a system check decides, and a draft pull request with code, tests, stories and docs comes out. 22 components merged, about 60 minutes each.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -537,7 +554,7 @@ export function CaseSoftwareFactory() {
             </section>
           </div>
           <aside
-            aria-label="Project facts"
+            aria-label={t("Project facts")}
             style={{
               flex: "2 1 300px",
               minWidth: "0",
@@ -561,7 +578,7 @@ export function CaseSoftwareFactory() {
             >
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  layers of trust before the automation
+                  {t("layers of trust before the automation")}
                 </dt>
                 <dd
                   style={{
@@ -575,7 +592,7 @@ export function CaseSoftwareFactory() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  brakes on every ticket
+                  {t("brakes on every ticket")}
                 </dt>
                 <dd
                   style={{
@@ -589,7 +606,7 @@ export function CaseSoftwareFactory() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  rework rounds at most
+                  {t("rework rounds at most")}
                 </dt>
                 <dd
                   style={{
@@ -603,7 +620,7 @@ export function CaseSoftwareFactory() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  components merged by the Component Factory
+                  {t("components merged by the Component Factory")}
                 </dt>
                 <dd
                   style={{
@@ -635,7 +652,7 @@ export function CaseSoftwareFactory() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Where
+                  {t("Where")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>Grundfos</dd>
               </div>
@@ -648,9 +665,11 @@ export function CaseSoftwareFactory() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  When
+                  {t("When")}
                 </dt>
-                <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>2025 to now</dd>
+                <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
+                  {t("2025 to now")}
+                </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                 <dt
@@ -661,7 +680,7 @@ export function CaseSoftwareFactory() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Role
+                  {t("Role")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   Lead Software Engineer
@@ -669,7 +688,7 @@ export function CaseSoftwareFactory() {
               </div>
             </dl>
             <ul
-              aria-label="Keywords"
+              aria-label={t("Keywords")}
               style={{
                 margin: "0",
                 padding: "22px 0 0",
@@ -691,7 +710,7 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Agent pipelines
+                {t("Agent pipelines")}
               </li>
               <li
                 style={{
@@ -704,7 +723,7 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Foundations first
+                {t("Foundations first")}
               </li>
               <li
                 style={{
@@ -717,7 +736,7 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Spec to pull request
+                {t("Spec to pull request")}
               </li>
               <li
                 style={{
@@ -730,7 +749,7 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Triage
+                {t("Triage")}
               </li>
               <li
                 style={{
@@ -743,7 +762,7 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Human review
+                {t("Human review")}
               </li>
             </ul>
           </aside>

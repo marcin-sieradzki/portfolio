@@ -1,6 +1,10 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
-export function About() {
+import type { Locale } from "@/i18n/config";
+import { translator } from "@/i18n/translate";
+
+export function About({ lang }: { lang: Locale }) {
+  const t = translator(lang);
   return (
     <section
       id="about"
@@ -16,7 +20,7 @@ export function About() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span style={{ color: "var(--perron-color-text-brand)" }}>03</span> / About
+            <span style={{ color: "var(--perron-color-text-brand)" }}>03</span> {t("/ About")}
           </span>
           <h2
             style={{
@@ -29,7 +33,7 @@ export function About() {
               textWrap: "balance",
             }}
           >
-            The man in the loop.
+            {t("The man in the loop.")}
           </h2>
           <p
             style={{
@@ -40,8 +44,9 @@ export function About() {
               color: "var(--perron-color-text-primary)",
             }}
           >
-            I&apos;m a lead software engineer in Copenhagen with 6+ years of shipping production systems for large
-            organisations.
+            {t(
+              "I'm a lead software engineer in Copenhagen with 6+ years of shipping production systems for large organisations.",
+            )}
           </p>
           <p
             style={{
@@ -52,10 +57,9 @@ export function About() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            I started in full-stack agency work at VML MAP, spent three years at Maersk on the design system and
-            customer-facing products, and I&apos;m now the lead developer in a team of 5 on the design system at
-            Grundfos. That is where I put agents into the software lifecycle: factories that turn tickets and designs
-            into pull requests for review, and a design system agents can build from.
+            {t(
+              "I started in full-stack agency work at VML MAP, spent three years at Maersk on the design system and customer-facing products, and I'm now the lead developer in a team of 5 on the design system at Grundfos. That is where I put agents into the software lifecycle: factories that turn tickets and designs into pull requests for review, and a design system agents can build from.",
+            )}
           </p>
           <p
             style={{
@@ -66,11 +70,13 @@ export function About() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            My own projects, Perron and Mylder, are public and built solo with coding agents, so you can see how I work.
+            {t(
+              "My own projects, Perron and Mylder, are public and built solo with coding agents, so you can see how I work.",
+            )}
           </p>
         </div>
         <aside
-          aria-label="Facts and toolbox"
+          aria-label={t("Facts and toolbox")}
           style={{
             flex: "0 1 420px",
             minWidth: "min(280px, 100%)",
@@ -94,10 +100,10 @@ export function About() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Based in
+                {t("Based in")}
               </dt>
               <dd style={{ margin: "0", fontSize: "17px", lineHeight: "1.4", fontWeight: "600" }}>
-                Copenhagen, Denmark
+                {t("Copenhagen, Denmark")}
               </dd>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
@@ -109,9 +115,11 @@ export function About() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Languages
+                {t("Languages")}
               </dt>
-              <dd style={{ margin: "0", fontSize: "17px", lineHeight: "1.4", fontWeight: "600" }}>English, Polish</dd>
+              <dd style={{ margin: "0", fontSize: "17px", lineHeight: "1.4", fontWeight: "600" }}>
+                {t("English, Polish")}
+              </dd>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
               <dt
@@ -122,10 +130,10 @@ export function About() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Education
+                {t("Education")}
               </dt>
               <dd style={{ margin: "0", fontSize: "17px", lineHeight: "1.4", fontWeight: "600" }}>
-                Bachelor in Web Development
+                {t("Bachelor in Web Development")}
               </dd>
             </div>
           </dl>
@@ -146,10 +154,10 @@ export function About() {
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              Toolbox
+              {t("Toolbox")}
             </span>
             <ul
-              aria-label="Toolbox"
+              aria-label={t("Toolbox")}
               style={{
                 margin: "0",
                 padding: "0",
@@ -263,7 +271,7 @@ export function About() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Design tokens
+                {t("Design tokens")}
               </li>
               <li
                 style={{
@@ -341,7 +349,7 @@ export function About() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                AI agents
+                {t("AI agents")}
               </li>
               <li
                 style={{
@@ -354,7 +362,7 @@ export function About() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Design systems
+                {t("Design systems")}
               </li>
               <li
                 style={{
@@ -380,7 +388,7 @@ export function About() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Eval harnesses
+                {t("Eval harnesses")}
               </li>
               <li
                 style={{
@@ -393,7 +401,7 @@ export function About() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Local LLMs
+                {t("Local LLMs")}
               </li>
               <li
                 style={{
@@ -406,7 +414,7 @@ export function About() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Accessibility
+                {t("Accessibility")}
               </li>
               <li
                 style={{
@@ -419,7 +427,7 @@ export function About() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                and more...
+                {t("and more...")}
               </li>
             </ul>
           </div>

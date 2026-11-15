@@ -3,6 +3,7 @@
    project modal, beside its close button, and a text button under the badge. Hidden when the system already asks for
    less motion, since nothing loops then. */
 import { useEffect, useSyncExternalStore } from "react";
+import { useT } from "@/i18n/LocaleProvider";
 import { motionPaused, restoreMotion, setMotionPaused, subscribeMotion } from "@/lib/motion";
 
 let restored = false;
@@ -14,7 +15,8 @@ export function MotionToggle({ look }: { look: "round" | "text" }) {
     restored = true;
     restoreMotion();
   }, []);
-  const label = paused ? "Play motion" : "Pause motion";
+  const t = useT();
+  const label = paused ? t("Play motion") : t("Pause motion");
   const toggle = () => setMotionPaused(!paused);
   if (look === "text")
     return (

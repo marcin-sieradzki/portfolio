@@ -1,6 +1,8 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
+import { useT } from "@/i18n/LocaleProvider";
 export function CaseMicroFrontends() {
+  const t = useT();
   return (
     <article style={{ display: "flex", flexDirection: "column" }}>
       <figure style={{ margin: "0", flex: "none" }}>
@@ -27,7 +29,9 @@ export function CaseMicroFrontends() {
               viewBox="0 0 1040 380"
               preserveAspectRatio="xMidYMid slice"
               role="img"
-              aria-label="On the left a single block marked Vue 2 monolith with dashed cut lines. In the middle a host with four remotes side by side, one per team, each with its own deploy arrow. A bar shows the bundle is 35 percent smaller. On the right a live campaign dashboard with envelopes dropping in over a WebSocket."
+              aria-label={t(
+                "On the left a single block marked Vue 2 monolith with dashed cut lines. In the middle a host with four remotes side by side, one per team, each with its own deploy arrow. A bar shows the bundle is 35 percent smaller. On the right a live campaign dashboard with envelopes dropping in over a WebSocket.",
+              )}
               style={{ display: "block", width: "100%", height: "100%" }}
             >
               <text
@@ -38,7 +42,7 @@ export function CaseMicroFrontends() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                Vue 2 monolith
+                {t("Vue 2 monolith")}
               </text>
               <rect x="46" y="78" width="168" height="214" rx="8" fill="#141A25" stroke="#4A5568" strokeWidth="2" />
               <path
@@ -67,7 +71,7 @@ export function CaseMicroFrontends() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                one deploy for everyone
+                {t("one deploy for everyone")}
               </text>
               <path
                 d="M228 185H274"
@@ -138,7 +142,7 @@ export function CaseMicroFrontends() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                team A
+                {t("team A")}
               </text>
               <g transform="translate(345 72)">
                 <g className="mv" style={{ animation: "csRise 3.4s ease-in 0s infinite" }}>
@@ -187,7 +191,7 @@ export function CaseMicroFrontends() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                team B
+                {t("team B")}
               </text>
               <g transform="translate(433.5 72)">
                 <g className="mv" style={{ animation: "csRise 4.3s ease-in -1.3s infinite" }}>
@@ -227,7 +231,7 @@ export function CaseMicroFrontends() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                team C
+                {t("team C")}
               </text>
               <g transform="translate(522 72)">
                 <g className="mv" style={{ animation: "csRise 5.2s ease-in -2.6s infinite" }}>
@@ -276,7 +280,7 @@ export function CaseMicroFrontends() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                team D
+                {t("team D")}
               </text>
               <g transform="translate(610.5 72)">
                 <g className="mv" style={{ animation: "csRise 6.1s ease-in -3.9s infinite" }}>
@@ -299,7 +303,7 @@ export function CaseMicroFrontends() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                each team deploys on its own
+                {t("each team deploys on its own")}
               </text>
               <rect x="46" y="326" width="168" height="9" rx="4.5" fill="#4A5568" />
               <text
@@ -310,7 +314,7 @@ export function CaseMicroFrontends() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                bundle before
+                {t("bundle before")}
               </text>
               <rect x="292" y="326" width="168" height="9" rx="4.5" fill="#2E3746" />
               <rect x="292" y="326" width="109.2" height="9" rx="4.5" fill="#C8F560" />
@@ -322,7 +326,7 @@ export function CaseMicroFrontends() {
                 fontWeight="600"
                 fill="#C8F560"
               >
-                35% smaller bundles
+                {t("35% smaller bundles")}
               </text>
               <path d="M698 40V348" fill="none" stroke="#2E3746" strokeWidth="1.5" strokeDasharray="2 6" />
               <text
@@ -333,7 +337,7 @@ export function CaseMicroFrontends() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                KPI dashboards · email campaigns
+                {t("KPI dashboards · email campaigns")}
               </text>
               <rect x="732" y="98" width="272" height="216" rx="10" fill="#10141B" stroke="#3A4557" strokeWidth="1.5" />
               <path d="M732 132H1004" fill="none" stroke="#2E3746" strokeWidth="1.5" />
@@ -345,7 +349,7 @@ export function CaseMicroFrontends() {
                 fontWeight="600"
                 fill="#F2F4F7"
               >
-                live campaign view
+                {t("live campaign view")}
               </text>
               <circle
                 cx="942"
@@ -364,7 +368,7 @@ export function CaseMicroFrontends() {
                 fontWeight="600"
                 fill="#3DDC97"
               >
-                live
+                {t("live")}
               </text>
               <rect x="748" y="146" width="74" height="46" rx="6" fill="#0A0C10" stroke="#232A36" strokeWidth="1.5" />
               <rect x="758" y="156" width="36" height="5" rx="2.5" fill="#3A4557" />
@@ -470,9 +474,10 @@ export function CaseMicroFrontends() {
             }}
           />
           <span>
-            One monolith, cut into four remotes inside a host. Each team ships in its own time. On the right, the live
-            campaign view.
-            <span className="cs-swipe"> Swipe sideways to see all of it.</span>
+            {t(
+              "One monolith, cut into four remotes inside a host. Each team ships in its own time. On the right, the live campaign view.",
+            )}
+            <span className="cs-swipe"> {t("Swipe sideways to see all of it.")}</span>
           </span>
         </figcaption>
       </figure>
@@ -498,7 +503,7 @@ export function CaseMicroFrontends() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span>VML MAP · 2020 to 2021</span>
+            <span>{t("VML MAP · 2020 to 2021")}</span>
           </div>
           <h2
             id="case-title-vml-map"
@@ -512,7 +517,7 @@ export function CaseMicroFrontends() {
               textWrap: "balance",
             }}
           >
-            Email marketing apps
+            {t("Email marketing apps")}
           </h2>
           <p
             style={{
@@ -524,8 +529,8 @@ export function CaseMicroFrontends() {
               textWrap: "balance",
             }}
           >
-            Apps for email marketing automation and observability, built as{" "}
-            <span style={{ whiteSpace: "nowrap" }}>micro-frontends</span>.
+            {t("Apps for email marketing automation and observability, built as")}{" "}
+            <span style={{ whiteSpace: "nowrap" }}>{t("micro-frontends")}</span>.
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -540,7 +545,7 @@ export function CaseMicroFrontends() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What it is
+                {t("What it is")}
               </h3>
               <p
                 style={{
@@ -550,8 +555,9 @@ export function CaseMicroFrontends() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                A set of apps for email marketing automation and observability, such as a dashboard with live campaign
-                statistics. Built as Vue 2 micro-frontends on .NET APIs and Azure Functions.
+                {t(
+                  "A set of apps for email marketing automation and observability, such as a dashboard with live campaign statistics. Built as Vue 2 micro-frontends on .NET APIs and Azure Functions.",
+                )}
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -564,7 +570,7 @@ export function CaseMicroFrontends() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What I did
+                {t("What I did")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -595,11 +601,12 @@ export function CaseMicroFrontends() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Micro-frontends
+                      {t("Micro-frontends")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Re-architected the monolithic Vue 2 frontend into micro-frontends with Module Federation: 35%
-                      smaller bundles, and each team deploys on its own.
+                      {t(
+                        "Re-architected the monolithic Vue 2 frontend into micro-frontends with Module Federation: 35% smaller bundles, and each team deploys on its own.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -631,10 +638,12 @@ export function CaseMicroFrontends() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      KPI dashboards
+                      {t("KPI dashboards")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Campaign statistics dashboards on Azure Functions, with a live campaign view over WebSockets.
+                      {t(
+                        "Campaign statistics dashboards on Azure Functions, with a live campaign view over WebSockets.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -656,7 +665,7 @@ export function CaseMicroFrontends() {
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Mentoring</strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Mentored two interns.
+                      {t("Mentored two interns.")}
                     </span>
                   </div>
                 </li>
@@ -664,7 +673,7 @@ export function CaseMicroFrontends() {
             </section>
           </div>
           <aside
-            aria-label="Project facts"
+            aria-label={t("Project facts")}
             style={{
               flex: "2 1 300px",
               minWidth: "0",
@@ -688,7 +697,7 @@ export function CaseMicroFrontends() {
             >
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  smaller bundles
+                  {t("smaller bundles")}
                 </dt>
                 <dd
                   style={{
@@ -702,7 +711,7 @@ export function CaseMicroFrontends() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  interns mentored
+                  {t("interns mentored")}
                 </dt>
                 <dd
                   style={{
@@ -734,7 +743,7 @@ export function CaseMicroFrontends() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Where
+                  {t("Where")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>VML MAP</dd>
               </div>
@@ -747,10 +756,10 @@ export function CaseMicroFrontends() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  When
+                  {t("When")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
-                  Jan 2020 to Nov 2021
+                  {t("Jan 2020 to Nov 2021")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
@@ -762,7 +771,7 @@ export function CaseMicroFrontends() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Role
+                  {t("Role")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   Full-stack Developer
@@ -770,7 +779,7 @@ export function CaseMicroFrontends() {
               </div>
             </dl>
             <ul
-              aria-label="Keywords"
+              aria-label={t("Keywords")}
               style={{
                 margin: "0",
                 padding: "22px 0 0",
@@ -805,7 +814,7 @@ export function CaseMicroFrontends() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Micro-frontends
+                {t("Micro-frontends")}
               </li>
               <li
                 style={{
@@ -831,7 +840,7 @@ export function CaseMicroFrontends() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                .NET APIs
+                {t(".NET APIs")}
               </li>
               <li
                 style={{
@@ -857,7 +866,7 @@ export function CaseMicroFrontends() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                WebSockets
+                {t("WebSockets")}
               </li>
             </ul>
           </aside>

@@ -9,6 +9,7 @@ import { CaseMaerskDesignSystem } from "./cases/CaseMaerskDesignSystem";
 import { CaseSchedules } from "./cases/CaseSchedules";
 import { CaseVendorMasterData } from "./cases/CaseVendorMasterData";
 import { CaseMicroFrontends } from "./cases/CaseMicroFrontends";
+import { useT } from "@/i18n/LocaleProvider";
 import { PROJECTS, type ProjectId } from "@/lib/works";
 import { WorkCard } from "./WorkCard";
 import { MotionToggle } from "./MotionToggle";
@@ -28,6 +29,7 @@ const CASE_VIEWS: Record<ProjectId, () => ReactNode> = {
 /* The Work section, then whatever follows it on the page (children), then the project modal.
    The modal stays last in the page so it paints over everything, as in the prototype. */
 export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode }) {
+  const t = useT();
   const CaseNow = v.caseAt >= 0 ? CASE_VIEWS[PROJECTS[v.caseAt].id] : null;
   return (
     <>
@@ -54,7 +56,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              <span style={{ color: "var(--perron-color-text-brand)" }}>01</span> / Selected work
+              <span style={{ color: "var(--perron-color-text-brand)" }}>01</span> {t("/ Selected work")}
             </span>
             <h2
               style={{
@@ -67,7 +69,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                 textWrap: "balance",
               }}
             >
-              Software, and the factories that build it.
+              {t("Software, and the factories that build it.")}
             </h2>
           </div>
           <p
@@ -79,15 +81,16 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            Agent pipelines inside the software lifecycle, the design systems they build from, and customer-facing
-            products with millions of views a day. Built at Grundfos, Maersk and VML MAP, and in my own time.
+            {t(
+              "Agent pipelines inside the software lifecycle, the design systems they build from, and customer-facing products with millions of views a day. Built at Grundfos, Maersk and VML MAP, and in my own time.",
+            )}
           </p>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
           {/* STATUS BAR. It sticks under the top edge while the visitor scrolls through the work. */}
           <div
             role="group"
-            aria-label="Work build status"
+            aria-label={t("Work build status")}
             className="wk-status"
             style={{
               position: "sticky",
@@ -125,7 +128,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
               ))}
             </span>
             <span className="wk-agents">
-              <span style={{ color: "var(--perron-color-text-primary)" }}>8</span> agents
+              <span style={{ color: "var(--perron-color-text-primary)" }}>8</span> {t("agents")}
             </span>
             <span
               aria-hidden="true"
@@ -144,7 +147,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
               >
                 {v.worksCount}
               </span>
-              <span style={{ color: "var(--perron-color-text-primary)" }}> / 8</span> projects built
+              <span style={{ color: "var(--perron-color-text-primary)" }}> / 8</span> {t("projects built")}
             </span>
             <span
               aria-hidden="true"
@@ -152,7 +155,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
               style={{ width: "1px", height: "14px", background: "var(--perron-color-border-strong)" }}
             />
             <ul
-              aria-label="System checks"
+              aria-label={t("System checks")}
               className="wk-checks"
               style={{
                 margin: "0",
@@ -248,7 +251,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                     </>
                   ) : null}
                 </span>{" "}
-                validator{" "}
+                {t("validator")}{" "}
               </li>
               <li
                 style={{
@@ -333,7 +336,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                     </>
                   ) : null}
                 </span>{" "}
-                typecheck{" "}
+                {t("typecheck")}{" "}
               </li>
               <li
                 style={{
@@ -503,7 +506,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                     </>
                   ) : null}
                 </span>{" "}
-                runtime sweep{" "}
+                {t("runtime sweep")}{" "}
               </li>
             </ul>
             <span
@@ -516,10 +519,10 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                 transition: "color 250ms ease",
               }}
             >
-              {v.worksIsIdle ? <>queued</> : null}
-              {v.worksIsBuilding ? <>building</> : null}
-              {v.worksIsChecking ? <>checking</> : null}
-              {v.worksIsVerified ? <>verified</> : null}
+              {v.worksIsIdle ? <>{t("queued")}</> : null}
+              {v.worksIsBuilding ? <>{t("building")}</> : null}
+              {v.worksIsChecking ? <>{t("checking")}</> : null}
+              {v.worksIsVerified ? <>{t("verified")}</> : null}
             </span>
             <button
               type="button"
@@ -544,7 +547,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
               <svg width="11" height="11" viewBox="0 0 16 16" aria-hidden="true">
                 <path d="M4.5 2.8v10.4l8.5-5.2z" fill="currentColor" />
               </svg>{" "}
-              Replay build{" "}
+              {t("Replay build")}{" "}
             </button>
           </div>
           {/* The projects, in the order of PROJECTS. Every card has the same shape. */}
@@ -635,7 +638,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                   type="button"
                   className="cs-x"
                   onClick={v.caseClose}
-                  aria-label="Close project details"
+                  aria-label={t("Close project details")}
                   style={{
                     position: "absolute",
                     right: "14px",
@@ -696,7 +699,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                     type="button"
                     className="cs-btn"
                     onClick={v.casePrev}
-                    aria-label={`Previous project: ${v.casePrevName}`}
+                    aria-label={t("Previous project: {name}", { name: t(v.casePrevName) })}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -748,7 +751,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                           color: "var(--perron-color-text-secondary)",
                         }}
                       >
-                        Previous
+                        {t("Previous")}
                       </span>
                       <span
                         style={{
@@ -761,7 +764,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                           textOverflow: "ellipsis",
                         }}
                       >
-                        {v.casePrevName}
+                        {t(v.casePrevName)}
                       </span>
                     </span>
                   </button>
@@ -830,7 +833,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                     type="button"
                     className="cs-btn"
                     onClick={v.caseNext}
-                    aria-label={`Next project: ${v.caseNextName}`}
+                    aria-label={t("Next project: {name}", { name: t(v.caseNextName) })}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -869,7 +872,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                           color: "var(--perron-color-text-secondary)",
                         }}
                       >
-                        Next
+                        {t("Next")}
                       </span>
                       <span
                         style={{
@@ -882,7 +885,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                           textOverflow: "ellipsis",
                         }}
                       >
-                        {v.caseNextName}
+                        {t(v.caseNextName)}
                       </span>
                     </span>
                     <svg

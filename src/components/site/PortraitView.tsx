@@ -1,8 +1,10 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 import portrait from "@/assets/marcin.webp";
 import type { PortraitVals } from "./Portrait";
+import { useT } from "@/i18n/LocaleProvider";
 
 export function PortraitView({ v }: { v: PortraitVals }) {
+  const t = useT();
   return (
     <div
       style={{
@@ -56,7 +58,7 @@ export function PortraitView({ v }: { v: PortraitVals }) {
           <img
             ref={v.faceImg}
             src={portrait.src}
-            alt="Marcin Sieradzki, smiling, wearing white headphones"
+            alt={t("Marcin Sieradzki, smiling, wearing white headphones")}
             fetchPriority="high"
             draggable={false}
             onLoad={v.faceLoaded}
@@ -116,7 +118,7 @@ export function PortraitView({ v }: { v: PortraitVals }) {
               whiteSpace: "nowrap",
             }}
           >
-            visitor
+            {t("visitor")}
           </span>
         </div>
       </div>
@@ -147,7 +149,7 @@ export function PortraitView({ v }: { v: PortraitVals }) {
         >
           <path d="M8 2v12M2 8h12M8 2L6 4M8 2l2 2M8 14l-2-2M8 14l2-2M2 8l2-2M2 8l2 2M14 8l-2-2M14 8l-2 2" />
         </svg>
-        <span>Grab my face and pull. It springs back.</span>
+        <span>{t("Grab my face and pull. It springs back.")}</span>
       </p>
     </div>
   );

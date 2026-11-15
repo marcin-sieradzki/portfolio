@@ -1,6 +1,8 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
+import { useT } from "@/i18n/LocaleProvider";
 export function CasePerronMylder() {
+  const t = useT();
   return (
     <article style={{ display: "flex", flexDirection: "column" }}>
       <figure style={{ margin: "0", flex: "none" }}>
@@ -27,7 +29,9 @@ export function CasePerronMylder() {
               viewBox="0 0 1040 380"
               preserveAspectRatio="xMidYMid slice"
               role="img"
-              aria-label="A cut through Copenhagen at night: an S-tog on a viaduct, a yellow bus on the street and a metro at the platform below. Each carries a position marker that says how fresh it is, and the departure board lists 280 tokens, 54 components, 14 patterns and 4 languages."
+              aria-label={t(
+                "A cut through Copenhagen at night: an S-tog on a viaduct, a yellow bus on the street and a metro at the platform below. Each carries a position marker that says how fresh it is, and the departure board lists 280 tokens, 54 components, 14 patterns and 4 languages.",
+              )}
               style={{ display: "block", width: "100%", height: "100%" }}
             >
               <g aria-hidden="true">
@@ -121,7 +125,7 @@ export function CasePerronMylder() {
                   fontWeight="600"
                   fill="#0A0C10"
                 >
-                  Live
+                  {t("Live")}
                 </text>
               </g>
               <rect x="0" y="206" width="1040" height="26" fill="#141A25" />
@@ -154,7 +158,7 @@ export function CasePerronMylder() {
                   fontWeight="600"
                   fill="#0A0C10"
                 >
-                  Reported 20 s ago
+                  {t("Reported 20 s ago")}
                 </text>
               </g>
               <rect x="0" y="232" width="1040" height="148" fill="#080A0E" />
@@ -221,7 +225,7 @@ export function CasePerronMylder() {
                 fontWeight="500"
                 fill="#FFD166"
               >
-                Tokens
+                {t("Tokens")}
               </text>
               <text
                 x="879"
@@ -254,7 +258,7 @@ export function CasePerronMylder() {
                 fontWeight="500"
                 fill="#FFD166"
               >
-                Components
+                {t("Components")}
               </text>
               <text
                 x="879"
@@ -287,7 +291,7 @@ export function CasePerronMylder() {
                 fontWeight="500"
                 fill="#FFD166"
               >
-                Patterns
+                {t("Patterns")}
               </text>
               <text
                 x="879"
@@ -320,7 +324,7 @@ export function CasePerronMylder() {
                 fontWeight="500"
                 fill="#FFD166"
               >
-                Languages
+                {t("Languages")}
               </text>
               <text
                 x="879"
@@ -377,7 +381,7 @@ export function CasePerronMylder() {
                   fontWeight="600"
                   fill="#0A0C10"
                 >
-                  Estimated
+                  {t("Estimated")}
                 </text>
               </g>
               <rect x="0" y="244" width="140" height="118" fill="#080A0E" />
@@ -420,9 +424,10 @@ export function CasePerronMylder() {
             }}
           />
           <span>
-            A cut through Copenhagen. S-tog, bus and metro each carry a marker that says how fresh the position is. The
-            departure board lists what Perron ships.
-            <span className="cs-swipe"> Swipe sideways to see all of it.</span>
+            {t(
+              "A cut through Copenhagen. S-tog, bus and metro each carry a marker that says how fresh the position is. The departure board lists what Perron ships.",
+            )}
+            <span className="cs-swipe"> {t("Swipe sideways to see all of it.")}</span>
           </span>
         </figcaption>
       </figure>
@@ -448,7 +453,7 @@ export function CasePerronMylder() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span>Own time · 2026</span>
+            <span>{t("Own time · 2026")}</span>
             <span
               style={{
                 padding: "3px 10px",
@@ -488,7 +493,7 @@ export function CasePerronMylder() {
               textWrap: "balance",
             }}
           >
-            An open-source design system, and the live city map built on it.
+            {t("An open-source design system, and the live city map built on it.")}
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -503,7 +508,7 @@ export function CasePerronMylder() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What it is
+                {t("What it is")}
               </h3>
               <p
                 style={{
@@ -513,9 +518,9 @@ export function CasePerronMylder() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Perron ships tokens, components and patterns with an MCP server, so coding agents can read the system
-                directly. Mylder puts Copenhagen&apos;s buses, S-tog, metro and trains on one live map, and is honest
-                about how fresh each position is. Built solo with coding agents.
+                {t(
+                  "Perron ships tokens, components and patterns with an MCP server, so coding agents can read the system directly. Mylder puts Copenhagen's buses, S-tog, metro and trains on one live map, and is honest about how fresh each position is. Built solo with coding agents.",
+                )}
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -528,7 +533,7 @@ export function CasePerronMylder() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Two projects, one system
+                {t("Two projects, one system")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -560,8 +565,9 @@ export function CasePerronMylder() {
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Perron</strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      The design system: tokens, components and patterns, with an MCP server that coding agents read
-                      directly.
+                      {t(
+                        "The design system: tokens, components and patterns, with an MCP server that coding agents read directly.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -594,7 +600,7 @@ export function CasePerronMylder() {
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Mylder</strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      The live map built on Perron: buses, S-tog, metro and trains in one place.
+                      {t("The live map built on Perron: buses, S-tog, metro and trains in one place.")}
                     </span>
                   </div>
                 </li>
@@ -626,11 +632,12 @@ export function CasePerronMylder() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Honest positions
+                      {t("Honest positions")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Every vehicle says how fresh its position is: live, ageing, estimated, timetable only, or no
-                      signal.
+                      {t(
+                        "Every vehicle says how fresh its position is: live, ageing, estimated, timetable only, or no signal.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -650,9 +657,11 @@ export function CasePerronMylder() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>This page</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("This page")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      The page you are on uses Perron&apos;s token names, with Perron&apos;s type, radius and spacing.
+                      {t("The page you are on uses Perron's token names, with Perron's type, radius and spacing.")}
                     </span>
                   </div>
                 </li>
@@ -660,7 +669,7 @@ export function CasePerronMylder() {
             </section>
           </div>
           <aside
-            aria-label="Project facts"
+            aria-label={t("Project facts")}
             style={{
               flex: "2 1 300px",
               minWidth: "0",
@@ -684,7 +693,7 @@ export function CasePerronMylder() {
             >
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  components
+                  {t("components")}
                 </dt>
                 <dd
                   style={{
@@ -698,7 +707,7 @@ export function CasePerronMylder() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  patterns
+                  {t("patterns")}
                 </dt>
                 <dd
                   style={{
@@ -712,7 +721,7 @@ export function CasePerronMylder() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  tokens
+                  {t("tokens")}
                 </dt>
                 <dd
                   style={{
@@ -726,7 +735,7 @@ export function CasePerronMylder() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  languages
+                  {t("languages")}
                 </dt>
                 <dd
                   style={{
@@ -758,9 +767,11 @@ export function CasePerronMylder() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Where
+                  {t("Where")}
                 </dt>
-                <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>Own time</dd>
+                <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
+                  {t("Own time")}
+                </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                 <dt
@@ -771,7 +782,7 @@ export function CasePerronMylder() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  When
+                  {t("When")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>2026</dd>
               </div>
@@ -784,15 +795,15 @@ export function CasePerronMylder() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Role
+                  {t("Role")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
-                  Solo, with coding agents
+                  {t("Solo, with coding agents")}
                 </dd>
               </div>
             </dl>
             <ul
-              aria-label="Keywords"
+              aria-label={t("Keywords")}
               style={{
                 margin: "0",
                 padding: "22px 0 0",
@@ -827,7 +838,7 @@ export function CasePerronMylder() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                MCP server
+                {t("MCP server")}
               </li>
               <li
                 style={{
@@ -840,7 +851,7 @@ export function CasePerronMylder() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Live map
+                {t("Live map")}
               </li>
             </ul>
             <div
@@ -857,7 +868,7 @@ export function CasePerronMylder() {
                 href="https://mylder.marcinsieradzki.com/en"
                 style={{ display: "flex", alignItems: "center", gap: "6px", padding: "11px 0", textDecoration: "none" }}
               >
-                Open Mylder{" "}
+                {t("Open Mylder")}{" "}
                 <svg
                   width="14"
                   height="14"
@@ -876,7 +887,7 @@ export function CasePerronMylder() {
                 href="https://perron.marcinsieradzki.com/"
                 style={{ display: "flex", alignItems: "center", gap: "6px", padding: "11px 0", textDecoration: "none" }}
               >
-                Perron docs{" "}
+                {t("Perron docs")}{" "}
                 <svg
                   width="14"
                   height="14"

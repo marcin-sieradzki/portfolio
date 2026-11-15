@@ -24,13 +24,15 @@ export default function Home() {
       }}
     >
       <Nav />
-      <Hero />
-      <Work>
-        <Experience />
-        <About />
-        <Contact />
-        <Footer />
-      </Work>
+      <main>
+        <Hero />
+        <Work>
+          <Experience />
+          <About />
+          <Contact />
+        </Work>
+      </main>
+      <Footer />
     </div>
   );
 }

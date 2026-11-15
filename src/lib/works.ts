@@ -29,7 +29,7 @@ export const AGENTS = {
   code: { name: "Code Writer", color: "#3DDC97" },
   test: { name: "Test Author", color: "#FFD166" },
   visual: { name: "Visual Reviewer", color: "#C8F560" },
-  a11y: { name: "A11y Fixer", color: "#FF7EB6" },
+  a11y: { name: "A11y", color: "#FF7EB6" },
   docs: { name: "Docs Author", color: "#5ED3F0" },
   research: { name: "Researcher", color: "#B58CFF" },
   capture: { name: "Source Capture", color: "#5B9DFF" },

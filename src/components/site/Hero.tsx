@@ -183,7 +183,7 @@ export function Hero() {
             {/* CONCEPT:END */}
           </div>
         </div>
-        {/* STATS */}
+        {/* STATS. Each term comes before its figure in the markup, as a list needs; column-reverse shows the figure on top. */}
         <dl
           style={{
             margin: "0",
@@ -195,12 +195,16 @@ export function Hero() {
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "column-reverse",
+              justifyContent: "flex-end",
               gap: "10px",
               paddingTop: "20px",
               borderTop: "1px solid var(--perron-color-border-strong)",
             }}
           >
+            <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
+              years shipping production systems for large organisations
+            </dt>
             <dd
               style={{
                 margin: "0",
@@ -211,19 +215,20 @@ export function Hero() {
             >
               6+
             </dd>
-            <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              years shipping production systems for large organisations
-            </dt>
           </div>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "column-reverse",
+              justifyContent: "flex-end",
               gap: "10px",
               paddingTop: "20px",
               borderTop: "1px solid var(--perron-color-border-strong)",
             }}
           >
+            <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
+              UI repositories on the Maersk Design System, which I helped build from its early days
+            </dt>
             <dd
               style={{
                 margin: "0",
@@ -234,19 +239,20 @@ export function Hero() {
             >
               467+
             </dd>
-            <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              UI repositories on the Maersk Design System, which I helped build from its early days
-            </dt>
           </div>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "column-reverse",
+              justifyContent: "flex-end",
               gap: "10px",
               paddingTop: "20px",
               borderTop: "1px solid var(--perron-color-border-strong)",
             }}
           >
+            <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
+              components in the Grundfos design system, where I&apos;m the lead developer in a team of 5
+            </dt>
             <dd
               style={{
                 margin: "0",
@@ -257,20 +263,21 @@ export function Hero() {
             >
               65
             </dd>
-            <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              components in the Grundfos design system, where I&apos;m the lead developer in a team of 5
-            </dt>
           </div>
           <div
             style={{
               position: "relative",
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "column-reverse",
+              justifyContent: "flex-end",
               gap: "10px",
               paddingTop: "20px",
               borderTop: "1px solid var(--perron-color-border-strong)",
             }}
           >
+            <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
+              components merged by my Component Factory, each in about 60 minutes
+            </dt>
             <dd
               style={{
                 margin: "0",
@@ -281,9 +288,6 @@ export function Hero() {
             >
               22
             </dd>
-            <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              components merged by my Component Factory, each in about 60 minutes
-            </dt>
           </div>
         </dl>
       </div>

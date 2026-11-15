@@ -38,7 +38,7 @@ export function Experience() {
               textWrap: "balance",
             }}
           >
-            Three stops so far.
+            The journey so far.
           </h2>
         </div>
         <div
@@ -125,7 +125,7 @@ export function Experience() {
               fontWeight: "700",
             }}
           >
-            Wunderman Nordic
+            VML MAP
           </h3>
           <p style={{ margin: "0", fontSize: "15.5px", fontWeight: "600", color: "var(--perron-color-text-primary)" }}>
             Full-stack Developer
@@ -143,8 +143,9 @@ export function Experience() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
+            <li>Apps for email marketing automation and observability: Vue 2, .NET APIs and Azure Functions.</li>
             <li>Micro-frontends with Module Federation: 35% smaller bundles, independent deployments per team.</li>
-            <li>KPI dashboard platform for email campaigns on Azure Functions.</li>
+            <li>Campaign statistics dashboards with a live campaign view.</li>
             <li>Mentored two interns.</li>
           </ul>
         </li>
@@ -292,10 +293,10 @@ export function Experience() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <li>Lead in a team of 5 on a design system built from zero.</li>
+            <li>Lead developer in a team of 5 on a design system built from zero.</li>
             <li>
-              GDS Studio, the Component Factory, and a software factory: a ticket goes in, a human-reviewed pull request
-              comes out.
+              GDS Studio and the software factory built for it: a spec goes in, pull requests for review come out. The
+              Component Factory does the same for design system components.
             </li>
             <li>Weekly design system adoption audit across 30 UI repositories, on local models.</li>
           </ul>

@@ -442,7 +442,7 @@ export function CaseVendorMasterData() {
             <span>Maersk · 2021 to 2024</span>
           </div>
           <h2
-            id="case-title-6"
+            id="case-title-vendor"
             style={{
               fontFamily: "var(--perron-font-family-display)",
               margin: "0",
@@ -490,9 +490,9 @@ export function CaseVendorMasterData() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Built the RESTful APIs and designed the UI on top of a ruleset engine that decides at runtime, per
-                country and entity, which fields exist and how they validate. A delta engine shows approvers exactly
-                what changed.
+                I took what the business needed from the app, turned it into requirements, and built it: the RESTful
+                APIs and the UI on top of a ruleset engine that decides at runtime, per country and entity, which fields
+                exist and how they validate. A delta engine shows approvers exactly what changed.
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -629,50 +629,13 @@ export function CaseVendorMasterData() {
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>My part</strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      The RESTful APIs, the ruleset UI and the approval workflow.
+                      I talked with the business people about what the app had to do, turned that into requirements, and
+                      built it: the RESTful APIs, the ruleset UI and the approval workflow.
                     </span>
                   </div>
                 </li>
               </ol>
             </section>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: "10px",
-                boxSizing: "border-box",
-                padding: "16px 18px",
-                border: "1px dashed var(--perron-color-border-control)",
-                borderRadius: "var(--perron-radius-lg)",
-              }}
-            >
-              <span
-                style={{
-                  padding: "3px 10px",
-                  borderRadius: "var(--perron-radius-full)",
-                  font: "600 11px/1.3 var(--perron-font-family-body)",
-                  letterSpacing: "0.88px",
-                  textTransform: "uppercase",
-                  border: "1px solid transparent",
-                  background: "var(--perron-color-surface-warning)",
-                  color: "var(--perron-color-text-warning)",
-                }}
-              >
-                Placeholder
-              </span>
-              <p
-                style={{
-                  margin: "0",
-                  fontSize: "15px",
-                  lineHeight: "1.55",
-                  color: "var(--perron-color-text-secondary)",
-                }}
-              >
-                [ADD: how many countries, entities or vendor records this covers, and the hardest rule you had to
-                model.]
-              </p>
-            </div>
           </div>
           <aside
             aria-label="Project facts"

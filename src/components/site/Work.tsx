@@ -5,7 +5,7 @@
    the timings, moves and the modal behaviour are the prototype's. */
 
 import { Component, createRef, type KeyboardEvent, type MouseEvent, type ReactNode, type RefObject } from "react";
-import { WORKS, type MoveKind, type PartKey } from "@/lib/works";
+import { PROJECTS, type MoveKind, type PartKey } from "@/lib/works";
 import { WorkView } from "./WorkView";
 
 const WORKS_TICK = 320; /* ms per build step */
@@ -77,31 +77,21 @@ export type WorkUnit = {
   okO: string;
   okT: string;
   dot: string;
-} & Record<PartKey, Move> &
-  Record<"c0" | "c1" | "c2" | "c3", Cursor>;
+  cur: Cursor[] /* one per agent cursor of the card */;
+} & Partial<Record<PartKey, Move>>;
 
 /* ---------- project modals ---------- */
 
 /* One row per project, in the order of the cards. name is read out on the Previous and Next buttons,
    color is the project's colour on the stop line in the modal's footer. The copy and the drawings are markup. */
-const CASES = [
-  { name: "GDS Studio", color: "#3DDC97" },
-  { name: "Perron + Mylder", color: "#5B9DFF" },
-  { name: "Software factory and Component Factory", color: "#FF8A5B" },
-  { name: "Grundfos design system", color: "#5ED3F0" },
-  { name: "Maersk Design System", color: "#FFD166" },
-  { name: "Schedules on Maersk.com", color: "#B58CFF" },
-  { name: "Vendor Master Data", color: "#FF7EB6" },
-  { name: "Micro-frontends", color: "#C8F560" },
-];
+const WORKS = PROJECTS.map((p) => p.build);
+const CASES = PROJECTS.map((p) => ({ id: p.id, name: p.name, color: p.build.color }));
 const CASE_FADE = 200; /* ms the modal takes to fade in and out */
 const CASE_MOVE = 320; /* ms the panel takes to rise into place */
 const CASE_BOX = { l: "0px", t: "0px", w: "100%", h: "100%" };
 
 type Check = { passed: boolean; running: boolean; pending: boolean; color: string; bg: string; line: string };
 type Stop = { d: string; bg: string; bd: string };
-type CaseIs = Record<"p0" | "p1" | "p2" | "p3" | "p4" | "p5" | "p6" | "p7", boolean>;
-type Idx = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
 export type WorkVals = {
   agents: boolean;
@@ -114,7 +104,8 @@ export type WorkVals = {
   worksStatusColor: string;
   worksReplay: () => void;
   caseOn: boolean;
-  caseIs: CaseIs;
+  caseAt: number /* which project the modal shows, or -1 */;
+  caseCount: string;
   caseO: string;
   caseT: string;
   caseMs: string;
@@ -134,9 +125,13 @@ export type WorkVals = {
   caseClose: () => void;
   casePrev: () => void;
   caseNext: () => void;
-} & { [K in `wk${Idx}`]: WorkUnit } & { [K in `worksRef${Idx}`]: RefObject<HTMLDivElement | null> } & {
-  [K in `caseBtn${Idx}`]: RefObject<HTMLButtonElement | null>;
-} & { [K in `caseOpen${Idx}`]: () => void } & { [K in `caseCard${Idx}`]: (e: MouseEvent<HTMLElement>) => void };
+  /* one entry per project, in page order */
+  wk: WorkUnit[];
+  worksRefs: RefObject<HTMLDivElement | null>[];
+  caseBtns: RefObject<HTMLButtonElement | null>[];
+  caseOpens: (() => void)[];
+  caseCards: ((e: MouseEvent<HTMLElement>) => void)[];
+};
 
 type State = {
   works: number[]; /* one build step per project: 0 queued, then 1 up to its last step, where it is built */
@@ -184,7 +179,6 @@ export class Work extends Component<{ children?: ReactNode }, State> {
   private caseSeen = -1; /* the project the modal showed last */
   private caseLocked: { o: string; p: string } | null =
     null; /* the page's own overflow and padding, kept while it is locked */
-  private caseIsCache: Record<number, CaseIs> = {};
   private caseStopsCache: Record<number, Stop[]> = {};
   private caseOnClose = () => this.caseHide();
   private caseOnPrev = () => this.caseStep(-1);
@@ -380,10 +374,10 @@ export class Work extends Component<{ children?: ReactNode }, State> {
     const dragged = !!w.drag && s >= w.drag;
     v.dg = { w: dragged ? "100%" : "0%", h: dragged ? "100%" : "0%", o: dragged && s < w.drag + 2 ? "1" : "0" };
     /* The cursors: each stands where its latest path entry puts it. */
-    w.curs.forEach((c, j) => {
+    v.cur = w.curs.map((c) => {
       let at = c.path[0];
       for (const p of c.path) if (p[0] <= s) at = p;
-      v["c" + j] = { x: at[1], y: at[2], o: s >= c.show && s < c.hide ? "1" : "0" };
+      return { x: at[1], y: at[2], o: s >= c.show && s < c.hide ? "1" : "0" };
     });
     /* The review line. */
     v.sw = { p: s >= w.sweep ? "100%" : "0%", o: s >= w.sweep && s < w.sweep + 2 ? "1" : "0" };
@@ -398,16 +392,17 @@ export class Work extends Component<{ children?: ReactNode }, State> {
   worksVals() {
     const steps = this.state.works;
     const checks = this.state.worksChecks;
-    const out: Record<string, unknown> = {};
+    const out: Record<string, unknown> = { worksRefs: this.worksRefs };
+    const units: WorkUnit[] = [];
     let built = 0,
       started = 0;
     for (let i = 0; i < WORKS.length; i++) {
       const s = steps[i];
       if (s >= WORKS[i].n) built++;
       if (s > 0) started++;
-      out["worksRef" + i] = this.worksRefs[i];
-      out["wk" + i] = this.worksUnit(i, s);
+      units.push(this.worksUnit(i, s));
     }
+    out.wk = units;
     const all = built === WORKS.length;
     const ck: Record<string, Check> = {};
     ["c1", "c2", "c3", "c4"].forEach((id, j) => {
@@ -623,17 +618,6 @@ export class Work extends Component<{ children?: ReactNode }, State> {
     }
   }
 
-  /* Which project block is shown. One object per project, kept. */
-  caseIsFor(at: number): CaseIs {
-    let hit = this.caseIsCache[at];
-    if (hit) return hit;
-    const o: Record<string, boolean> = {};
-    for (let i = 0; i < CASES.length; i++) o["p" + i] = i === at;
-    hit = o as CaseIs;
-    this.caseIsCache[at] = hit;
-    return hit;
-  }
-
   /* The stops in the footer: the open project is the large one, in its own colour. */
   caseStopsFor(at: number): Stop[] {
     let hit = this.caseStopsCache[at];
@@ -654,14 +638,15 @@ export class Work extends Component<{ children?: ReactNode }, State> {
     const shown = at >= 0 && st.caseReady && !st.caseLeaving;
     const out: Record<string, unknown> = {
       caseOn: at >= 0,
-      caseIs: this.caseIsFor(at),
+      caseAt: at,
+      caseCount: String(n),
       caseO: shown ? "1" : "0",
       caseT: shown || this.caseStill ? "none" : "translateY(18px) scale(0.985)",
       caseMs: this.caseStill ? "0ms" : CASE_FADE + "ms",
       caseMoveMs: this.caseStill ? "0ms" : CASE_MOVE + "ms",
       caseBlur: "blur(6px)",
       caseBox: CASE_BOX,
-      caseTitleId: "case-title-" + Math.max(at, 0),
+      caseTitleId: "case-title-" + CASES[Math.max(at, 0)].id,
       caseNo: String(at + 1),
       casePrevName: at >= 0 ? CASES[(at + n - 1) % n].name : "",
       caseNextName: at >= 0 ? CASES[(at + 1) % n].name : "",
@@ -675,11 +660,9 @@ export class Work extends Component<{ children?: ReactNode }, State> {
       casePrev: this.caseOnPrev,
       caseNext: this.caseOnNext,
     };
-    for (let i = 0; i < n; i++) {
-      out["caseBtn" + i] = this.caseBtnRefs[i];
-      out["caseOpen" + i] = this.caseOpeners[i];
-      out["caseCard" + i] = this.caseCardClicks[i];
-    }
+    out.caseBtns = this.caseBtnRefs;
+    out.caseOpens = this.caseOpeners;
+    out.caseCards = this.caseCardClicks;
     return out;
   }
 }

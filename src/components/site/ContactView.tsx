@@ -1,5 +1,6 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 import { Fragment } from "react";
+import portrait from "@/assets/marcin.webp";
 import type { ContactVals } from "./Contact";
 
 export function ContactView({ v }: { v: ContactVals }) {
@@ -50,7 +51,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              <span style={{ color: "var(--perron-color-text-brand)" }}>05</span> / Contact
+              <span style={{ color: "var(--perron-color-text-brand)" }}>04</span> / Contact
             </span>
             <h2
               style={{
@@ -74,8 +75,8 @@ export function ContactView({ v }: { v: ContactVals }) {
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              If you want AI agents working inside your software lifecycle and your design system, and someone to lead
-              that work, I would like to hear about it.
+              If you need AI agents in your software lifecycle, agents that run in production, a design system, or
+              simply high-quality software, let&apos;s talk!
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "8px" }}>
@@ -251,40 +252,22 @@ export function ContactView({ v }: { v: ContactVals }) {
                       }}
                     />
                     {/* badge */}
-                    <button
-                      ref={v.badgeBtn}
-                      type="button"
-                      aria-label="Flip the badge to show contact details"
-                      aria-pressed={v.badgeFlipped}
-                      onClick={v.badgeFlip}
-                      onPointerDown={v.badgeDown}
-                      onPointerMove={v.badgeMove}
-                      onPointerUp={v.badgeUp}
-                      onPointerCancel={v.badgeUp}
-                      onLostPointerCapture={v.badgeUp}
+                    {/* The card is drawn by the first child; the button lies over it, empty, so its name is only its label. */}
+                    <div
                       style={{
                         position: "absolute",
                         left: "-165px",
                         top: "290px",
                         width: "330px",
                         height: "460px",
-                        margin: "0",
-                        padding: "0",
-                        border: "0",
-                        borderRadius: "var(--perron-radius-xl)",
-                        background: "none",
-                        color: "inherit",
-                        font: "inherit",
                         textAlign: "left",
-                        cursor: "grab",
-                        touchAction: "pan-y",
                         userSelect: "none",
                         WebkitUserSelect: "none",
-                        WebkitTapHighlightColor: "transparent",
                         perspective: "1100px",
                       }}
                     >
                       <span
+                        aria-hidden="true"
                         ref={v.badgeTilt}
                         style={{
                           position: "absolute",
@@ -384,7 +367,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                               }}
                             >
                               <img
-                                src="/images/marcin.webp"
+                                src={portrait.src}
                                 alt="Marcin Sieradzki, smiling, wearing white headphones"
                                 draggable={false}
                                 style={{
@@ -674,7 +657,33 @@ export function ContactView({ v }: { v: ContactVals }) {
                           </span>
                         </span>
                       </span>
-                    </button>
+                      <button
+                        ref={v.badgeBtn}
+                        type="button"
+                        aria-label="Flip the badge to show contact details"
+                        aria-pressed={v.badgeFlipped}
+                        onClick={v.badgeFlip}
+                        onPointerDown={v.badgeDown}
+                        onPointerMove={v.badgeMove}
+                        onPointerUp={v.badgeUp}
+                        onPointerCancel={v.badgeUp}
+                        onLostPointerCapture={v.badgeUp}
+                        style={{
+                          position: "absolute",
+                          inset: "0",
+                          width: "100%",
+                          height: "100%",
+                          margin: "0",
+                          padding: "0",
+                          border: "0",
+                          borderRadius: "var(--perron-radius-xl)",
+                          background: "none",
+                          cursor: "grab",
+                          touchAction: "pan-y",
+                          WebkitTapHighlightColor: "transparent",
+                        }}
+                      />
+                    </div>
                     {/* clip ring, drawn over the card so it reads as passing through the slot */}
                     <span
                       aria-hidden="true"

@@ -824,7 +824,7 @@ export function CaseMaerskDesignSystem() {
             <span>Maersk · 2021 to 2024</span>
           </div>
           <h2
-            id="case-title-4"
+            id="case-title-maersk-ds"
             style={{
               fontFamily: "var(--perron-font-family-display)",
               margin: "0",
@@ -872,8 +872,8 @@ export function CaseMaerskDesignSystem() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Framework-agnostic web components from one token source for 5 brands, light and dark, 3 densities.
-                Third-largest contributor with 2,600+ commits, and I led the v1 to v2 upgrade.
+                Framework-agnostic web components from one token source for 5 brands, light and dark, 3 densities. I was
+                a developer on it from its early days, with 2,600+ commits, and I led the v1 to v2 upgrade.
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -988,7 +988,7 @@ export function CaseMaerskDesignSystem() {
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Contributor</strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Third-largest contributor, with 2,600+ commits.
+                      A developer on the system from its early days, with 2,600+ commits.
                     </span>
                   </div>
                 </li>
@@ -1016,43 +1016,6 @@ export function CaseMaerskDesignSystem() {
                 </li>
               </ol>
             </section>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: "10px",
-                boxSizing: "border-box",
-                padding: "16px 18px",
-                border: "1px dashed var(--perron-color-border-control)",
-                borderRadius: "var(--perron-radius-lg)",
-              }}
-            >
-              <span
-                style={{
-                  padding: "3px 10px",
-                  borderRadius: "var(--perron-radius-full)",
-                  font: "600 11px/1.3 var(--perron-font-family-body)",
-                  letterSpacing: "0.88px",
-                  textTransform: "uppercase",
-                  border: "1px solid transparent",
-                  background: "var(--perron-color-surface-warning)",
-                  color: "var(--perron-color-text-warning)",
-                }}
-              >
-                Placeholder
-              </span>
-              <p
-                style={{
-                  margin: "0",
-                  fontSize: "15px",
-                  lineHeight: "1.55",
-                  color: "var(--perron-color-text-secondary)",
-                }}
-              >
-                [ADD: what changed between v1 and v2, and how the repositories moved across.]
-              </p>
-            </div>
           </div>
           <aside
             aria-label="Project facts"

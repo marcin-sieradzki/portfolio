@@ -175,7 +175,7 @@ export function Hero() {
               >
                 <li>Grundfos</li>
                 <li>Maersk</li>
-                <li>Wunderman Nordic</li>
+                <li>VML MAP</li>
               </ul>
             </div>
           </div>
@@ -237,7 +237,7 @@ export function Hero() {
               467+
             </dd>
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              UI repositories on the Maersk Design System, where I was the third-largest contributor
+              UI repositories on the Maersk Design System, which I helped build from its early days
             </dt>
           </div>
           <div
@@ -260,7 +260,7 @@ export function Hero() {
               65
             </dd>
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              components in the Grundfos design system, where I&apos;m the lead in a team of 5
+              components in the Grundfos design system, where I&apos;m the lead developer in a team of 5
             </dt>
           </div>
           <div
@@ -281,7 +281,7 @@ export function Hero() {
                 fontVariantNumeric: "tabular-nums",
               }}
             >
-              18
+              22
             </dd>
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
               components merged by my Component Factory, each in about 60 minutes

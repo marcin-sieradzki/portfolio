@@ -1,4 +1,5 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
+import portrait from "@/assets/marcin.webp";
 import type { PortraitVals } from "./Portrait";
 
 export function PortraitView({ v }: { v: PortraitVals }) {
@@ -19,6 +20,7 @@ export function PortraitView({ v }: { v: PortraitVals }) {
         onPointerMove={v.faceMove}
         onPointerUp={v.faceUp}
         onPointerCancel={v.faceUp}
+        onLostPointerCapture={v.faceLost}
         style={{
           position: "relative",
           width: "100%",
@@ -53,8 +55,9 @@ export function PortraitView({ v }: { v: PortraitVals }) {
         >
           <img
             ref={v.faceImg}
-            src="/images/marcin.webp"
+            src={portrait.src}
             alt="Marcin Sieradzki, smiling, wearing white headphones"
+            fetchPriority="high"
             draggable={false}
             onLoad={v.faceLoaded}
             style={{

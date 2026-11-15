@@ -62,6 +62,7 @@ export type PortraitVals = {
   faceDown: (e: PointerEvent<HTMLDivElement>) => void;
   faceMove: (e: PointerEvent<HTMLDivElement>) => void;
   faceUp: (e: PointerEvent<HTMLDivElement>) => void;
+  faceLost: (e: PointerEvent<HTMLDivElement>) => void;
   faceLoaded: () => void;
   faceTint: string;
   faceImgOpacity: number;
@@ -80,7 +81,17 @@ export class Portrait extends Component<object, { faceLive: boolean }> {
   private faceMove = (e: PointerEvent<HTMLDivElement>) => this.facePointerMove(e);
   private faceUp = (e: PointerEvent<HTMLDivElement>) => this.facePointerUp(e);
   private faceLoaded = () => this.faceImageReady();
+  private faceLost = (e: PointerEvent<HTMLDivElement>) => this.facePointerUp(e);
   private faceLoop = (now: number) => this.faceFrame(now);
+  /* While a person holds the face, the window is watched too, so a release the box never hears about still lets go. */
+  private faceWinUp = (e: globalThis.PointerEvent) => {
+    if (e.pointerId === this.facePointerId) this.faceRelease();
+  };
+  private faceWinMove = (e: globalThis.PointerEvent) => {
+    if (e.pointerId === this.facePointerId && e.pointerType === "mouse" && !(e.buttons & 1)) this.faceRelease();
+  };
+  private faceWinDrop = () => this.faceRelease();
+  private faceWatching = false;
   private facePull: [number, number] = [0, 0]; /* current pull in box px */
   private faceStart: [number, number] = [0, 0]; /* where the pointer went down */
   private faceCursor: [number, number] = [0, 0]; /* visitor cursor position */
@@ -154,6 +165,7 @@ export class Portrait extends Component<object, { faceLive: boolean }> {
 
   componentWillUnmount() {
     this.faceGhostStop(); /* clears the timer and hides the visitor */
+    this.faceWatch(false);
     this.faceUser = false;
     this.faceGrab = false;
     this.facePull = [0, 0];
@@ -173,6 +185,7 @@ export class Portrait extends Component<object, { faceLive: boolean }> {
       faceDown: this.faceDown,
       faceMove: this.faceMove,
       faceUp: this.faceUp,
+      faceLost: this.faceLost,
       faceLoaded: this.faceLoaded,
       faceTint: FACE_TINT,
       /* The <img> is the fallback. It hides once the canvas has drawn the same photo. */
@@ -625,27 +638,62 @@ export class Portrait extends Component<object, { faceLive: boolean }> {
     }
     if (el && el.style) el.style.cursor = "grabbing";
     if (e.cancelable) e.preventDefault();
+    this.faceWatch(true);
     this.faceWake();
   }
 
   facePointerMove(e: PointerEvent<HTMLDivElement>) {
     if (!this.faceUser || e.pointerId !== this.facePointerId) return;
+    /* A mouse that moves with no button down was let go where the page could not see it, such as outside the window. */
+    if (e.pointerType === "mouse" && !(e.buttons & 1)) {
+      this.faceRelease();
+      return;
+    }
     const p = this.facePoint(e);
     if (!p) return;
     this.facePullTo(p[0] - this.faceStart[0], p[1] - this.faceStart[1]);
     this.faceWake();
   }
 
+  /* Pointer up, pointer cancel, or the box lost its capture of the pointer. */
   facePointerUp(e: PointerEvent<HTMLDivElement>) {
     if (!this.faceUser || (e && e.pointerId !== this.facePointerId)) return;
+    this.faceRelease();
+  }
+
+  /* Let go of the face. Every way a pull can end comes through here, so the face can never stay stretched. */
+  faceRelease() {
+    if (!this.faceUser) return;
+    const id = this.facePointerId;
+    this.faceWatch(false);
     this.faceUser = false;
     this.facePointerId = -1;
     this.faceGrab = false;
     this.facePull = [0, 0];
     this.faceResumeAt = performance.now() + FACE_BACK_OFF;
-    if (this.faceBoxEl) this.faceBoxEl.style.cursor = "grab";
+    const el = this.faceBoxEl;
+    if (el) {
+      el.style.cursor = "grab";
+      try {
+        if (el.hasPointerCapture && el.hasPointerCapture(id)) el.releasePointerCapture(id);
+      } catch {}
+    }
     this.faceSchedule(FACE_BACK_OFF);
     this.faceWake();
+  }
+
+  /* Listen on the window for the end of a pull: the pointer going up or being cancelled anywhere, a mouse moving
+     with no button down, a context menu, or the window or tab losing focus. */
+  faceWatch(on: boolean) {
+    if (on === this.faceWatching) return;
+    this.faceWatching = on;
+    const set = on ? window.addEventListener : window.removeEventListener;
+    set.call(window, "pointerup", this.faceWinUp as EventListener, true);
+    set.call(window, "pointercancel", this.faceWinUp as EventListener, true);
+    set.call(window, "pointermove", this.faceWinMove as EventListener, true);
+    set.call(window, "contextmenu", this.faceWinDrop, true);
+    set.call(window, "blur", this.faceWinDrop);
+    set.call(document, "visibilitychange", this.faceWinDrop);
   }
 
   /* ---------- the scripted visitor ---------- */

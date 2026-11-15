@@ -19,6 +19,7 @@ export function PortraitView({ v }: { v: PortraitVals }) {
         onPointerMove={v.faceMove}
         onPointerUp={v.faceUp}
         onPointerCancel={v.faceUp}
+        onLostPointerCapture={v.faceLost}
         style={{
           position: "relative",
           width: "100%",

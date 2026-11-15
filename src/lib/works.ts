@@ -111,7 +111,7 @@ export const PROJECTS: WorkProject[] = [
     id: "grundfos-ds",
     name: "Grundfos design system",
     kicker: "Grundfos · Dec 2024 to now",
-    body: "Built from zero on React Aria, and machine-readable: a component registry, a token registry, and a validator that blocks unknown components and invented tokens.",
+    body: "Built from zero on React Aria, and made for agents as much as for people. Registries say what exists, a validator blocks unknown components and invented tokens, and an MCP server and skills bring the system into coding agents.",
     chips: ["65 components", "adoption around 70%"],
     lead: "docs",
     sweep: { dir: "across", agent: "a11y" },

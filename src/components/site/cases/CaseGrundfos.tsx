@@ -546,8 +546,9 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Built from zero on React Aria, and machine-readable: a component registry, a token registry, and a
-                validator that blocks unknown components and invented tokens.
+                Built from zero on React Aria, and made for agents as much as for people. Registries say what exists and
+                a validator blocks what does not. An MCP server, skills, codemods and Figma Code Connect carry the
+                system into coding agents, migrations and design files.
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -629,6 +630,145 @@ export function CaseGrundfos() {
                     </span>
                   </div>
                 </li>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "0" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      Adoption audit
+                    </strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      A weekly audit of design system adoption across 30 UI repositories, on local models.
+                    </span>
+                  </div>
+                </li>
+              </ol>
+            </section>
+            <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              <h3
+                style={{
+                  margin: "0",
+                  font: "600 12px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  color: "var(--perron-color-text-secondary)",
+                }}
+              >
+                Made for agents
+              </h3>
+              <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "6px",
+                      top: "14px",
+                      bottom: "-8px",
+                      width: "2px",
+                      background: "#5ED3F0",
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>MCP server</strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      Gives coding agents the components, the documentation and the accessibility guidelines.
+                    </span>
+                  </div>
+                </li>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "6px",
+                      top: "14px",
+                      bottom: "-8px",
+                      width: "2px",
+                      background: "#5ED3F0",
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Skills</strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      Portable instructions that teach a coding agent how to work with the system, including the move
+                      from v1 to v2.
+                    </span>
+                  </div>
+                </li>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "6px",
+                      top: "14px",
+                      bottom: "-8px",
+                      width: "2px",
+                      background: "#5ED3F0",
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Codemods</strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      Rewrite code from v1 to v2 automatically, for the mechanical part of the migration.
+                    </span>
+                  </div>
+                </li>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
                   <span
                     aria-hidden="true"
@@ -657,10 +797,10 @@ export function CaseGrundfos() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Agents build from it
+                      Figma Code Connect
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      GDS Studio builds its prototypes from these components and tokens.
+                      Links each component in Figma to its code, so a design points at the real component.
                     </span>
                   </div>
                 </li>
@@ -681,10 +821,11 @@ export function CaseGrundfos() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Adoption audit
+                      Agents build from it
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A weekly audit of design system adoption across 30 UI repositories, on local models.
+                      GDS Studio builds its prototypes from these components and tokens, and the Component Factory adds
+                      new components to it.
                     </span>
                   </div>
                 </li>
@@ -888,6 +1029,58 @@ export function CaseGrundfos() {
                 }}
               >
                 Validator
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                MCP server
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                Agent skills
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                Codemods
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                Figma Code Connect
               </li>
             </ul>
           </aside>

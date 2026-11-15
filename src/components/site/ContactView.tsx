@@ -2,6 +2,7 @@
 import { Fragment } from "react";
 import portrait from "@/assets/marcin.webp";
 import type { ContactVals } from "./Contact";
+import { MotionToggle } from "./MotionToggle";
 
 export function ContactView({ v }: { v: ContactVals }) {
   return (
@@ -660,6 +661,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                       <button
                         ref={v.badgeBtn}
                         type="button"
+                        className="ct-badge-btn"
                         aria-label="Flip the badge to show contact details"
                         aria-pressed={v.badgeFlipped}
                         onClick={v.badgeFlip}
@@ -730,6 +732,7 @@ export function ContactView({ v }: { v: ContactVals }) {
             >
               Drag the badge to swing it. Tap it to flip.
             </p>
+            <MotionToggle look="text" />
           </div>
           {/* CONCEPT C:END */}
         </div>

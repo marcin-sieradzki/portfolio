@@ -199,8 +199,8 @@ export const PROJECTS: WorkProject[] = [
     body: "Perron is an open-source design system with an MCP server, so coding agents can read it directly. Mylder puts Copenhagen's buses, S-tog, metro and trains on one live map, and is honest about how fresh each position is. Built solo with coding agents.",
     chips: ["54 components", "280 tokens", "open source"],
     links: [
-      { href: "https://mylder-liard.vercel.app/en", label: "Open Mylder" },
-      { href: "https://perron-pearl.vercel.app/", label: "Perron docs" },
+      { href: "https://mylder.marcinsieradzki.com/en", label: "Open Mylder" },
+      { href: "https://perron.marcinsieradzki.com/", label: "Perron docs" },
       { href: "https://github.com/marcin-sieradzki/perron", label: "GitHub" },
     ],
     lead: "capture",

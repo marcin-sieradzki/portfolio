@@ -338,20 +338,50 @@ a:hover {
     stroke-dashoffset: 0;
   }
 }
-.wk-card:hover {
-  border-color: var(--perron-color-border-control) !important;
+/* A project card is one target. Once it is built, pointing at it (or reaching its "View project" with the
+   keyboard) lifts it, fades in its green edge and shadow, and nudges the arrow in its corner.
+   Touch screens have no hover, so there the arrow alone says the card opens. */
+.wk-box {
+  transition: transform 200ms var(--perron-easing-sheet);
 }
-.wk-open {
+.wk-glow {
+  transition: opacity 200ms ease;
+}
+.wk-arrow {
   transition:
-    background-color 160ms ease,
-    color 160ms ease,
-    border-color 160ms ease;
+    transform 200ms var(--perron-easing-sheet),
+    color 200ms ease;
 }
-.wk-card:hover .wk-open,
-.wk-open:hover {
-  background: var(--perron-color-surface-inverse) !important;
-  color: var(--perron-color-text-inverse) !important;
-  border-color: transparent !important;
+.wk-box[data-built]:has(.wk-open:focus-visible) {
+  transform: translateY(-3px);
+}
+.wk-box[data-built]:has(.wk-open:focus-visible) .wk-glow {
+  opacity: 1 !important;
+}
+.wk-box[data-built]:has(.wk-open:focus-visible) .wk-arrow {
+  transform: translateX(4px);
+  color: var(--perron-color-text-brand) !important;
+}
+@media (hover: hover) {
+  .wk-box[data-built]:hover {
+    transform: translateY(-3px);
+  }
+  /* The strip the card rose from still counts as the card, so its bottom edge does not flicker. */
+  .wk-box[data-built]:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 3px;
+  }
+  .wk-box[data-built]:hover .wk-glow {
+    opacity: 1 !important;
+  }
+  .wk-box[data-built]:hover .wk-arrow {
+    transform: translateX(4px);
+    color: var(--perron-color-text-brand) !important;
+  }
 }
 .cs-btn {
   transition:
@@ -383,7 +413,8 @@ a:hover {
 .cs-scroll:focus {
   outline: none;
 }
-.cs-scroll:focus-visible {
+/* The modal puts focus on its text when it opens (data-quiet). The ring is for focus someone moved there. */
+.cs-scroll:focus-visible:not([data-quiet]) {
   outline: 2px solid var(--perron-color-border-focus);
   outline-offset: -2px;
 }
@@ -405,10 +436,18 @@ a:hover {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .wk-open,
+  .wk-box,
+  .wk-glow,
+  .wk-arrow,
   .cs-btn,
   .cs-x {
     transition: none;
+  }
+  .wk-box[data-built]:hover,
+  .wk-box[data-built]:has(.wk-open:focus-visible),
+  .wk-box[data-built]:hover .wk-arrow,
+  .wk-box[data-built]:has(.wk-open:focus-visible) .wk-arrow {
+    transform: none;
   }
 }
 

@@ -1,6 +1,8 @@
 /* One project card of the Work section: the dashed frame that waits for the build, the card itself, the selection
    frame, the review line, the agent cursors and the "verified" badge. Every card has this one shape.
-   The markup and its numbers come from the Version E prototype. */
+   The markup and its numbers come from the Version E prototype.
+   The whole card opens the project. Once it is built, hovering it lifts it, lights its edge and nudges the arrow
+   in its corner (the wk- rules in globals.css). "View project" is the same action for the keyboard, drawn as text. */
 import type { CSSProperties, MouseEvent, RefObject } from "react";
 import { AGENTS, type AgentKey, type WorkProject } from "@/lib/works";
 import type { Move, WorkUnit } from "./Work";
@@ -58,6 +60,26 @@ function Agent({ agent, side }: { agent: AgentKey; side: "left" | "right" }) {
   );
 }
 
+/* A plain arrow to the right: in the card's corner and after "View project". */
+function Arrow({ size }: { size: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      style={{ display: "block", flex: "none" }}
+    >
+      <path d="M3 8h10M9 4l4 4-4 4" />
+    </svg>
+  );
+}
+
 function LinkArrow() {
   return (
     <svg
@@ -99,7 +121,12 @@ export function WorkCard({
   const sweepColor = AGENTS[p.sweep.agent].color;
   const links = p.links ?? [];
   return (
-    <div ref={boxRef} style={{ position: "relative", minWidth: "0", display: "flex", flexDirection: "column" }}>
+    <div
+      ref={boxRef}
+      className="wk-box"
+      data-built={u.okO === "1" ? "" : undefined}
+      style={{ position: "relative", minWidth: "0", display: "flex", flexDirection: "column" }}
+    >
       {/* the dashed frame that waits for the build */}
       <div
         aria-hidden="true"
@@ -136,6 +163,7 @@ export function WorkCard({
         className="wk-card"
         onClick={onCard}
         style={{
+          position: "relative",
           cursor: "pointer",
           display: "flex",
           flexDirection: "column",
@@ -149,8 +177,15 @@ export function WorkCard({
           ...at(u.sh, u.tr),
         }}
       >
+        {/* the arrow in the corner: the sign that the card opens, also where nothing hovers */}
+        <span aria-hidden="true" style={{ position: "absolute", right: "26px", top: "26px", ...at(u.b, u.tr) }}>
+          <span className="wk-arrow" style={{ display: "block", color: "var(--perron-color-text-tertiary)" }}>
+            <Arrow size={18} />
+          </span>
+        </span>
         <span
           style={{
+            paddingRight: "32px",
             font: "600 12px/1.3 var(--perron-font-family-body)",
             letterSpacing: "0.88px",
             textTransform: "uppercase",
@@ -232,7 +267,7 @@ export function WorkCard({
             ))}
           </div>
         ) : null}
-        {/* opens the project modal */}
+        {/* opens the project modal: a button for the keyboard, drawn as plain text so the card stays the one target */}
         <div style={{ alignSelf: "flex-start", marginTop: "6px", ...at(u.b, u.tr) }}>
           <button
             ref={btnRef}
@@ -244,37 +279,38 @@ export function WorkCard({
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "10px",
+              gap: "8px",
               minHeight: "44px",
               boxSizing: "border-box",
               margin: "0",
-              padding: "0 16px",
-              border: "1px solid var(--perron-color-border-control)",
-              borderRadius: "var(--perron-radius-md)",
+              padding: "0",
+              border: "0",
+              borderRadius: "var(--perron-radius-sm)",
               background: "transparent",
               color: "var(--perron-color-text-primary)",
               font: "600 14.5px/1 var(--perron-font-family-body)",
               cursor: "pointer",
             }}
           >
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 16 16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-              style={{ flex: "none" }}
-            >
-              <path d="M9.5 2.5h4v4M13.5 2.5L9 7M6.5 13.5h-4v-4M2.5 13.5L7 9" />
-            </svg>{" "}
-            View project{" "}
+            View project <Arrow size={15} />
           </button>
         </div>
       </article>
+      {/* the lit edge and the shadow of a hovered card, faded in over the card's own border */}
+      <span
+        aria-hidden="true"
+        className="wk-glow"
+        style={{
+          position: "absolute",
+          inset: "0",
+          boxSizing: "border-box",
+          border: "1px solid var(--perron-color-border-brand)",
+          borderRadius: "var(--perron-radius-lg)",
+          boxShadow: "0 1px 2px rgba(0, 0, 0, 0.3), 0 14px 32px rgba(0, 0, 0, 0.38)",
+          opacity: "0",
+          pointerEvents: "none",
+        }}
+      />
       {/* the selection frame the Architect drags out together with the card */}
       {p.build.drag ? (
         <div

@@ -8,17 +8,21 @@ import { Component, createRef, type KeyboardEvent, type MouseEvent, type ReactNo
 import { PROJECTS, type MoveKind, type PartKey } from "@/lib/works";
 import { WorkView } from "./WorkView";
 
-const WORKS_TICK = 320; /* ms per build step */
+/* The prototype's timings, run 20% shorter: every duration of the build goes through pace(). */
+const WORKS_PACE = 0.8;
+const pace = (ms: number) => Math.round(ms * WORKS_PACE);
+
+const WORKS_TICK = pace(320); /* ms per build step */
 const WORKS_EVERY = 2; /* steps between two starts when several projects are in view at once */
-const WORKS_CHECK = 420; /* ms between two checks once every project is built */
+const WORKS_CHECK = pace(420); /* ms between two checks once every project is built */
 const WORKS_SEEN = 0.18; /* share of a project that must be in view before its agents start */
 const WORKS_EASE = "cubic-bezier(0.4, 0, 0.6, 1)";
 
-const WORKS_TR = `opacity 320ms ease, transform 440ms cubic-bezier(0.2, 0.9, 0.3, 1.2), clip-path 420ms ${WORKS_EASE}`;
-const WORKS_TT = "clip-path 420ms steps(14, end)"; /* typed text appears in small jumps */
-const WORKS_CTR = `left 420ms ${WORKS_EASE}, top 420ms ${WORKS_EASE}, opacity 220ms ease`;
-const WORKS_DTR = `width 420ms ${WORKS_EASE}, height 420ms ${WORKS_EASE}, opacity 220ms ease`;
-const WORKS_STR = `left ${2 * WORKS_TICK}ms linear, top ${2 * WORKS_TICK}ms linear, opacity 180ms ease`;
+const WORKS_TR = `opacity ${pace(320)}ms ease, transform ${pace(440)}ms cubic-bezier(0.2, 0.9, 0.3, 1.2), clip-path ${pace(420)}ms ${WORKS_EASE}`;
+const WORKS_TT = `clip-path ${pace(420)}ms steps(14, end)`; /* typed text appears in small jumps */
+const WORKS_CTR = `left ${pace(420)}ms ${WORKS_EASE}, top ${pace(420)}ms ${WORKS_EASE}, opacity ${pace(220)}ms ease`;
+const WORKS_DTR = `width ${pace(420)}ms ${WORKS_EASE}, height ${pace(420)}ms ${WORKS_EASE}, opacity ${pace(220)}ms ease`;
+const WORKS_STR = `left ${2 * WORKS_TICK}ms linear, top ${2 * WORKS_TICK}ms linear, opacity ${pace(180)}ms ease`;
 
 export type Move = { o: string; t: string; c: string };
 type Cursor = { x: string; y: string; o: string };
@@ -462,7 +466,7 @@ export class Work extends Component<{ children?: ReactNode }, State> {
       const sc = this.caseScrollRef.current;
       const panel = this.casePanelRef.current;
       if (sc) sc.scrollTop = 0;
-      if (was >= 0 && sc && panel && !panel.contains(document.activeElement)) sc.focus({ preventScroll: true });
+      if (was >= 0 && sc && panel && !panel.contains(document.activeElement)) this.caseTakeFocus(sc);
     }
   }
 
@@ -528,8 +532,22 @@ export class Work extends Component<{ children?: ReactNode }, State> {
     const sc = this.caseScrollRef.current;
     this.caseSeen = this.state.caseAt;
     this.caseLockScroll();
-    if (sc) sc.focus({ preventScroll: true });
+    if (sc) this.caseTakeFocus(sc);
     this.caseLater(() => this.caseReveal(), 20);
+  }
+
+  /* Put focus on the modal's text, so the arrow keys scroll it straight away, without drawing a focus ring:
+     nobody moved there on purpose. The mark goes when focus moves on to something else, so tabbing back to the
+     text shows the ring. Leaving the window and coming back is not moving on (no relatedTarget). */
+  caseTakeFocus(el: HTMLElement) {
+    const moved = (e: FocusEvent) => {
+      if (!e.relatedTarget) return;
+      el.removeAttribute("data-quiet");
+      el.removeEventListener("blur", moved);
+    };
+    if (!el.hasAttribute("data-quiet")) el.addEventListener("blur", moved);
+    el.setAttribute("data-quiet", "");
+    el.focus({ preventScroll: true });
   }
 
   /* Show the modal. */

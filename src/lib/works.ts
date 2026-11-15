@@ -336,7 +336,7 @@ export const PROJECTS: WorkProject[] = [
     id: "factory",
     name: "Software factory",
     kicker: "Grundfos · 2025 to now",
-    body: "A system of agents that turns a spec into pull requests, one ticket at a time. An implementer builds each ticket test-first, a reviewer reads the diff cold, and a verifier that never sees the code drives the running app. Every run ends with a triage of what went wrong, so the factory gets better over time.",
+    body: "Five layers of trust come first: the codebase, static analysis, verification, prose and human review. On top, a system of agents turns a spec into pull requests, one ticket at a time, through three brakes. Every run ends with a triage of what went wrong, so the factory gets better over time.",
     chips: ["built for GDS Studio", "Component Factory: 22 merged"],
     lead: "architect",
     sweep: { dir: "down", agent: "visual" },

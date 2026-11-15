@@ -54,9 +54,9 @@ export function CaseSoftwareFactory() {
             }}
           />
           <span>
-            The main line is the software factory: a spec, its tickets, the implementer, three brakes and the human
-            review. The triage pipe carries what a run learned back into the factory. The Component Factory is the side
-            line underneath.
+            Underneath, the five layers of trust the factory stands on, built from the bottom up. On top, the factory: a
+            spec, its tickets, the implementer, three brakes and the human review. The triage pipe carries what a run
+            learned back into the layers.
             <span className="cs-swipe"> Swipe sideways to see all of it.</span>
           </span>
         </figcaption>
@@ -109,7 +109,7 @@ export function CaseSoftwareFactory() {
               textWrap: "balance",
             }}
           >
-            A spec goes in. Pull requests for a person to review come out, one ticket at a time.
+            Trust first, automation second. Then a spec goes in, and pull requests for a person to review come out.
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -135,8 +135,9 @@ export function CaseSoftwareFactory() {
                 }}
               >
                 A system of agents that turns a spec into pull requests, one ticket at a time. I built it for the GDS
-                Studio work. Every ticket passes three brakes before a person reviews it, and every run ends with a
-                triage of what went wrong, so the factory gets better over time.
+                Studio work, and I built the ground under it first: five layers that make an agent&apos;s work worth
+                trusting before any of it is automated. Every ticket then passes three brakes before a person reviews
+                it, and every run ends with a triage of what went wrong, so the factory gets better over time.
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -149,7 +150,184 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                How it works
+                First, five layers of trust
+              </h3>
+              <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "6px",
+                      top: "14px",
+                      bottom: "-8px",
+                      width: "2px",
+                      background: "#FF8A5B",
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>1. Codebase</strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      Clear APIs, a firm architecture and constant refactoring. Agents copy what they find, so what they
+                      find has to be good.
+                    </span>
+                  </div>
+                </li>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "6px",
+                      top: "14px",
+                      bottom: "-8px",
+                      width: "2px",
+                      background: "#FF8A5B",
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      2. Static analysis
+                    </strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      Lint rules, types, tests and CI. When I correct an agent, I turn the correction into a check, so
+                      it holds for every agent after it.
+                    </span>
+                  </div>
+                </li>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "6px",
+                      top: "14px",
+                      bottom: "-8px",
+                      width: "2px",
+                      background: "#FF8A5B",
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      3. Verification
+                    </strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      Agents run the app themselves and show that a change works, with evidence a person can look at.
+                    </span>
+                  </div>
+                </li>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "6px",
+                      top: "14px",
+                      bottom: "-8px",
+                      width: "2px",
+                      background: "#FF8A5B",
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>4. Prose</strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      Rules, skills and AGENTS.md, kept for the few things that need judgement.
+                    </span>
+                  </div>
+                </li>
+                <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "0" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "relative",
+                      flex: "none",
+                      width: "14px",
+                      height: "14px",
+                      marginTop: "5px",
+                      boxSizing: "border-box",
+                      borderRadius: "50%",
+                      background: "var(--perron-color-surface-raised)",
+                      border: "3px solid var(--perron-color-text-primary)",
+                    }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      5. Human review
+                    </strong>
+                    <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
+                      The most expensive layer, so it comes last. The four layers under it leave a person less to catch.
+                    </span>
+                  </div>
+                </li>
+              </ol>
+            </section>
+            <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              <h3
+                style={{
+                  margin: "0",
+                  font: "600 12px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  color: "var(--perron-color-text-secondary)",
+                }}
+              >
+                Then, the factory
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -323,8 +501,9 @@ export function CaseSoftwareFactory() {
                       Triage after every run
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Each run ends by going through what went wrong and ranking it. The fixes go into the
-                      factory&apos;s own checks, briefs and skills, so the next run is better.
+                      Each run ends by going through what went wrong and ranking it. A fix goes into the lowest layer
+                      that can hold it: the codebase or a check first, a rule in prose last. That is how the factory
+                      improves over time.
                     </span>
                   </div>
                 </li>
@@ -382,6 +561,20 @@ export function CaseSoftwareFactory() {
             >
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
+                  layers of trust before the automation
+                </dt>
+                <dd
+                  style={{
+                    margin: "0",
+                    font: "600 26px/1.15 var(--perron-font-family-body)",
+                    letterSpacing: "-0.78px",
+                  }}
+                >
+                  5
+                </dd>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
+                <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
                   brakes on every ticket
                 </dt>
                 <dd
@@ -420,20 +613,6 @@ export function CaseSoftwareFactory() {
                   }}
                 >
                   22
-                </dd>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
-                <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  for each component
-                </dt>
-                <dd
-                  style={{
-                    margin: "0",
-                    font: "600 26px/1.15 var(--perron-font-family-body)",
-                    letterSpacing: "-0.78px",
-                  }}
-                >
-                  About 60 min
                 </dd>
               </div>
             </dl>
@@ -513,6 +692,19 @@ export function CaseSoftwareFactory() {
                 }}
               >
                 Agent pipelines
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                Foundations first
               </li>
               <li
                 style={{

@@ -1,6 +1,7 @@
-/* The drawing in the Software factory modal. The software factory is the main line: a spec becomes tickets,
-   an implementer pump builds each one, three brakes sit on the pipe, a hand valve is the human review, and a
-   triage pipe runs from the end back to the factory. The Component Factory is the small side line underneath.
+/* The drawing in the Software factory modal. Underneath are the five layers of trust the factory stands on, drawn
+   as a stack that is built from the bottom up. On top is the factory itself: a spec becomes tickets, an implementer
+   pump builds each one, three brakes sit on the pipe, a hand valve is the human review, and a triage pipe runs
+   from the end back to the factory. The Component Factory is a tag in the corner.
    Flat and schematic, in the same palette and with the same pipes and pumps as the other project drawings. */
 import type { ReactNode } from "react";
 import { AGENTS } from "@/lib/works";
@@ -21,10 +22,21 @@ const GREEN = "#3DDC97",
   LIME = "#C8F560";
 const MONO = "JetBrains Mono, ui-monospace, Menlo, monospace";
 
-const Y = 188; /* the main line */
-const Y_BACK = 264; /* the rework pipe under it */
-const Y_TRIAGE = 52; /* the triage pipe over it */
-const Y_SIDE = 344; /* the Component Factory's line */
+const Y = 166; /* the main line */
+const Y_BACK = 242; /* the rework pipe under it */
+const Y_TRIAGE = 40; /* the triage pipe over it */
+
+/* The layers of trust, from the top of the stack down. They are built in the other order: the codebase first. */
+const LAYERS = [
+  { no: 5, name: "human review", note: "last, and with the least left to catch" },
+  { no: 4, name: "prose", note: "rules, skills, AGENTS.md" },
+  { no: 3, name: "verification", note: "agents run the app and show the evidence" },
+  { no: 2, name: "static analysis", note: "lint, types, tests, CI" },
+  { no: 1, name: "codebase", note: "clear APIs, firm architecture, constant refactoring" },
+];
+const LAYER_TOP = 280,
+  LAYER_H = 17,
+  LAYER_STEP = 60; /* each layer is this much wider on both sides than the one above it */
 
 function Label({
   x,
@@ -164,12 +176,42 @@ export function FactoryDrawing() {
       viewBox="0 0 1040 380"
       preserveAspectRatio="xMidYMid slice"
       role="img"
-      aria-label="The software factory as one long pipe. A spec becomes tickets, an implementer pump builds each ticket test-first, and three brakes sit on the pipe: checks, review and verdict. A return pipe under them is marked rework, two rounds at most. A hand valve marked human review leads to a pull request, and a pipe marked triage after every run leads from there back to the factory. Underneath, a small side line: the Component Factory turns a Figma component and its docs into a draft pull request through eight agents and a system check, with 22 components merged."
+      aria-label="Underneath, a stack of five layers of trust, built from the bottom up: the codebase, static analysis, verification, prose and human review. On top of it, the software factory as one long pipe. A spec becomes tickets, an implementer pump builds each ticket test-first, and three brakes sit on the pipe: checks, review and verdict. A return pipe under them is marked rework, two rounds at most. A hand valve marked human review leads to a pull request, and a pipe marked triage after every run leads from there back to the factory. A tag in the corner names the side line, the Component Factory, with 22 components merged."
       style={{ display: "block", width: "100%", height: "100%" }}
     >
       {/* ---------- the software factory, the main line ---------- */}
-      <Label x={40} y={30} fill={T3} anchor="start" weight={600} spacing={0.9}>
+      <Label x={40} y={26} fill={T3} anchor="start" weight={600} spacing={0.9}>
         SOFTWARE FACTORY
+      </Label>
+
+      {/* the side line, as a tag: the eight agents of the Component Factory */}
+      <rect
+        x="34"
+        y="40"
+        width="262"
+        height="46"
+        rx="8"
+        fill={BG1}
+        stroke={L2}
+        strokeWidth="1.5"
+        strokeDasharray="4 5"
+      />
+      <Label x={46} y={58} anchor="start" fill={T1} size={10.5} weight={600}>
+        side line: Component Factory
+      </Label>
+      {LINE.map((key, i) => (
+        <circle
+          key={key}
+          cx={50 + i * 12}
+          cy={72}
+          r="4"
+          fill={AGENTS[key].color}
+          className="mv"
+          style={{ animation: `csPulse 3.2s ease-in-out ${(-3.2 + i * 0.4).toFixed(1)}s infinite` }}
+        />
+      ))}
+      <Label x={148} y={75.5} anchor="start">
+        22 components merged
       </Label>
 
       {/* triage: from the pull request back to the factory */}
@@ -242,43 +284,54 @@ export function FactoryDrawing() {
         pull request
       </Chip>
 
-      {/* ---------- the Component Factory, the side line ---------- */}
-      <path d="M34 298H1006" fill="none" stroke={L2} strokeWidth="1.5" strokeDasharray="4 8" />
-      <Label x={40} y={318} fill={T3} anchor="start" weight={600} spacing={0.9}>
-        SIDE LINE · COMPONENT FACTORY
+      {/* ---------- the five layers of trust the factory stands on ---------- */}
+      <path d="M34 266H1006" fill="none" stroke={L2} strokeWidth="1.5" strokeDasharray="4 8" />
+      <Label x={40} y={LAYER_TOP + 8} fill={T3} anchor="start" weight={600} spacing={0.9}>
+        FIRST, THE
       </Label>
-      <Pipe d={`M200 ${Y_SIDE}H664`} color={ORANGE} w={8} dur="1.1s" />
-      <Chip x={34} y={Y_SIDE - 14} w={170} h={28}>
-        Figma component + docs
-      </Chip>
-      {LINE.map((key, i) => (
-        <circle
-          key={key}
-          cx={250 + i * 42}
-          cy={Y_SIDE}
-          r="6.5"
-          fill={AGENTS[key].color}
-          stroke={BG0}
-          strokeWidth="2"
-          className="mv"
-          style={{ animation: `csPulse 3.2s ease-in-out ${(-3.2 + i * 0.4).toFixed(1)}s infinite` }}
-        />
-      ))}
-      <circle cx="606" cy={Y_SIDE} r="12" fill={BG1} stroke={L4} strokeWidth="1.5" />
+      <Label x={40} y={LAYER_TOP + 21} fill={T3} anchor="start" weight={600} spacing={0.9}>
+        FIVE LAYERS
+      </Label>
+      <Label x={40} y={LAYER_TOP + 34} fill={T3} anchor="start" weight={600} spacing={0.9}>
+        OF TRUST
+      </Label>
+      {LAYERS.map((layer, i) => {
+        const half = 190 + i * LAYER_STEP;
+        const y = LAYER_TOP + i * LAYER_H;
+        const base = layer.no === 1;
+        return (
+          <g key={layer.no}>
+            <rect
+              x={570 - half}
+              y={y}
+              width={half * 2}
+              height={LAYER_H - 3}
+              rx="4"
+              fill={base ? "rgba(61,220,151,0.12)" : BG1}
+              stroke={base ? GREEN : L3}
+              strokeWidth="1.5"
+            />
+            <text x={570} y={y + 10.5} textAnchor="middle" fontFamily={MONO} fontSize="10">
+              <tspan fill={GREEN} fontWeight="600">
+                {layer.no}
+              </tspan>
+              <tspan fill={T1} fontWeight="600">
+                {" " + layer.name}
+              </tspan>
+              <tspan fill={T2}>{" · " + layer.note}</tspan>
+            </text>
+          </g>
+        );
+      })}
+      {/* built from the bottom up */}
       <path
-        d={`M601 ${Y_SIDE}l3.6 3.6 6.4 -7`}
+        d={`M1012 ${LAYER_TOP + 5 * LAYER_H - 6}V${LAYER_TOP + 30}m-4.5 6l4.5 -6l4.5 6`}
         fill="none"
-        stroke={GREEN}
-        strokeWidth="2"
+        stroke={L4}
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <Chip x={660} y={Y_SIDE - 14} w={140} h={28} stroke={GREEN} fill="rgba(61,220,151,0.12)" color={GREEN}>
-        draft pull request
-      </Chip>
-      <Label x={816} y={Y_SIDE + 3.8} anchor="start" size={10.5}>
-        22 merged · about 60 min each
-      </Label>
     </svg>
   );
 }

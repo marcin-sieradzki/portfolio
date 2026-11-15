@@ -498,10 +498,10 @@ export function CaseMicroFrontends() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span>Wunderman Nordic · 2020 to 2021</span>
+            <span>VML MAP · 2020 to 2021</span>
           </div>
           <h2
-            id="case-title-7"
+            id="case-title-vml-map"
             style={{
               fontFamily: "var(--perron-font-family-display)",
               margin: "0",
@@ -512,7 +512,7 @@ export function CaseMicroFrontends() {
               textWrap: "balance",
             }}
           >
-            Micro-frontends
+            Email marketing apps
           </h2>
           <p
             style={{
@@ -524,8 +524,8 @@ export function CaseMicroFrontends() {
               textWrap: "balance",
             }}
           >
-            From one Vue 2 monolith to <span style={{ whiteSpace: "nowrap" }}>micro-frontends</span> that each team
-            deploys on its own.
+            Apps for email marketing automation and observability, built as{" "}
+            <span style={{ whiteSpace: "nowrap" }}>micro-frontends</span>.
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -550,8 +550,8 @@ export function CaseMicroFrontends() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Re-architected a monolithic Vue 2 frontend into micro-frontends with Module Federation, so each team
-                deploys on its own. Also built a KPI dashboard platform with a live campaign view over WebSockets.
+                A set of apps for email marketing automation and observability, such as a dashboard with live campaign
+                statistics. Built as Vue 2 micro-frontends on .NET APIs and Azure Functions.
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -598,7 +598,8 @@ export function CaseMicroFrontends() {
                       Micro-frontends
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Module Federation, with 35% smaller bundles and independent deployments per team.
+                      Re-architected the monolithic Vue 2 frontend into micro-frontends with Module Federation: 35%
+                      smaller bundles, and each team deploys on its own.
                     </span>
                   </div>
                 </li>
@@ -633,8 +634,7 @@ export function CaseMicroFrontends() {
                       KPI dashboards
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A dashboard platform for email campaigns on Azure Functions, with a live campaign view over
-                      WebSockets.
+                      Campaign statistics dashboards on Azure Functions, with a live campaign view over WebSockets.
                     </span>
                   </div>
                 </li>
@@ -662,43 +662,6 @@ export function CaseMicroFrontends() {
                 </li>
               </ol>
             </section>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: "10px",
-                boxSizing: "border-box",
-                padding: "16px 18px",
-                border: "1px dashed var(--perron-color-border-control)",
-                borderRadius: "var(--perron-radius-lg)",
-              }}
-            >
-              <span
-                style={{
-                  padding: "3px 10px",
-                  borderRadius: "var(--perron-radius-full)",
-                  font: "600 11px/1.3 var(--perron-font-family-body)",
-                  letterSpacing: "0.88px",
-                  textTransform: "uppercase",
-                  border: "1px solid transparent",
-                  background: "var(--perron-color-surface-warning)",
-                  color: "var(--perron-color-text-warning)",
-                }}
-              >
-                Placeholder
-              </span>
-              <p
-                style={{
-                  margin: "0",
-                  fontSize: "15px",
-                  lineHeight: "1.55",
-                  color: "var(--perron-color-text-secondary)",
-                }}
-              >
-                [ADD: how many teams and apps the split covered, and what a release looked like before and after.]
-              </p>
-            </div>
           </div>
           <aside
             aria-label="Project facts"
@@ -773,9 +736,7 @@ export function CaseMicroFrontends() {
                 >
                   Where
                 </dt>
-                <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
-                  Wunderman Nordic
-                </dd>
+                <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>VML MAP</dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                 <dt
@@ -844,6 +805,19 @@ export function CaseMicroFrontends() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
+                Micro-frontends
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
                 Module Federation
               </li>
               <li
@@ -857,7 +831,7 @@ export function CaseMicroFrontends() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                WebSockets
+                .NET APIs
               </li>
               <li
                 style={{
@@ -871,6 +845,19 @@ export function CaseMicroFrontends() {
                 }}
               >
                 Azure Functions
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                WebSockets
               </li>
             </ul>
           </aside>

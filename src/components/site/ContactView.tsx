@@ -50,7 +50,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              <span style={{ color: "var(--perron-color-text-brand)" }}>05</span> / Contact
+              <span style={{ color: "var(--perron-color-text-brand)" }}>04</span> / Contact
             </span>
             <h2
               style={{
@@ -74,8 +74,8 @@ export function ContactView({ v }: { v: ContactVals }) {
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              If you want AI agents working inside your software lifecycle and your design system, and someone to lead
-              that work, I would like to hear about it.
+              If you need AI agents in your software lifecycle, agents that run in production, a design system, or
+              simply high-quality software, let&apos;s talk!
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "8px" }}>

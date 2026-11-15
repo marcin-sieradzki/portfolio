@@ -11,17 +11,13 @@ export function Footer() {
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "flex-start",
         gap: "16px 40px",
         fontSize: "14px",
         lineHeight: "1.55",
         color: "var(--perron-color-text-secondary)",
       }}
     >
-      <p style={{ margin: "0", maxWidth: "560px" }}>
-        The work section is built live by 8 agent cursors, then checked. If you prefer reduced motion, you get the
-        finished page straight away.
-      </p>
       <p style={{ margin: "0", font: "400 12.5px/1.5 var(--perron-font-family-data)" }}>
         © 2026 Marcin Sieradzki · Copenhagen
       </p>

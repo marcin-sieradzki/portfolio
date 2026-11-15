@@ -75,12 +75,6 @@ export function Nav() {
           Experience
         </a>
         <a
-          href="#method"
-          style={{ padding: "11px 0", color: "var(--perron-color-text-secondary)", textDecoration: "none" }}
-        >
-          How I build
-        </a>
-        <a
           href="#about"
           style={{ padding: "11px 0", color: "var(--perron-color-text-secondary)", textDecoration: "none" }}
         >

@@ -26,7 +26,17 @@ export function Hero() {
         }}
       >
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "56px" }}>
-          <div style={{ flex: "1 1 520px", minWidth: "0", display: "flex", flexDirection: "column", gap: "28px" }}>
+          {/* A size container, so the headline can scale with this column and each of its lines stays on one line. */}
+          <div
+            style={{
+              flex: "1 1 520px",
+              minWidth: "0",
+              display: "flex",
+              flexDirection: "column",
+              gap: "28px",
+              containerType: "inline-size",
+            }}
+          >
             <p
               style={{
                 margin: "0",
@@ -42,7 +52,7 @@ export function Hero() {
               style={{
                 fontFamily: "var(--perron-font-family-display)",
                 margin: "0",
-                fontSize: "clamp(38px, 5vw, 68px)",
+                fontSize: "clamp(28px, 9.3cqi, 60px)",
                 lineHeight: "1.02",
                 letterSpacing: "-0.03em",
                 fontWeight: "700",
@@ -51,10 +61,10 @@ export function Hero() {
               <span style={{ display: "block", color: "var(--perron-color-text-secondary)" }}>
                 Hi, I&apos;m Marcin.
               </span>
-              <span style={{ display: "block" }}>I ship software</span>
+              <span style={{ display: "block" }}>Agents write the code.</span>
               <span style={{ display: "block", color: "var(--perron-color-text-success)" }}>
                 <span style={{ position: "relative", display: "inline-block" }}>
-                  with AI agents.
+                  I make it safe to ship.
                   <span
                     aria-hidden="true"
                     className="mv"
@@ -81,7 +91,7 @@ export function Hero() {
               }}
             >
               I&apos;m a lead software engineer in Copenhagen. I put AI agents into the software lifecycle and the
-              design system, with checks and evals that make their work safe to ship.
+              design system, with the checks and evals their work has to pass.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
               <a
@@ -175,7 +185,7 @@ export function Hero() {
               >
                 <li>Grundfos</li>
                 <li>Maersk</li>
-                <li>Wunderman Nordic</li>
+                <li>VML MAP</li>
               </ul>
             </div>
           </div>
@@ -237,7 +247,7 @@ export function Hero() {
               467+
             </dd>
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              UI repositories on the Maersk Design System, where I was the third-largest contributor
+              UI repositories on the Maersk Design System, which I helped build from its early days
             </dt>
           </div>
           <div
@@ -260,7 +270,7 @@ export function Hero() {
               65
             </dd>
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              components in the Grundfos design system, where I&apos;m the lead in a team of 5
+              components in the Grundfos design system, where I&apos;m the lead developer in a team of 5
             </dt>
           </div>
           <div
@@ -281,7 +291,7 @@ export function Hero() {
                 fontVariantNumeric: "tabular-nums",
               }}
             >
-              18
+              22
             </dd>
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
               components merged by my Component Factory, each in about 60 minutes

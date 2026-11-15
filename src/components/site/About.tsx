@@ -16,7 +16,7 @@ export function About() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span style={{ color: "var(--perron-color-text-brand)" }}>04</span> / About
+            <span style={{ color: "var(--perron-color-text-brand)" }}>03</span> / About
           </span>
           <h2
             style={{
@@ -29,7 +29,7 @@ export function About() {
               textWrap: "balance",
             }}
           >
-            One human, in the loop.
+            The man in the loop.
           </h2>
           <p
             style={{
@@ -52,10 +52,10 @@ export function About() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            I started in full-stack agency work at Wunderman Nordic, spent three years at Maersk on the design system
-            and customer-facing products, and I&apos;m now the lead in a team of 5 on the design system at Grundfos.
-            That is where I put agents into the software lifecycle: factories that turn tickets and designs into pull
-            requests for review, and a design system agents can build from.
+            I started in full-stack agency work at VML MAP, spent three years at Maersk on the design system and
+            customer-facing products, and I&apos;m now the lead developer in a team of 5 on the design system at
+            Grundfos. That is where I put agents into the software lifecycle: factories that turn tickets and designs
+            into pull requests for review, and a design system agents can build from.
           </p>
           <p
             style={{
@@ -125,7 +125,7 @@ export function About() {
                 Education
               </dt>
               <dd style={{ margin: "0", fontSize: "17px", lineHeight: "1.4", fontWeight: "600" }}>
-                BSc Top-up in Web Development, KEA
+                Bachelor in Web Development
               </dd>
             </div>
           </dl>
@@ -341,7 +341,7 @@ export function About() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Claude Agent SDK
+                AI agents
               </li>
               <li
                 style={{
@@ -354,7 +354,7 @@ export function About() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                GitHub Copilot SDK
+                Design systems
               </li>
               <li
                 style={{
@@ -394,6 +394,32 @@ export function About() {
                 }}
               >
                 Local LLMs
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                Accessibility
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                and more...
               </li>
             </ul>
           </div>

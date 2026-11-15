@@ -581,7 +581,7 @@ export function CaseGdsStudio() {
             </span>
           </div>
           <h2
-            id="case-title-0"
+            id="case-title-studio"
             style={{
               fontFamily: "var(--perron-font-family-display)",
               margin: "0",
@@ -805,44 +805,67 @@ export function CaseGdsStudio() {
                 </li>
               </ol>
             </section>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: "10px",
-                boxSizing: "border-box",
-                padding: "16px 18px",
-                border: "1px dashed var(--perron-color-border-control)",
-                borderRadius: "var(--perron-radius-lg)",
-              }}
-            >
-              <span
-                style={{
-                  padding: "3px 10px",
-                  borderRadius: "var(--perron-radius-full)",
-                  font: "600 11px/1.3 var(--perron-font-family-body)",
-                  letterSpacing: "0.88px",
-                  textTransform: "uppercase",
-                  border: "1px solid transparent",
-                  background: "var(--perron-color-surface-warning)",
-                  color: "var(--perron-color-text-warning)",
-                }}
-              >
-                Placeholder
-              </span>
-              <p
+            <section style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              <h3
                 style={{
                   margin: "0",
-                  fontSize: "15px",
-                  lineHeight: "1.55",
+                  font: "600 12px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                [ADD: a screenshot or a short recording of GDS Studio building a prototype, and one line from a designer
-                in the pilot.]
+                Connected to what the company knows
+              </h3>
+              <p
+                style={{
+                  margin: "0",
+                  fontSize: "16.5px",
+                  lineHeight: "1.6",
+                  color: "var(--perron-color-text-secondary)",
+                }}
+              >
+                Studio also connects to the company&apos;s RAG and to the customer feedback platform, so the agent can
+                build from product knowledge and from what customers say.
               </p>
-            </div>
+            </section>
+            <section style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              <h3
+                style={{
+                  margin: "0",
+                  font: "600 12px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  color: "var(--perron-color-text-secondary)",
+                }}
+              >
+                JEV on the chats
+              </h3>
+              <p
+                style={{
+                  margin: "0",
+                  fontSize: "16.5px",
+                  lineHeight: "1.6",
+                  color: "var(--perron-color-text-secondary)",
+                }}
+              >
+                We used JEV, a decision model, on the designers&apos; chats with the agent: to categorise them and
+                improve the agent, to find components the design system is missing, and to pick the components for a
+                generation.
+              </p>
+              <p
+                style={{
+                  margin: "0",
+                  fontSize: "16.5px",
+                  lineHeight: "1.6",
+                  color: "var(--perron-color-text-secondary)",
+                }}
+              >
+                Where JEV could go next: deciding if a brief is clear enough to build or needs a question first, sorting
+                failed system checks by cause, matching customer feedback to the screen or component it is about, and
+                spotting when a designer is stuck.
+              </p>
+            </section>
           </div>
           <aside
             aria-label="Project facts"
@@ -1067,6 +1090,32 @@ export function CaseGdsStudio() {
                 }}
               >
                 Eval harness
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                RAG connector
+              </li>
+              <li
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "var(--perron-radius-full)",
+                  font: "600 11px/1.3 var(--perron-font-family-body)",
+                  letterSpacing: "0.88px",
+                  textTransform: "uppercase",
+                  border: "1px dashed var(--perron-color-border-strong)",
+                  color: "var(--perron-color-text-primary)",
+                }}
+              >
+                JEV
               </li>
             </ul>
           </aside>

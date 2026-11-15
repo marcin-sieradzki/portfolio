@@ -1,7 +1,10 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
+import type { Locale } from "@/i18n/config";
+import { translator } from "@/i18n/translate";
 import { Portrait } from "./Portrait";
 
-export function Hero() {
+export function Hero({ lang }: { lang: Locale }) {
+  const t = translator(lang);
   return (
     <section
       id="top"
@@ -48,11 +51,11 @@ export function Hero() {
                 fontWeight: "700",
               }}
             >
-              <span style={{ display: "block" }}>Hi, I&apos;m Marcin.</span>
-              <span style={{ display: "block" }}>I ship software</span>
+              <span style={{ display: "block" }}>{t("Hi, I'm Marcin.")}</span>
+              <span style={{ display: "block" }}>{t("I ship software")}</span>
               <span style={{ display: "block", color: "var(--perron-color-text-success)" }}>
                 <span style={{ position: "relative", display: "inline-block" }}>
-                  with AI agents.
+                  {t("with AI agents.")}
                   <span
                     aria-hidden="true"
                     className="mv"
@@ -78,8 +81,9 @@ export function Hero() {
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              I&apos;m a lead software engineer in Copenhagen. I put AI agents into the software lifecycle and the
-              design system, with checks and evals that make their work safe to ship.
+              {t(
+                "I'm a lead software engineer in Copenhagen. I put AI agents into the software lifecycle and the design system, with checks and evals that make their work safe to ship.",
+              )}
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
               <a
@@ -100,7 +104,7 @@ export function Hero() {
                   textDecoration: "none",
                 }}
               >
-                See the work{" "}
+                {t("See the work")}{" "}
                 <svg
                   width="16"
                   height="16"
@@ -133,7 +137,7 @@ export function Hero() {
                   textDecoration: "none",
                 }}
               >
-                Get in touch
+                {t("Get in touch")}
               </a>
             </div>
             <div
@@ -153,7 +157,7 @@ export function Hero() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                6+ years at
+                {t("6+ years at")}
               </span>
               <ul
                 style={{
@@ -203,7 +207,7 @@ export function Hero() {
             }}
           >
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              years shipping production systems for large organisations
+              {t("years shipping production systems for large organisations")}
             </dt>
             <dd
               style={{
@@ -227,7 +231,7 @@ export function Hero() {
             }}
           >
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              UI repositories on the Maersk Design System, which I helped build from its early days
+              {t("UI repositories on the Maersk Design System, which I helped build from its early days")}
             </dt>
             <dd
               style={{
@@ -251,7 +255,7 @@ export function Hero() {
             }}
           >
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              components in the Grundfos design system, where I&apos;m the lead developer in a team of 5
+              {t("components in the Grundfos design system, where I'm the lead developer in a team of 5")}
             </dt>
             <dd
               style={{
@@ -276,7 +280,7 @@ export function Hero() {
             }}
           >
             <dt style={{ fontSize: "14.5px", lineHeight: "1.45", color: "var(--perron-color-text-secondary)" }}>
-              components merged by my Component Factory, each in about 60 minutes
+              {t("components merged by my Component Factory, each in about 60 minutes")}
             </dt>
             <dd
               style={{

@@ -1,6 +1,8 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
+import { useT } from "@/i18n/LocaleProvider";
 export function CaseGdsStudio() {
+  const t = useT();
   return (
     <article style={{ display: "flex", flexDirection: "column" }}>
       <figure style={{ margin: "0", flex: "none" }}>
@@ -27,7 +29,9 @@ export function CaseGdsStudio() {
               viewBox="0 0 1040 380"
               preserveAspectRatio="xMidYMid slice"
               role="img"
-              aria-label="A pump drawn as the agent: a brief and the design system flow in from the left, a system check with four passed checks sits on the outlet, a return pipe is marked 2 fix rounds, and a working prototype fills in on the right."
+              aria-label={t(
+                "A pump drawn as the agent: a brief and the design system flow in from the left, a system check with four passed checks sits on the outlet, a return pipe is marked 2 fix rounds, and a working prototype fills in on the right.",
+              )}
               style={{ display: "block", width: "100%", height: "100%" }}
             >
               <path
@@ -234,7 +238,7 @@ export function CaseGdsStudio() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                tokens
+                {t("tokens")}
               </text>
               <rect x="482" y="138" width="36" height="22" rx="3" fill="#1A202B" stroke="#3A4557" strokeWidth="1.5" />
               <rect x="464" y="58" width="72" height="82" rx="9" fill="#232A36" stroke="#4A5568" strokeWidth="1.5" />
@@ -275,7 +279,7 @@ export function CaseGdsStudio() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                sandbox, no network
+                {t("sandbox, no network")}
               </text>
               <rect x="430" y="194" width="10" height="40" rx="2" fill="#2E3746" stroke="#4A5568" strokeWidth="1.5" />
               <rect x="560" y="194" width="10" height="40" rx="2" fill="#2E3746" stroke="#4A5568" strokeWidth="1.5" />
@@ -397,7 +401,7 @@ export function CaseGdsStudio() {
                 fontWeight="600"
                 fill="#F2F4F7"
               >
-                system check
+                {t("system check")}
               </text>
               <text
                 x="638"
@@ -407,7 +411,7 @@ export function CaseGdsStudio() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                validator · typecheck
+                {t("validator · typecheck")}
               </text>
               <text
                 x="638"
@@ -417,7 +421,7 @@ export function CaseGdsStudio() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                build · runtime sweep
+                {t("build · runtime sweep")}
               </text>
               <rect x="494" y="303" width="112" height="22" rx="11" fill="#0A0C10" stroke="#2E3746" strokeWidth="1.5" />
               <path
@@ -436,7 +440,7 @@ export function CaseGdsStudio() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                2 fix rounds
+                {t("2 fix rounds")}
               </text>
               <text
                 x="792"
@@ -446,7 +450,7 @@ export function CaseGdsStudio() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                working prototype
+                {t("working prototype")}
               </text>
               <rect
                 x="792"
@@ -505,7 +509,7 @@ export function CaseGdsStudio() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                streamed live
+                {t("streamed live")}
               </text>
             </svg>
           </div>
@@ -536,9 +540,10 @@ export function CaseGdsStudio() {
             }}
           />
           <span>
-            The agent, drawn as a pump. A brief and the design system go in, the system check decides, and a working
-            prototype comes out.
-            <span className="cs-swipe"> Swipe sideways to see all of it.</span>
+            {t(
+              "The agent, drawn as a pump. A brief and the design system go in, the system check decides, and a working prototype comes out.",
+            )}
+            <span className="cs-swipe"> {t("Swipe sideways to see all of it.")}</span>
           </span>
         </figcaption>
       </figure>
@@ -564,7 +569,7 @@ export function CaseGdsStudio() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span>Grundfos · 2025 to now</span>
+            <span>{t("Grundfos · 2025 to now")}</span>
             <span
               style={{
                 padding: "3px 10px",
@@ -577,7 +582,7 @@ export function CaseGdsStudio() {
                 color: "var(--perron-color-text-info)",
               }}
             >
-              My own idea
+              {t("My own idea")}
             </span>
           </div>
           <h2
@@ -604,7 +609,7 @@ export function CaseGdsStudio() {
               textWrap: "balance",
             }}
           >
-            Designers describe a UI. An agent builds the working prototype.
+            {t("Designers describe a UI. An agent builds the working prototype.")}
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -619,7 +624,7 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What it is
+                {t("What it is")}
               </h3>
               <p
                 style={{
@@ -629,9 +634,9 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                A desktop app where a designer writes a brief and an AI agent builds a working React prototype from real
-                design system components and tokens, with its output streamed live. Designers take prototypes to
-                stakeholder reviews without an engineer in the loop.
+                {t(
+                  "A desktop app where a designer writes a brief and an AI agent builds a working React prototype from real design system components and tokens, with its output streamed live. Designers take prototypes to stakeholder reviews without an engineer in the loop.",
+                )}
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -644,7 +649,7 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                How it works
+                {t("How it works")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -676,7 +681,7 @@ export function CaseGdsStudio() {
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Brief</strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A designer describes the UI in plain words.
+                      {t("A designer describes the UI in plain words.")}
                     </span>
                   </div>
                 </li>
@@ -709,7 +714,7 @@ export function CaseGdsStudio() {
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Agent</strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Builds from real components and tokens, in a sandbox with no network.
+                      {t("Builds from real components and tokens, in a sandbox with no network.")}
                     </span>
                   </div>
                 </li>
@@ -740,10 +745,13 @@ export function CaseGdsStudio() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>System check</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("System check")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Decides the result, not the agent: validator, typecheck, build and a runtime sweep. The agent gets
-                      two fix rounds.
+                      {t(
+                        "Decides the result, not the agent: validator, typecheck, build and a runtime sweep. The agent gets two fix rounds.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -774,9 +782,11 @@ export function CaseGdsStudio() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Prototype</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("Prototype")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A working React prototype, streamed live while it is built.
+                      {t("A working React prototype, streamed live while it is built.")}
                     </span>
                   </div>
                 </li>
@@ -796,10 +806,11 @@ export function CaseGdsStudio() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Evals</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>{t("Evals")}</strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      An eval harness drives the shipped app headless: programmatic graders first, then an LLM judge, on
-                      dev and holdout sets. It catches regressions before people do.
+                      {t(
+                        "An eval harness drives the shipped app headless: programmatic graders first, then an LLM judge, on dev and holdout sets. It catches regressions before people do.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -815,7 +826,7 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Connected to what the company knows
+                {t("Connected to what the company knows")}
               </h3>
               <p
                 style={{
@@ -825,8 +836,9 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Studio also connects to the company&apos;s RAG and to the customer feedback platform, so the agent can
-                build from product knowledge and from what customers say.
+                {t(
+                  "Studio also connects to the company's RAG and to the customer feedback platform, so the agent can build from product knowledge and from what customers say.",
+                )}
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -839,7 +851,7 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                JEV on the chats
+                {t("JEV on the chats")}
               </h3>
               <p
                 style={{
@@ -849,9 +861,9 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                We used JEV, a decision model, on the designers&apos; chats with the agent: to categorise them and
-                improve the agent, to find components the design system is missing, and to pick the components for a
-                generation.
+                {t(
+                  "We used JEV, a decision model, on the designers' chats with the agent: to categorise them and improve the agent, to find components the design system is missing, and to pick the components for a generation.",
+                )}
               </p>
               <p
                 style={{
@@ -861,14 +873,14 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Where JEV could go next: deciding if a brief is clear enough to build or needs a question first, sorting
-                failed system checks by cause, matching customer feedback to the screen or component it is about, and
-                spotting when a designer is stuck.
+                {t(
+                  "Where JEV could go next: deciding if a brief is clear enough to build or needs a question first, sorting failed system checks by cause, matching customer feedback to the screen or component it is about, and spotting when a designer is stuck.",
+                )}
               </p>
             </section>
           </div>
           <aside
-            aria-label="Project facts"
+            aria-label={t("Project facts")}
             style={{
               flex: "2 1 300px",
               minWidth: "0",
@@ -892,7 +904,7 @@ export function CaseGdsStudio() {
             >
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  prototypes built
+                  {t("prototypes built")}
                 </dt>
                 <dd
                   style={{
@@ -906,7 +918,7 @@ export function CaseGdsStudio() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  designers in the pilot
+                  {t("designers in the pilot")}
                 </dt>
                 <dd
                   style={{
@@ -915,12 +927,12 @@ export function CaseGdsStudio() {
                     letterSpacing: "-0.78px",
                   }}
                 >
-                  About 20
+                  {t("About 20")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  instead of hours
+                  {t("instead of hours")}
                 </dt>
                 <dd
                   style={{
@@ -929,12 +941,12 @@ export function CaseGdsStudio() {
                     letterSpacing: "-0.78px",
                   }}
                 >
-                  Minutes
+                  {t("Minutes")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  tests
+                  {t("tests")}
                 </dt>
                 <dd
                   style={{
@@ -943,12 +955,12 @@ export function CaseGdsStudio() {
                     letterSpacing: "-0.78px",
                   }}
                 >
-                  1,100+
+                  {t("1,100+")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  eval cases, dev and holdout
+                  {t("eval cases, dev and holdout")}
                 </dt>
                 <dd
                   style={{
@@ -962,7 +974,7 @@ export function CaseGdsStudio() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  ADRs
+                  {t("ADRs")}
                 </dt>
                 <dd
                   style={{
@@ -994,7 +1006,7 @@ export function CaseGdsStudio() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Where
+                  {t("Where")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>Grundfos</dd>
               </div>
@@ -1007,9 +1019,11 @@ export function CaseGdsStudio() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  When
+                  {t("When")}
                 </dt>
-                <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>2025 to now</dd>
+                <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
+                  {t("2025 to now")}
+                </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                 <dt
@@ -1020,7 +1034,7 @@ export function CaseGdsStudio() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Role
+                  {t("Role")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   Lead Software Engineer
@@ -1028,7 +1042,7 @@ export function CaseGdsStudio() {
               </div>
             </dl>
             <ul
-              aria-label="Keywords"
+              aria-label={t("Keywords")}
               style={{
                 margin: "0",
                 padding: "22px 0 0",
@@ -1050,7 +1064,7 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Desktop app
+                {t("Desktop app")}
               </li>
               <li
                 style={{
@@ -1063,7 +1077,7 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                React prototypes
+                {t("React prototypes")}
               </li>
               <li
                 style={{
@@ -1076,7 +1090,7 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Sandbox, no network
+                {t("Sandbox, no network")}
               </li>
               <li
                 style={{
@@ -1089,7 +1103,7 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Eval harness
+                {t("Eval harness")}
               </li>
               <li
                 style={{
@@ -1102,7 +1116,7 @@ export function CaseGdsStudio() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                RAG connector
+                {t("RAG connector")}
               </li>
               <li
                 style={{

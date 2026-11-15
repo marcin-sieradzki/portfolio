@@ -1,6 +1,9 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
+import { useT } from "@/i18n/LocaleProvider";
 export function CaseSchedules() {
+  const t = useT();
+  const nowW = Math.max(30, t("now").length * 5.4 + 10);
   return (
     <article style={{ display: "flex", flexDirection: "column" }}>
       <figure style={{ margin: "0", flex: "none" }}>
@@ -27,7 +30,9 @@ export function CaseSchedules() {
               viewBox="0 0 1040 380"
               preserveAspectRatio="xMidYMid slice"
               role="img"
-              aria-label="A sea chart with a dashed route between four ports and two vessels sailing it. Below it, a schedule: two vessels as rows across a week, port calls as stops, and a line that marks now."
+              aria-label={t(
+                "A sea chart with a dashed route between four ports and two vessels sailing it. Below it, a schedule: two vessels as rows across a week, port calls as stops, and a line that marks now.",
+              )}
               style={{ display: "block", width: "100%", height: "100%" }}
             >
               <rect x="0" y="0" width="1040" height="380" fill="#0D1827" />
@@ -186,7 +191,7 @@ export function CaseSchedules() {
                 fontWeight="600"
                 fill="#B58CFF"
               >
-                Routes
+                {t("Routes")}
               </text>
               <rect x="124" y="256" width="128" height="22" rx="11" fill="none" stroke="#2E3746" strokeWidth="1.5" />
               <text
@@ -198,7 +203,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                Vessel schedules
+                {t("Vessel schedules")}
               </text>
               <rect x="260" y="256" width="88" height="22" rx="11" fill="none" stroke="#2E3746" strokeWidth="1.5" />
               <text
@@ -210,7 +215,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                Port calls
+                {t("Port calls")}
               </text>
               <text
                 x="990"
@@ -221,7 +226,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                2 brand builds · every view embeddable
+                {t("2 brand builds · every view embeddable")}
               </text>
               <path
                 d="M176 288V350M291.4 288V350M406.9 288V350M522.3 288V350M637.7 288V350M753.1 288V350M868.6 288V350M984 288V350"
@@ -237,7 +242,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                Mon
+                {t("Mon")}
               </text>
               <text
                 x="297.4"
@@ -247,7 +252,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                Tue
+                {t("Tue")}
               </text>
               <text
                 x="412.9"
@@ -257,7 +262,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                Wed
+                {t("Wed")}
               </text>
               <text
                 x="528.3"
@@ -267,7 +272,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                Thu
+                {t("Thu")}
               </text>
               <text
                 x="643.7"
@@ -277,7 +282,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                Fri
+                {t("Fri")}
               </text>
               <text
                 x="759.1"
@@ -287,7 +292,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                Sat
+                {t("Sat")}
               </text>
               <text
                 x="874.6"
@@ -297,7 +302,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                Sun
+                {t("Sun")}
               </text>
               <text
                 x="52"
@@ -307,7 +312,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                Vessel 1
+                {t("Vessel 1")}
               </text>
               <path
                 d="M216.4 318H932.1"
@@ -369,7 +374,7 @@ export function CaseSchedules() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                Vessel 2
+                {t("Vessel 2")}
               </text>
               <path
                 d="M314.5 340H839.7"
@@ -415,7 +420,8 @@ export function CaseSchedules() {
               <g transform="translate(184 0)">
                 <g className="mv" style={{ "--cs-d": "792px", animation: "csSweep 18s linear infinite" }}>
                   <path d="M0 286V352" fill="none" stroke="#F2F4F7" strokeWidth="1.5" />
-                  <rect x="-15" y="279" width="30" height="13" rx="6.5" fill="#F2F4F7" />
+                  {/* the pill grows with the word, so a longer translation of "now" still fits */}
+                  <rect x={-nowW / 2} y="279" width={nowW} height="13" rx="6.5" fill="#F2F4F7" />
                   <text
                     x="0"
                     y="288.6"
@@ -425,7 +431,7 @@ export function CaseSchedules() {
                     fontWeight="600"
                     fill="#0A0C10"
                   >
-                    now
+                    {t("now")}
                   </text>
                 </g>
               </g>
@@ -458,9 +464,10 @@ export function CaseSchedules() {
             }}
           />
           <span>
-            A sea chart with one route and two vessels on it. Under it, the schedule: vessels as rows, port calls as
-            stops. The port codes are examples.
-            <span className="cs-swipe"> Swipe sideways to see all of it.</span>
+            {t(
+              "A sea chart with one route and two vessels on it. Under it, the schedule: vessels as rows, port calls as stops. The port codes are examples.",
+            )}
+            <span className="cs-swipe"> {t("Swipe sideways to see all of it.")}</span>
           </span>
         </figcaption>
       </figure>
@@ -486,7 +493,7 @@ export function CaseSchedules() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span>Maersk · 2021 to 2024</span>
+            <span>{t("Maersk · 2021 to 2024")}</span>
           </div>
           <h2
             id="case-title-schedules"
@@ -500,7 +507,7 @@ export function CaseSchedules() {
               textWrap: "balance",
             }}
           >
-            Schedules on Maersk.com
+            {t("Schedules on Maersk.com")}
           </h2>
           <p
             style={{
@@ -512,7 +519,7 @@ export function CaseSchedules() {
               textWrap: "balance",
             }}
           >
-            Routes, vessel schedules and port calls, seen millions of times a day.
+            {t("Routes, vessel schedules and port calls, seen millions of times a day.")}
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -527,7 +534,7 @@ export function CaseSchedules() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What it is
+                {t("What it is")}
               </h3>
               <p
                 style={{
@@ -537,8 +544,9 @@ export function CaseSchedules() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                One of the most visited pages on Maersk.com: routes, vessel schedules and port calls. Two brand builds,
-                with an embeddable version of every view, and the page&apos;s first A/B experiments.
+                {t(
+                  "One of the most visited pages on Maersk.com: routes, vessel schedules and port calls. Two brand builds, with an embeddable version of every view, and the page's first A/B experiments.",
+                )}
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -551,7 +559,7 @@ export function CaseSchedules() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What I did
+                {t("What I did")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -581,9 +589,11 @@ export function CaseSchedules() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>The page</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("The page")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Routes, vessel schedules and port calls, on one of the most visited pages on Maersk.com.
+                      {t("Routes, vessel schedules and port calls, on one of the most visited pages on Maersk.com.")}
                     </span>
                   </div>
                 </li>
@@ -615,10 +625,10 @@ export function CaseSchedules() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Two brand builds
+                      {t("Two brand builds")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      With an embeddable version of every view.
+                      {t("With an embeddable version of every view.")}
                     </span>
                   </div>
                 </li>
@@ -638,9 +648,11 @@ export function CaseSchedules() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Experiments</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("Experiments")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      The page&apos;s first A/B experiments.
+                      {t("The page's first A/B experiments.")}
                     </span>
                   </div>
                 </li>
@@ -648,7 +660,7 @@ export function CaseSchedules() {
             </section>
           </div>
           <aside
-            aria-label="Project facts"
+            aria-label={t("Project facts")}
             style={{
               flex: "2 1 300px",
               minWidth: "0",
@@ -672,7 +684,7 @@ export function CaseSchedules() {
             >
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  of views every day
+                  {t("of views every day")}
                 </dt>
                 <dd
                   style={{
@@ -681,12 +693,12 @@ export function CaseSchedules() {
                     letterSpacing: "-0.78px",
                   }}
                 >
-                  Millions
+                  {t("Millions")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  brand builds
+                  {t("brand builds")}
                 </dt>
                 <dd
                   style={{
@@ -718,7 +730,7 @@ export function CaseSchedules() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Where
+                  {t("Where")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   A.P. Moller - Maersk
@@ -733,10 +745,10 @@ export function CaseSchedules() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  When
+                  {t("When")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
-                  Nov 2021 to Dec 2024
+                  {t("Nov 2021 to Dec 2024")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
@@ -748,7 +760,7 @@ export function CaseSchedules() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Role
+                  {t("Role")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   Senior Software Engineer
@@ -756,7 +768,7 @@ export function CaseSchedules() {
               </div>
             </dl>
             <ul
-              aria-label="Keywords"
+              aria-label={t("Keywords")}
               style={{
                 margin: "0",
                 padding: "22px 0 0",
@@ -791,7 +803,7 @@ export function CaseSchedules() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Embeddable views
+                {t("Embeddable views")}
               </li>
               <li
                 style={{
@@ -804,7 +816,7 @@ export function CaseSchedules() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                A/B experiments
+                {t("A/B experiments")}
               </li>
             </ul>
             <div

@@ -4,6 +4,7 @@
    from the end back to the factory. The Component Factory is a tag in the corner.
    Flat and schematic, in the same palette and with the same pipes and pumps as the other project drawings. */
 import type { ReactNode } from "react";
+import { useT } from "@/i18n/LocaleProvider";
 import { AGENTS } from "@/lib/works";
 
 const BG0 = "#0A0C10",
@@ -171,17 +172,20 @@ function Brake({ x, name, note, children }: { x: number; name: string; note: str
 const LINE = ["capture", "research", "architect", "code", "test", "docs", "a11y", "visual"] as const;
 
 export function FactoryDrawing() {
+  const t = useT();
   return (
     <svg
       viewBox="0 0 1040 380"
       preserveAspectRatio="xMidYMid slice"
       role="img"
-      aria-label="Underneath, a stack of five layers of trust, built from the bottom up: the codebase, static analysis, verification, prose and human review. On top of it, the software factory as one long pipe. A spec becomes tickets, an implementer pump builds each ticket test-first, and three brakes sit on the pipe: checks, review and verdict. A return pipe under them is marked rework, two rounds at most. A hand valve marked human review leads to a pull request, and a pipe marked triage after every run leads from there back to the factory. A tag in the corner names the side line, the Component Factory, with 22 components merged."
+      aria-label={t(
+        "Underneath, a stack of five layers of trust, built from the bottom up: the codebase, static analysis, verification, prose and human review. On top of it, the software factory as one long pipe. A spec becomes tickets, an implementer pump builds each ticket test-first, and three brakes sit on the pipe: checks, review and verdict. A return pipe under them is marked rework, two rounds at most. A hand valve marked human review leads to a pull request, and a pipe marked triage after every run leads from there back to the factory. A tag in the corner names the side line, the Component Factory, with 22 components merged.",
+      )}
       style={{ display: "block", width: "100%", height: "100%" }}
     >
       {/* ---------- the software factory, the main line ---------- */}
       <Label x={40} y={26} fill={T3} anchor="start" weight={600} spacing={0.9}>
-        SOFTWARE FACTORY
+        {t("SOFTWARE FACTORY")}
       </Label>
 
       {/* the side line, as a tag: the eight agents of the Component Factory */}
@@ -197,7 +201,7 @@ export function FactoryDrawing() {
         strokeDasharray="4 5"
       />
       <Label x={46} y={58} anchor="start" fill={T1} size={10.5} weight={600}>
-        side line: Component Factory
+        {t("side line: Component Factory")}
       </Label>
       {LINE.map((key, i) => (
         <circle
@@ -211,35 +215,35 @@ export function FactoryDrawing() {
         />
       ))}
       <Label x={148} y={75.5} anchor="start">
-        22 components merged
+        {t("22 components merged")}
       </Label>
 
       {/* triage: from the pull request back to the factory */}
       <Pipe d={`M924 ${Y - 16}V${Y_TRIAGE}H330V${Y - 106}`} color={LIME} w={10} dur="1.6s" />
       <Chip x={470} y={Y_TRIAGE - 14} w={316} h={28} stroke={LIME} fill={BG1} color={LIME}>
-        triage after every run: the factory improves
+        {t("triage after every run: the factory improves")}
       </Chip>
 
       {/* rework: from behind the brakes back to the implementer */}
       <Pipe d={`M756 ${Y}V${Y_BACK}H282V${Y}`} color={ORANGE} w={10} dur="1.4s" />
       <Chip x={420} y={Y_BACK - 13} w={204} h={26}>
-        rework, two rounds at most
+        {t("rework, two rounds at most")}
       </Chip>
 
       <Pipe d={`M120 ${Y}H870`} color={GREEN} />
 
       <Chip x={34} y={Y - 17} w={86} h={34}>
-        spec
+        {t("spec")}
       </Chip>
 
       {/* the spec is cut into tickets */}
       <rect x="184" y={Y - 25} width="84" height="34" rx="8" fill={BG1} stroke={L2} strokeWidth="1.5" />
       <rect x="180" y={Y - 21} width="84" height="34" rx="8" fill={BG1} stroke={L2} strokeWidth="1.5" />
       <Chip x={176} y={Y - 17} w={84} h={34} stroke={L4}>
-        tickets
+        {t("tickets")}
       </Chip>
       <Label x={218} y={Y + 38}>
-        cut small
+        {t("cut small")}
       </Label>
 
       <Pump x={330} y={Y} color={AGENTS.code.color} scale={0.72} />
@@ -247,22 +251,22 @@ export function FactoryDrawing() {
         implementer
       </Label>
       <Label x={334} y={Y + 51}>
-        test-first
+        {t("test-first")}
       </Label>
 
       {/* the three brakes */}
       <path d={`M448 ${Y - 30}v-6h264v6`} fill="none" stroke={L4} strokeWidth="1.5" />
       <Label x={580} y={Y - 44} fill={T3} weight={600} spacing={0.9}>
-        THREE BRAKES ON EVERY TICKET
+        {t("THREE BRAKES ON EVERY TICKET")}
       </Label>
-      <Brake x={470} name="checks" note="automated">
+      <Brake x={470} name={t("checks")} note={t("automated")}>
         <path d="M-6.5 0l4.4 4.4 8.4-9" />
       </Brake>
-      <Brake x={580} name="review" note="the diff, cold">
+      <Brake x={580} name="review" note={t("the diff, cold")}>
         <path d="M-8 0q8 -9 16 0q-8 9 -16 0z" />
         <circle r="2.2" fill={GREEN} stroke="none" />
       </Brake>
-      <Brake x={690} name="verdict" note="the running app">
+      <Brake x={690} name={t("verdict")} note={t("the running app")}>
         <path d="M-4.5 -7.5v15l11 -7.5z" />
       </Brake>
 
@@ -277,7 +281,7 @@ export function FactoryDrawing() {
       <path d={`M806 ${Y - 12}V${Y - 26}`} fill="none" stroke={L4} strokeWidth="2" />
       <path d={`M792 ${Y - 26}H820`} fill="none" stroke={T1} strokeWidth="3" strokeLinecap="round" />
       <Label x={806} y={Y + 38} fill={T1} weight={600}>
-        human review
+        {t("human review")}
       </Label>
 
       <Chip x={866} y={Y - 16} w={116} h={32} stroke={GREEN} fill="rgba(61,220,151,0.12)" color={GREEN}>
@@ -287,13 +291,13 @@ export function FactoryDrawing() {
       {/* ---------- the five layers of trust the factory stands on ---------- */}
       <path d="M34 266H1006" fill="none" stroke={L2} strokeWidth="1.5" strokeDasharray="4 8" />
       <Label x={40} y={LAYER_TOP + 8} fill={T3} anchor="start" weight={600} spacing={0.9}>
-        FIRST, THE
+        {t("FIRST, THE")}
       </Label>
       <Label x={40} y={LAYER_TOP + 21} fill={T3} anchor="start" weight={600} spacing={0.9}>
-        FIVE LAYERS
+        {t("FIVE LAYERS")}
       </Label>
       <Label x={40} y={LAYER_TOP + 34} fill={T3} anchor="start" weight={600} spacing={0.9}>
-        OF TRUST
+        {t("OF TRUST")}
       </Label>
       {LAYERS.map((layer, i) => {
         const half = 190 + i * LAYER_STEP;
@@ -316,9 +320,9 @@ export function FactoryDrawing() {
                 {layer.no}
               </tspan>
               <tspan fill={T1} fontWeight="600">
-                {" " + layer.name}
+                {" " + t(layer.name)}
               </tspan>
-              <tspan fill={T2}>{" · " + layer.note}</tspan>
+              <tspan fill={T2}>{" · " + t(layer.note)}</tspan>
             </text>
           </g>
         );

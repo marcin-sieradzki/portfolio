@@ -3,8 +3,10 @@ import { Fragment } from "react";
 import portrait from "@/assets/marcin.webp";
 import type { ContactVals } from "./Contact";
 import { MotionToggle } from "./MotionToggle";
+import { useT } from "@/i18n/LocaleProvider";
 
 export function ContactView({ v }: { v: ContactVals }) {
+  const t = useT();
   return (
     <section
       id="contact"
@@ -52,7 +54,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              <span style={{ color: "var(--perron-color-text-brand)" }}>04</span> / Contact
+              <span style={{ color: "var(--perron-color-text-brand)" }}>04</span> {t("/ Contact")}
             </span>
             <h2
               style={{
@@ -65,7 +67,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                 textWrap: "balance",
               }}
             >
-              Next stop: your team?
+              {t("Next stop: your team?")}
             </h2>
             <p
               style={{
@@ -76,8 +78,9 @@ export function ContactView({ v }: { v: ContactVals }) {
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              If you need AI agents in your software lifecycle, agents that run in production, a design system, or
-              simply high-quality software, let&apos;s talk!
+              {t(
+                "If you need AI agents in your software lifecycle, agents that run in production, a design system, or simply high-quality software, let's talk!",
+              )}
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "8px" }}>
@@ -234,7 +237,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                           color: "var(--perron-color-text-on-color-dark)",
                         }}
                       >
-                        AGENTS BUILD IT · CHECKS DECIDE · AGENTS BUILD IT · CHECKS DECIDE ·
+                        {t("AGENTS BUILD IT · CHECKS DECIDE · AGENTS BUILD IT · CHECKS DECIDE ·")}
                       </span>
                     </span>
                     {/* clip */}
@@ -352,7 +355,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                 >
                                   M
                                 </span>
-                                <span>LINE M · CPH</span>
+                                <span>{t("LINE M · CPH")}</span>
                               </span>
                               <span>2026</span>
                             </span>
@@ -369,7 +372,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                             >
                               <img
                                 src={portrait.src}
-                                alt="Marcin Sieradzki, smiling, wearing white headphones"
+                                alt={t("Marcin Sieradzki, smiling, wearing white headphones")}
                                 draggable={false}
                                 style={{
                                   position: "absolute",
@@ -411,7 +414,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   border: "1px solid var(--perron-color-text-on-color-dark)",
                                 }}
                               >
-                                AI agents
+                                {t("AI agents")}
                               </span>
                               <span
                                 style={{
@@ -423,7 +426,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   border: "1px solid var(--perron-color-text-on-color-dark)",
                                 }}
                               >
-                                Design systems
+                                {t("Design systems")}
                               </span>
                               <span
                                 style={{
@@ -435,7 +438,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   border: "1px solid var(--perron-color-text-on-color-dark)",
                                 }}
                               >
-                                Apps
+                                {t("Apps")}
                               </span>
                             </span>
                             <span
@@ -469,7 +472,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                     letterSpacing: "0.1em",
                                   }}
                                 >
-                                  ACCESS · ALL LAYERS
+                                  {t("ACCESS · ALL LAYERS")}
                                 </span>
                               </span>
                               <span
@@ -494,7 +497,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   strokeLinecap="round"
                                   strokeLinejoin="round"
                                   role="img"
-                                  aria-label="Verified"
+                                  aria-label={t("Verified")}
                                 >
                                   <path d="M3 8.5l3.2 3.2L13 4.8" />
                                 </svg>
@@ -558,7 +561,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   border: "2px dashed var(--perron-color-text-secondary)",
                                 }}
                               />
-                              <span>Next stop</span>
+                              <span>{t("Next stop")}</span>
                             </span>
                             <span
                               style={{
@@ -569,7 +572,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                 fontWeight: "700",
                               }}
                             >
-                              Your team?
+                              {t("Your team?")}
                             </span>
                             <span
                               style={{
@@ -587,7 +590,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   borderTop: "1px solid var(--perron-color-border-subtle)",
                                 }}
                               >
-                                <span style={{ color: "var(--perron-color-text-secondary)" }}>Email</span>
+                                <span style={{ color: "var(--perron-color-text-secondary)" }}>{t("Email")}</span>
                                 <span style={{ overflowWrap: "anywhere" }}>marcin.sieradzki97@gmail.com</span>
                               </span>
                               <span
@@ -632,7 +635,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   color: "var(--perron-color-text-secondary)",
                                 }}
                               >
-                                Copenhagen, or remote. Tap to flip back.
+                                {t("Copenhagen, or remote. Tap to flip back.")}
                               </span>
                               <span
                                 aria-hidden="true"
@@ -662,7 +665,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                         ref={v.badgeBtn}
                         type="button"
                         className="ct-badge-btn"
-                        aria-label="Flip the badge to show contact details"
+                        aria-label={t("Flip the badge to show contact details")}
                         aria-pressed={v.badgeFlipped}
                         onClick={v.badgeFlip}
                         onPointerDown={v.badgeDown}
@@ -730,7 +733,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                 color: "var(--perron-color-text-secondary)",
               }}
             >
-              Drag the badge to swing it. Tap it to flip.
+              {t("Drag the badge to swing it. Tap it to flip.")}
             </p>
             <MotionToggle look="text" />
           </div>

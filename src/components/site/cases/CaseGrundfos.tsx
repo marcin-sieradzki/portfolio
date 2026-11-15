@@ -1,6 +1,8 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 
+import { useT } from "@/i18n/LocaleProvider";
 export function CaseGrundfos() {
+  const t = useT();
   return (
     <article style={{ display: "flex", flexDirection: "column" }}>
       <figure style={{ margin: "0", flex: "none" }}>
@@ -27,7 +29,9 @@ export function CaseGrundfos() {
               viewBox="0 0 1040 380"
               preserveAspectRatio="xMidYMid slice"
               role="img"
-              aria-label="A blueprint with an exploded view of a pump. Five numbered parts match a parts list: React Aria, the token registry, the validator, 65 components and the component registry."
+              aria-label={t(
+                "A blueprint with an exploded view of a pump. Five numbered parts match a parts list: React Aria, the token registry, the validator, 65 components and the component registry.",
+              )}
               style={{ display: "block", width: "100%", height: "100%" }}
             >
               <rect x="22" y="20" width="996" height="340" rx="6" fill="none" stroke="#16303A" strokeWidth="1" />
@@ -239,7 +243,7 @@ export function CaseGrundfos() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                built from zero · Dec 2024 to now
+                {t("built from zero · Dec 2024 to now")}
               </text>
               <rect x="762" y="52" width="200" height="284" rx="4" fill="#0A0C10" stroke="#16303A" strokeWidth="1" />
               <text
@@ -251,7 +255,7 @@ export function CaseGrundfos() {
                 fill="#5ED3F0"
                 letterSpacing="0.9"
               >
-                PARTS LIST
+                {t("PARTS LIST")}
               </text>
               <path d="M762 83H962" fill="none" stroke="#16303A" strokeWidth="1" />
               <circle cx="785" cy="102" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
@@ -284,7 +288,7 @@ export function CaseGrundfos() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                the base it is built on
+                {t("the base it is built on")}
               </text>
               <path d="M776 126H948" fill="none" stroke="#12232B" strokeWidth="1" />
               <circle cx="785" cy="141" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
@@ -307,7 +311,7 @@ export function CaseGrundfos() {
                 fontWeight="600"
                 fill="#F2F4F7"
               >
-                Token registry
+                {t("Token registry")}
               </text>
               <text
                 x="804"
@@ -317,7 +321,7 @@ export function CaseGrundfos() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                machine-readable
+                {t("machine-readable")}
               </text>
               <path d="M776 165H948" fill="none" stroke="#12232B" strokeWidth="1" />
               <circle cx="785" cy="180" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
@@ -340,7 +344,7 @@ export function CaseGrundfos() {
                 fontWeight="600"
                 fill="#F2F4F7"
               >
-                Validator
+                {t("Validator")}
               </text>
               <text
                 x="804"
@@ -350,7 +354,7 @@ export function CaseGrundfos() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                blocks unknown components
+                {t("blocks unknown components")}
               </text>
               <path d="M776 204H948" fill="none" stroke="#12232B" strokeWidth="1" />
               <circle cx="785" cy="219" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
@@ -373,7 +377,7 @@ export function CaseGrundfos() {
                 fontWeight="600"
                 fill="#F2F4F7"
               >
-                Components
+                {t("Components")}
               </text>
               <text
                 x="804"
@@ -383,7 +387,7 @@ export function CaseGrundfos() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                65 in the system
+                {t("65 in the system")}
               </text>
               <path d="M776 243H948" fill="none" stroke="#12232B" strokeWidth="1" />
               <circle cx="785" cy="258" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
@@ -406,7 +410,7 @@ export function CaseGrundfos() {
                 fontWeight="600"
                 fill="#F2F4F7"
               >
-                Component registry
+                {t("Component registry")}
               </text>
               <text
                 x="804"
@@ -416,7 +420,7 @@ export function CaseGrundfos() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                machine-readable
+                {t("machine-readable")}
               </text>
               <path d="M762 293H962" fill="none" stroke="#16303A" strokeWidth="1" />
               <text
@@ -427,7 +431,7 @@ export function CaseGrundfos() {
                 fontWeight="500"
                 fill="#A4ADBB"
               >
-                Grundfos design system
+                {t("Grundfos design system")}
               </text>
               <text
                 x="776"
@@ -437,7 +441,7 @@ export function CaseGrundfos() {
                 fontWeight="500"
                 fill="#7C8696"
               >
-                sheet 4 of 8
+                {t("sheet 4 of 8")}
               </text>
             </svg>
           </div>
@@ -468,8 +472,8 @@ export function CaseGrundfos() {
             }}
           />
           <span>
-            An exploded view of a pump. Each numbered part is one piece of the design system.
-            <span className="cs-swipe"> Swipe sideways to see all of it.</span>
+            {t("An exploded view of a pump. Each numbered part is one piece of the design system.")}
+            <span className="cs-swipe"> {t("Swipe sideways to see all of it.")}</span>
           </span>
         </figcaption>
       </figure>
@@ -495,7 +499,7 @@ export function CaseGrundfos() {
               color: "var(--perron-color-text-secondary)",
             }}
           >
-            <span>Grundfos · Dec 2024 to now</span>
+            <span>{t("Grundfos · Dec 2024 to now")}</span>
           </div>
           <h2
             id="case-title-grundfos-ds"
@@ -509,7 +513,7 @@ export function CaseGrundfos() {
               textWrap: "balance",
             }}
           >
-            Grundfos design system
+            {t("Grundfos design system")}
           </h2>
           <p
             style={{
@@ -521,7 +525,7 @@ export function CaseGrundfos() {
               textWrap: "balance",
             }}
           >
-            Built from zero, and readable by machines.
+            {t("Built from zero, and readable by machines.")}
           </p>
         </header>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: "32px 56px" }}>
@@ -536,7 +540,7 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What it is
+                {t("What it is")}
               </h3>
               <p
                 style={{
@@ -546,9 +550,9 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Built from zero on React Aria, and made for agents as much as for people. Registries say what exists and
-                a validator blocks what does not. An MCP server, skills, codemods and Figma Code Connect carry the
-                system into coding agents, migrations and design files.
+                {t(
+                  "Built from zero on React Aria, and made for agents as much as for people. Registries say what exists and a validator blocks what does not. An MCP server, skills, codemods and Figma Code Connect carry the system into coding agents, migrations and design files.",
+                )}
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -561,7 +565,7 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                What is in it
+                {t("What is in it")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -591,9 +595,11 @@ export function CaseGrundfos() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Registries</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("Registries")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A component registry and a token registry, so tools and agents can read what exists.
+                      {t("A component registry and a token registry, so tools and agents can read what exists.")}
                     </span>
                   </div>
                 </li>
@@ -624,9 +630,11 @@ export function CaseGrundfos() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Validator</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("Validator")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Blocks unknown components and invented tokens.
+                      {t("Blocks unknown components and invented tokens.")}
                     </span>
                   </div>
                 </li>
@@ -647,10 +655,10 @@ export function CaseGrundfos() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Adoption audit
+                      {t("Adoption audit")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A weekly audit of design system adoption across 30 UI repositories, on local models.
+                      {t("A weekly audit of design system adoption across 30 UI repositories, on local models.")}
                     </span>
                   </div>
                 </li>
@@ -666,7 +674,7 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                Made for agents
+                {t("Made for agents")}
               </h3>
               <ol style={{ margin: "0", padding: "0", listStyle: "none", display: "flex", flexDirection: "column" }}>
                 <li style={{ position: "relative", display: "flex", gap: "16px", paddingBottom: "20px" }}>
@@ -696,9 +704,11 @@ export function CaseGrundfos() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>MCP server</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("MCP server")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Gives coding agents the components, the documentation and the accessibility guidelines.
+                      {t("Gives coding agents the components, the documentation and the accessibility guidelines.")}
                     </span>
                   </div>
                 </li>
@@ -729,10 +739,11 @@ export function CaseGrundfos() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Skills</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>{t("Skills")}</strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Portable instructions that teach a coding agent how to work with the system, including the move
-                      from v1 to v2.
+                      {t(
+                        "Portable instructions that teach a coding agent how to work with the system, including the move from v1 to v2.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -763,9 +774,11 @@ export function CaseGrundfos() {
                     }}
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
-                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>Codemods</strong>
+                    <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
+                      {t("Codemods")}
+                    </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Rewrite code from v1 to v2 automatically, for the mechanical part of the migration.
+                      {t("Rewrite code from v1 to v2 automatically, for the mechanical part of the migration.")}
                     </span>
                   </div>
                 </li>
@@ -800,7 +813,7 @@ export function CaseGrundfos() {
                       Figma Code Connect
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      Links each component in Figma to its code, so a design points at the real component.
+                      {t("Links each component in Figma to its code, so a design points at the real component.")}
                     </span>
                   </div>
                 </li>
@@ -821,11 +834,12 @@ export function CaseGrundfos() {
                   />
                   <div style={{ display: "flex", flexDirection: "column", gap: "3px", minWidth: "0" }}>
                     <strong style={{ fontSize: "15.5px", lineHeight: "1.45", fontWeight: "700" }}>
-                      Agents build from it
+                      {t("Agents build from it")}
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      GDS Studio builds its prototypes from these components and tokens, and the Component Factory adds
-                      new components to it.
+                      {t(
+                        "GDS Studio builds its prototypes from these components and tokens, and the Component Factory adds new components to it.",
+                      )}
                     </span>
                   </div>
                 </li>
@@ -833,7 +847,7 @@ export function CaseGrundfos() {
             </section>
           </div>
           <aside
-            aria-label="Project facts"
+            aria-label={t("Project facts")}
             style={{
               flex: "2 1 300px",
               minWidth: "0",
@@ -857,7 +871,7 @@ export function CaseGrundfos() {
             >
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  components
+                  {t("components")}
                 </dt>
                 <dd
                   style={{
@@ -871,7 +885,7 @@ export function CaseGrundfos() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  adoption
+                  {t("adoption")}
                 </dt>
                 <dd
                   style={{
@@ -880,12 +894,12 @@ export function CaseGrundfos() {
                     letterSpacing: "-0.78px",
                   }}
                 >
-                  Around 70%
+                  {t("Around 70%")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  people in the team
+                  {t("people in the team")}
                 </dt>
                 <dd
                   style={{
@@ -899,7 +913,7 @@ export function CaseGrundfos() {
               </div>
               <div style={{ display: "flex", flexDirection: "column-reverse", justifyContent: "flex-end", gap: "5px" }}>
                 <dt style={{ fontSize: "13.5px", lineHeight: "1.4", color: "var(--perron-color-text-secondary)" }}>
-                  UI repositories audited weekly
+                  {t("UI repositories audited weekly")}
                 </dt>
                 <dd
                   style={{
@@ -931,7 +945,7 @@ export function CaseGrundfos() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Where
+                  {t("Where")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>Grundfos</dd>
               </div>
@@ -944,10 +958,10 @@ export function CaseGrundfos() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  When
+                  {t("When")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
-                  Dec 2024 to now
+                  {t("Dec 2024 to now")}
                 </dd>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
@@ -959,7 +973,7 @@ export function CaseGrundfos() {
                     color: "var(--perron-color-text-secondary)",
                   }}
                 >
-                  Role
+                  {t("Role")}
                 </dt>
                 <dd style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.4", fontWeight: "600" }}>
                   Lead Software Engineer
@@ -967,7 +981,7 @@ export function CaseGrundfos() {
               </div>
             </dl>
             <ul
-              aria-label="Keywords"
+              aria-label={t("Keywords")}
               style={{
                 margin: "0",
                 padding: "22px 0 0",
@@ -1002,7 +1016,7 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Component registry
+                {t("Component registry")}
               </li>
               <li
                 style={{
@@ -1015,7 +1029,7 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Token registry
+                {t("Token registry")}
               </li>
               <li
                 style={{
@@ -1028,7 +1042,7 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Validator
+                {t("Validator")}
               </li>
               <li
                 style={{
@@ -1041,7 +1055,7 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                MCP server
+                {t("MCP server")}
               </li>
               <li
                 style={{
@@ -1054,7 +1068,7 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Agent skills
+                {t("Agent skills")}
               </li>
               <li
                 style={{
@@ -1067,7 +1081,7 @@ export function CaseGrundfos() {
                   color: "var(--perron-color-text-primary)",
                 }}
               >
-                Codemods
+                {t("Codemods")}
               </li>
               <li
                 style={{

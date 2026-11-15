@@ -134,10 +134,10 @@ export function CaseSoftwareFactory() {
                   color: "var(--perron-color-text-secondary)",
                 }}
               >
-                A system of agents that turns a spec into pull requests, one ticket at a time. I built it for the GDS
-                Studio work, and I built the ground under it first: five layers that make an agent&apos;s work worth
-                trusting before any of it is automated. Every ticket then passes three brakes before a person reviews
-                it, and every run ends with a triage of what went wrong, so the factory gets better over time.
+                A system of agents that turns a spec into pull requests. I built it for the GDS Studio work, and I built
+                the ground under it first: five layers that make an agent&apos;s work worth trusting before any of it is
+                automated. Every ticket then passes three brakes before a person reviews it, and every run ends with a
+                triage of what went wrong, so the factory gets better over time.
               </p>
             </section>
             <section style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -361,7 +361,7 @@ export function CaseSoftwareFactory() {
                       Spec to tickets
                     </strong>
                     <span style={{ fontSize: "15px", lineHeight: "1.55", color: "var(--perron-color-text-secondary)" }}>
-                      A spec is cut into small tickets, and the factory builds them one at a time.
+                      A spec is cut into small tickets for the factory to build.
                     </span>
                   </div>
                 </li>

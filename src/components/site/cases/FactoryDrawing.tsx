@@ -239,7 +239,7 @@ export function FactoryDrawing() {
         tickets
       </Chip>
       <Label x={218} y={Y + 38}>
-        one at a time
+        cut small
       </Label>
 
       <Pump x={330} y={Y} color={AGENTS.code.color} scale={0.72} />

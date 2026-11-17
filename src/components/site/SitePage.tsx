@@ -6,6 +6,7 @@ import { Experience } from "./Experience";
 import { Footer } from "./Footer";
 import { Hero } from "./Hero";
 import { Nav } from "./Nav";
+import { PersonJsonLd } from "./PersonJsonLd";
 import { Work } from "./Work";
 
 /* Version E: portrait hero, work built on scroll, in one language. The page is prerendered at build time (static
@@ -14,6 +15,7 @@ import { Work } from "./Work";
 export function SitePage({ lang }: { lang: Locale }) {
   return (
     <LocaleProvider lang={lang}>
+      <PersonJsonLd lang={lang} />
       <div
         data-theme="dark"
         style={{

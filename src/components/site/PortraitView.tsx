@@ -1,5 +1,13 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 import portrait from "@/assets/marcin.webp";
+import portrait480 from "@/assets/marcin-480.webp";
+import portrait640 from "@/assets/marcin-640.webp";
+import portrait800 from "@/assets/marcin-800.webp";
+
+/* The photo in four widths, so a phone does not download the full 1024 px one. The box is the column width minus
+   the 32 px gutters, up to 500 px. The face canvas reads the size of whichever file loaded (naturalWidth). */
+const PORTRAIT_SRCSET = [portrait480, portrait640, portrait800, portrait].map((p) => `${p.src} ${p.width}w`).join(", ");
+const PORTRAIT_SIZES = "(max-width: 564px) calc(100vw - 64px), 500px";
 import type { PortraitVals } from "./Portrait";
 import { useT } from "@/i18n/LocaleProvider";
 
@@ -58,6 +66,8 @@ export function PortraitView({ v }: { v: PortraitVals }) {
           <img
             ref={v.faceImg}
             src={portrait.src}
+            srcSet={PORTRAIT_SRCSET}
+            sizes={PORTRAIT_SIZES}
             alt={t("Marcin Sieradzki, smiling, wearing white headphones")}
             fetchPriority="high"
             draggable={false}

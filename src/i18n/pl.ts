@@ -347,6 +347,7 @@ export const pl: Record<string, string> = {
     "Ten sam pomysł dla komponentów design systemu. Na wejściu uzgodniony komponent z Figmy i jego strona dokumentacji, buduje go ośmiu agentów, każdy z jednym zadaniem, kontrola systemu decyduje, a na wyjściu jest szkic pull requesta z kodem, testami, stories i dokumentacją. 22 komponenty scalone, każdy w około 60 minut.",
   "Then, the factory": "Potem fabryka",
   "This page": "Ta strona",
+  "This project did not load.": "Nie udało się wczytać projektu.",
   "Three brakes": "Trzy hamulce",
   Thu: "Cz",
   "Token registry": "Rejestr tokenów",
@@ -357,6 +358,7 @@ export const pl: Record<string, string> = {
   "Trust first, automation second. Then a spec goes in, and pull requests for a person to review come out.":
     "Najpierw zaufanie, potem automatyzacja. Dopiero wtedy na wejściu jest specyfikacja, a na wyjściu pull requesty do review przez człowieka.",
   Tue: "Wt",
+  "Try again": "Spróbuj ponownie",
   "Two brand builds": "Dwie wersje marek",
   "Two projects, one system": "Dwa projekty, jeden system",
   "UI repositories audited weekly": "repozytoriów UI audytowanych co tydzień",

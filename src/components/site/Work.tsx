@@ -7,6 +7,7 @@
 import { Component, createRef, type KeyboardEvent, type MouseEvent, type ReactNode, type RefObject } from "react";
 import { PROJECTS, type MoveKind, type PartKey } from "@/lib/works";
 import { WorkView } from "./WorkView";
+import { loadCase, prefetchCase } from "./cases/load";
 
 /* The prototype's timings, run 20% shorter: every duration of the build goes through pace(). */
 const WORKS_PACE = 0.8;
@@ -184,6 +185,7 @@ export class Work extends Component<{ children?: ReactNode }, State> {
   private caseLocked: { o: string; p: string } | null =
     null; /* the page's own overflow and padding, kept while it is locked */
   private caseStopsCache: Record<number, Stop[]> = {};
+  private casePrefetchIO: IntersectionObserver | null = null;
   private caseOnClose = () => this.caseHide();
   private caseOnPrev = () => this.caseStep(-1);
   private caseOnNext = () => this.caseStep(1);
@@ -195,6 +197,7 @@ export class Work extends Component<{ children?: ReactNode }, State> {
   componentDidMount() {
     this.caseStill = reducedMotion();
     this.worksMount();
+    this.casePrefetchMount();
   }
 
   componentDidUpdate() {
@@ -204,6 +207,8 @@ export class Work extends Component<{ children?: ReactNode }, State> {
   componentWillUnmount() {
     this.worksUnmount();
     this.caseUnmount();
+    if (this.casePrefetchIO) this.casePrefetchIO.disconnect();
+    this.casePrefetchIO = null;
   }
 
   render() {
@@ -491,8 +496,36 @@ export class Work extends Component<{ children?: ReactNode }, State> {
     this.caseTimers = [];
   }
 
-  /* Open project i, or move to it when the modal is already open. */
+  /* Each modal's drawing is fetched when its card comes near the screen, so it is usually there by the time the
+     card is opened. Without IntersectionObserver they are all fetched once the page is idle. */
+  casePrefetchMount() {
+    if (typeof IntersectionObserver === "undefined") {
+      CASES.forEach((c) => prefetchCase(c.id));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (!en.isIntersecting) return;
+          const i = this.worksIndexOf(en.target);
+          if (i >= 0) prefetchCase(CASES[i].id);
+          io.unobserve(en.target);
+        });
+      },
+      { rootMargin: "200px 0px" },
+    );
+    this.casePrefetchIO = io;
+    this.worksRefs.forEach((r) => {
+      if (r.current) io.observe(r.current);
+    });
+  }
+
+  /* Open project i, or move to it when the modal is already open. Its neighbours are fetched too, for the arrows. */
   caseShow(i: number) {
+    const n = CASES.length;
+    void loadCase(CASES[i].id).catch(() => {});
+    prefetchCase(CASES[(i + 1) % n].id);
+    prefetchCase(CASES[(i + n - 1) % n].id);
     const mounted = this.state.caseAt >= 0;
     this.caseStopTimers();
     if (mounted) {

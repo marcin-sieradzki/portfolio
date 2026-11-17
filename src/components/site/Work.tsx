@@ -9,8 +9,8 @@ import { PROJECTS, type MoveKind, type PartKey } from "@/lib/works";
 import { WorkView } from "./WorkView";
 import { loadCase, prefetchCase } from "./cases/load";
 
-/* The prototype's timings, run 20% shorter: every duration of the build goes through pace(). */
-const WORKS_PACE = 0.8;
+/* The prototype's timings, run shorter (0.8, then another 20% off on 2026-11-17): every duration of the build goes through pace(). */
+const WORKS_PACE = 0.64;
 const pace = (ms: number) => Math.round(ms * WORKS_PACE);
 
 const WORKS_TICK = pace(320); /* ms per build step */

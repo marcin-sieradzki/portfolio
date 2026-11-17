@@ -278,6 +278,8 @@ export const pl: Record<string, string> = {
     "Perron dostarcza tokeny, komponenty i wzorce razem z serwerem MCP, więc agenci kodujący mogą czytać system bezpośrednio. Mylder pokazuje autobusy, S-tog, metro i pociągi Kopenhagi na jednej mapie na żywo i uczciwie mówi, jak świeża jest każda pozycja. Zbudowane w pojedynkę z agentami kodującymi.",
   "Play motion": "Wznów animacje",
   "Port calls": "Zawinięcia",
+  "Privacy: this site counts visits with Vercel Web Analytics. It sets no cookies and stores nothing on your device, and it cannot tell who you are.":
+    "Prywatność: ta strona liczy odwiedziny za pomocą Vercel Web Analytics. Nie zapisuje plików cookie ani niczego na Twoim urządzeniu i nie wie, kim jesteś.",
   "Portable instructions that teach a coding agent how to work with the system, including the move from v1 to v2.":
     "Przenośne instrukcje, które uczą agenta kodującego pracy z systemem, w tym przejścia z v1 na v2.",
   Previous: "Poprzedni",

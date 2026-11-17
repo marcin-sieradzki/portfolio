@@ -25,6 +25,11 @@ export function Footer({ lang }: { lang: Locale }) {
       <p style={{ margin: "0", font: "400 12.5px/1.5 var(--perron-font-family-data)" }}>
         {t("© 2026 Marcin Sieradzki · Copenhagen")}
       </p>
+      <p style={{ margin: "0", maxWidth: "640px", font: "400 12.5px/1.5 var(--perron-font-family-data)" }}>
+        {t(
+          "Privacy: this site counts visits with Vercel Web Analytics. It sets no cookies and stores nothing on your device, and it cannot tell who you are.",
+        )}
+      </p>
     </footer>
   );
 }

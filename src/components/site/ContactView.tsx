@@ -1,6 +1,7 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 import { Fragment } from "react";
-import portrait from "@/assets/marcin.webp";
+/* The badge photo is about 170 px wide, so the 480 px file is enough even on 3x screens. */
+import portrait from "@/assets/marcin-480.webp";
 import type { ContactVals } from "./Contact";
 import { MotionToggle } from "./MotionToggle";
 import { useT } from "@/i18n/LocaleProvider";
@@ -373,6 +374,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                               <img
                                 src={portrait.src}
                                 alt={t("Marcin Sieradzki, smiling, wearing white headphones")}
+                                loading="lazy"
                                 draggable={false}
                                 style={{
                                   position: "absolute",

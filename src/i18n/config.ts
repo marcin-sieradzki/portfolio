@@ -13,3 +13,6 @@ export const LOCALE_NAME: Record<Locale, string> = { en: "English", pl: "Polski"
 
 /* og:locale of each page. */
 export const OG_LOCALE: Record<Locale, string> = { en: "en_US", pl: "pl_PL" };
+
+/* The link preview image of each page (1200 x 630), drawn by scripts/og-image/render.mjs. */
+export const OG_IMAGE: Record<Locale, string> = { en: "/og/en.png", pl: "/og/pl.png" };

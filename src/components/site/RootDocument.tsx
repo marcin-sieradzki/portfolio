@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Familjen_Grotesk, JetBrains_Mono, Schibsted_Grotesk } from "next/font/google";
-import { LOCALE_PATH, LOCALES, OG_LOCALE, SITE_URL, type Locale } from "@/i18n/config";
+import { LOCALE_PATH, LOCALES, OG_IMAGE, OG_LOCALE, SITE_URL, type Locale } from "@/i18n/config";
 import { translator } from "@/i18n/translate";
 import "@/app/globals.css";
 
@@ -49,6 +50,14 @@ export function siteMetadata(lang: Locale): Metadata {
       description,
       locale: OG_LOCALE[lang],
       alternateLocale: LOCALES.filter((l) => l !== lang).map((l) => OG_LOCALE[l]),
+      siteName: "Marcin Sieradzki",
+      images: [{ url: OG_IMAGE[lang], width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [OG_IMAGE[lang]],
     },
   };
 }
@@ -61,7 +70,11 @@ export const siteViewport: Viewport = {
 export function RootDocument({ lang, children }: { lang: Locale; children: ReactNode }) {
   return (
     <html lang={lang} className={`${familjen.variable} ${schibsted.variable} ${jetbrains.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Vercel Web Analytics: page views only, no cookies. Needs Analytics turned on in the Vercel project. */}
+        <Analytics />
+      </body>
     </html>
   );
 }

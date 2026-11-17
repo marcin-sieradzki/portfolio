@@ -1,36 +1,17 @@
 /* Markup generated from the Version E prototype (Site-E-Face.dc.html) by scripts/dc-to-jsx. Edit it here freely: the generator was a one-off. */
 import { Fragment, type ReactNode } from "react";
+import { CaseBody } from "./cases/load";
 import type { WorkVals } from "./Work";
-import { CaseGdsStudio } from "./cases/CaseGdsStudio";
-import { CasePerronMylder } from "./cases/CasePerronMylder";
-import { CaseSoftwareFactory } from "./cases/CaseSoftwareFactory";
-import { CaseGrundfos } from "./cases/CaseGrundfos";
-import { CaseMaerskDesignSystem } from "./cases/CaseMaerskDesignSystem";
-import { CaseSchedules } from "./cases/CaseSchedules";
-import { CaseVendorMasterData } from "./cases/CaseVendorMasterData";
-import { CaseMicroFrontends } from "./cases/CaseMicroFrontends";
 import { useT } from "@/i18n/LocaleProvider";
-import { PROJECTS, type ProjectId } from "@/lib/works";
+import { PROJECTS } from "@/lib/works";
 import { WorkCard } from "./WorkCard";
 import { MotionToggle } from "./MotionToggle";
-
-/* The modal of each project: its drawing and its copy. */
-const CASE_VIEWS: Record<ProjectId, () => ReactNode> = {
-  studio: CaseGdsStudio,
-  "grundfos-ds": CaseGrundfos,
-  "maersk-ds": CaseMaerskDesignSystem,
-  "perron-mylder": CasePerronMylder,
-  schedules: CaseSchedules,
-  vendor: CaseVendorMasterData,
-  factory: CaseSoftwareFactory,
-  "vml-map": CaseMicroFrontends,
-};
 
 /* The Work section, then whatever follows it on the page (children), then the project modal.
    The modal stays last in the page so it paints over everything, as in the prototype. */
 export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode }) {
   const t = useT();
-  const CaseNow = v.caseAt >= 0 ? CASE_VIEWS[PROJECTS[v.caseAt].id] : null;
+  const caseId = v.caseAt >= 0 ? PROJECTS[v.caseAt].id : null;
   return (
     <>
       <section
@@ -680,7 +661,7 @@ export function WorkView({ v, children }: { v: WorkVals; children?: ReactNode })
                   tabIndex={0}
                   style={{ flex: "1 1 auto", minHeight: "0", overflowY: "auto", overscrollBehavior: "contain" }}
                 >
-                  {CaseNow ? <CaseNow /> : null}
+                  {caseId ? <CaseBody id={caseId} /> : null}
                 </div>
                 {/* footer: step through the projects, drawn as stops on a line */}
                 <div

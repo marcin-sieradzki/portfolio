@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Familjen_Grotesk, JetBrains_Mono, Schibsted_Grotesk } from "next/font/google";
-import { LOCALE_PATH, LOCALES, OG_IMAGE, OG_LOCALE, SITE_URL, type Locale } from "@/i18n/config";
+import { LOCALE_PATH, LOCALES, OG_IMAGE, OG_LOCALE, SITE_TITLE, SITE_URL, type Locale } from "@/i18n/config";
 import { translator } from "@/i18n/translate";
 import "@/app/globals.css";
 
@@ -31,7 +31,9 @@ const jetbrains = JetBrains_Mono({
 /* Title, description, canonical URL and the hreflang links to every language of the page. */
 export function siteMetadata(lang: Locale): Metadata {
   const t = translator(lang);
-  const title = "Marcin Sieradzki · Lead software engineer";
+  /* Name first (people search for it), then the role and the two specialisms the site is about. Under 65 characters,
+     so search results show it whole. */
+  const title = SITE_TITLE;
   const description = t(
     "Lead software engineer in Copenhagen. I put AI agents into the software lifecycle and the design system, with checks and evals that make their work safe to ship.",
   );
@@ -39,6 +41,7 @@ export function siteMetadata(lang: Locale): Metadata {
     metadataBase: new URL(SITE_URL),
     title,
     description,
+    authors: [{ name: "Marcin Sieradzki", url: SITE_URL }],
     alternates: {
       canonical: LOCALE_PATH[lang],
       languages: { ...Object.fromEntries(LOCALES.map((l) => [l, LOCALE_PATH[l]])), "x-default": LOCALE_PATH.en },

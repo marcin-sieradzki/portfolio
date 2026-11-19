@@ -6,7 +6,7 @@ export const DEFAULT_LOCALE: Locale = "en";
 export const SITE_URL = "https://www.marcinsieradzki.com";
 
 /* The <title> and share title of every language. Job titles stay in English, as recruiters search for them in English. */
-export const SITE_TITLE = "Marcin Sieradzki · Lead Software Engineer · AI & Design Systems";
+export const SITE_TITLE = "Marcin Sieradzki · Lead Frontend Engineer · AI & Design Systems";
 
 /* The page of each locale, as a path from the site root. */
 export const LOCALE_PATH: Record<Locale, string> = { en: "/", pl: "/pl" };

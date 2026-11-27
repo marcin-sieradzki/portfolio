@@ -325,6 +325,8 @@ export const pl: Record<string, string> = {
     "Studio łączy się też z firmowym RAG-iem i z platformą opinii klientów, więc agent może budować w oparciu o wiedzę o produktach i o to, co mówią klienci.",
   Sun: "Nd",
   "Swipe sideways to see all of it.": "Przesuń w bok, aby zobaczyć całość.",
+  "Switch to dark theme": "Włącz ciemny motyw",
+  "Switch to light theme": "Włącz jasny motyw",
   "System check": "Kontrola systemu",
   "System checks": "Kontrole systemu",
   "THREE BRAKES ON EVERY TICKET": "TRZY HAMULCE NA KAŻDYM ZADANIU",

@@ -1,0 +1,276 @@
+/* Design tokens. Every colour on the site comes from here, as a CSS custom property; components never write a colour
+   literal (scripts/color-check.mjs fails the build if one does).
+
+   Three layers, as in Perron (0.10.1), whose token names these are, so the site could ship as a Perron theme:
+   1. Palette: raw colours, the same in both themes. Only the theme blocks below read them.
+   2. Theme: semantic tokens (--perron-color-*) and the site's own (--site-color-*), with a value per theme.
+   3. Components read only layer 2.
+
+   The theme is data-theme="dark" or "light" on <html>, set before the first paint by the script in
+   RootDocument.tsx (the stored choice, else the system's prefers-color-scheme). Any element can pin its subtree to a
+   theme with its own data-theme. Without that attribute (no JavaScript) the site is dark, as it was before themes. */
+
+/* ---------- 1. Palette ---------- */
+:root {
+  --perron-palette-neutral-0: #ffffff;
+  --perron-palette-neutral-50: #f6f7f9;
+  --perron-palette-neutral-100: #f2f4f7;
+  --perron-palette-neutral-150: #e8ebf0;
+  --perron-palette-neutral-200: #dde2e8;
+  --perron-palette-neutral-250: #cbd2dc;
+  --perron-palette-neutral-275: #b4bdca;
+  --perron-palette-neutral-300: #a4adbb;
+  --perron-palette-neutral-400: #8d97a6;
+  --perron-palette-neutral-500: #7c8696;
+  --perron-palette-neutral-550: #5e6878;
+  --perron-palette-neutral-600: #3a4557;
+  --perron-palette-neutral-650: #4a5568;
+  --perron-palette-neutral-675: #2e3746;
+  --perron-palette-neutral-690: #232a36;
+  --perron-palette-neutral-700: #1a202b;
+  --perron-palette-neutral-750: #141a25;
+  --perron-palette-neutral-800: #10141b;
+  --perron-palette-neutral-900: #0a0c10;
+  --perron-palette-neutral-950: #07090c;
+  --perron-palette-neutral-975: #080a0e;
+  --perron-palette-blue-100: #8fb8ff;
+  --perron-palette-blue-200: #5b9dff;
+  --perron-palette-blue-300: #4c8dff;
+  --perron-palette-blue-600: #2563eb;
+  --perron-palette-blue-700: #1d4ed8;
+  --perron-palette-blue-900: #121e36;
+  --perron-palette-green-300: #3ddc97;
+  --perron-palette-green-350: #35c487;
+  --perron-palette-green-700: #047857;
+  --perron-palette-green-800: #065f46;
+  --perron-palette-green-900: #102520;
+  --perron-palette-orange-300: #ff8a5b;
+  --perron-palette-orange-700: #c2410c;
+  --perron-palette-red-300: #f0616d;
+  --perron-palette-red-400: #c94452;
+  --perron-palette-red-700: #b91c1c;
+  --perron-palette-red-800: #9f1239;
+  --perron-palette-red-900: #3a1d12;
+  --perron-palette-yellow-300: #ffd166;
+  --perron-palette-yellow-500: #d9a93a;
+  --perron-palette-yellow-700: #a16207;
+  --perron-palette-yellow-800: #854d0e;
+  --perron-palette-yellow-900: #33290f;
+  --perron-palette-cyan-300: #5ed3f0;
+  --perron-palette-cyan-700: #0e7490;
+  --perron-palette-pink-300: #ff7eb6;
+  --perron-palette-pink-700: #be185d;
+  --perron-palette-purple-300: #b58cff;
+  --perron-palette-purple-700: #7c3aed;
+  --perron-palette-lime-300: #c8f560;
+  --perron-palette-lime-700: #4d7c0f;
+
+  /* Transit line colours are the operators' own, so they do not change with the theme. */
+  --perron-color-transit-line-m1: #0b8a44;
+  --perron-color-transit-line-m2: #f0b400;
+  --perron-color-transit-line-m3: #e2231a;
+  --perron-color-transit-line-m4: #0090d0;
+  --perron-color-transit-line-a: #00a1de;
+  --perron-color-transit-line-b: #4ba046;
+  --perron-color-transit-line-c: #f18a00;
+  --perron-color-transit-line-e: #7d5aa6;
+  --perron-color-transit-line-f: #f5c200;
+  --perron-color-transit-line-h: #dd1f2a;
+  --perron-color-text-on-color-dark: var(--perron-palette-neutral-900);
+  --perron-color-text-on-color-light: var(--perron-palette-neutral-0);
+
+  /* The three families are self-hosted by next/font (see RootDocument.tsx), which sets --font-familjen, --font-schibsted and --font-jetbrains on <html>. */
+  --perron-font-family-display: var(--font-familjen), var(--font-schibsted), system-ui, sans-serif;
+  --perron-font-family-body: var(--font-schibsted), system-ui, -apple-system, "Segoe UI", "Roboto", sans-serif;
+  --perron-font-family-data: var(--font-jetbrains), ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
+  --perron-radius-xs: 4px;
+  --perron-radius-sm: 6px;
+  --perron-radius-md: 8px;
+  --perron-radius-lg: 12px;
+  --perron-radius-xl: 16px;
+  --perron-radius-full: 9999px;
+  --perron-space-050: 2px;
+  --perron-space-100: 4px;
+  --perron-space-150: 6px;
+  --perron-space-200: 8px;
+  --perron-space-300: 12px;
+  --perron-space-400: 16px;
+  --perron-space-500: 20px;
+  --perron-space-600: 24px;
+  --perron-space-800: 32px;
+  --perron-easing-sheet: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --perron-easing-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ---------- 2a. Dark theme (the default) ---------- */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --perron-color-text-primary: var(--perron-palette-neutral-100);
+  --perron-color-text-secondary: var(--perron-palette-neutral-300);
+  --perron-color-text-tertiary: var(--perron-palette-neutral-500);
+  --perron-color-text-inverse: var(--perron-palette-neutral-900);
+  --perron-color-text-success: var(--perron-palette-green-300);
+  --perron-color-text-warning: var(--perron-palette-yellow-300);
+  --perron-color-text-danger: var(--perron-palette-orange-300);
+  --perron-color-text-info: var(--perron-palette-blue-100);
+  --perron-color-text-brand: var(--perron-palette-green-300);
+  --perron-color-surface-default: var(--perron-palette-neutral-900);
+  --perron-color-surface-raised: var(--perron-palette-neutral-800);
+  --perron-color-surface-inset: var(--perron-palette-neutral-700);
+  --perron-color-surface-overlay: rgba(10, 12, 16, 0.88);
+  --perron-color-surface-hover: rgba(242, 244, 247, 0.06);
+  --perron-color-surface-selected: rgba(242, 244, 247, 0.09);
+  --perron-color-surface-inverse: var(--perron-palette-neutral-100);
+  --perron-color-surface-inverse-hover: var(--perron-palette-neutral-300);
+  --perron-color-surface-success: rgba(61, 220, 151, 0.12);
+  --perron-color-surface-warning: var(--perron-palette-yellow-900);
+  --perron-color-surface-danger: var(--perron-palette-red-900);
+  --perron-color-surface-info: rgba(76, 141, 255, 0.16);
+  --perron-color-surface-brand: var(--perron-palette-green-300);
+  --perron-color-surface-brand-hover: var(--perron-palette-green-350);
+  --perron-color-surface-brand-subtle: rgba(61, 220, 151, 0.12);
+  --perron-color-border-subtle: var(--perron-palette-neutral-690);
+  --perron-color-border-strong: var(--perron-palette-neutral-675);
+  --perron-color-border-control: var(--perron-palette-neutral-650);
+  --perron-color-border-brand: var(--perron-palette-green-300);
+  --perron-color-border-focus: var(--perron-palette-neutral-100);
+  --perron-color-status-success: var(--perron-palette-green-300);
+  --perron-color-status-warning: var(--perron-palette-yellow-300);
+  --perron-color-status-danger: var(--perron-palette-orange-300);
+  --perron-color-status-info: var(--perron-palette-blue-300);
+  --perron-color-scrim: rgba(7, 9, 12, 0.8);
+  --perron-color-map-water: #0d1827;
+  --perron-color-map-land: #0b0f16;
+  --perron-shadow-panel: 0px 1px 2px 0px rgba(0, 0, 0, 0.35), 0px 14px 40px 0px rgba(0, 0, 0, 0.5);
+  --perron-shadow-dialog: 0px 1px 2px 0px rgba(0, 0, 0, 0.4), 0px 32px 90px 0px rgba(0, 0, 0, 0.65);
+  --perron-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 14px 32px rgba(0, 0, 0, 0.38);
+
+  /* The site's own tokens, which Perron has none for. */
+  /* Accents: the eight agents' colours, also used across the project drawings. */
+  --site-color-accent-green: var(--perron-palette-green-300);
+  --site-color-accent-yellow: var(--perron-palette-yellow-300);
+  --site-color-accent-cyan: var(--perron-palette-cyan-300);
+  --site-color-accent-pink: var(--perron-palette-pink-300);
+  --site-color-accent-orange: var(--perron-palette-orange-300);
+  --site-color-accent-blue: var(--perron-palette-blue-200);
+  --site-color-accent-purple: var(--perron-palette-purple-300);
+  --site-color-accent-lime: var(--perron-palette-lime-300);
+  --site-color-accent-red: var(--perron-palette-red-300);
+  --site-color-accent-red-strong: var(--perron-palette-red-400);
+  --site-color-accent-yellow-strong: var(--perron-palette-yellow-500);
+  /* Text and marks on an accent fill. */
+  --site-color-text-on-accent: var(--perron-palette-neutral-900);
+  /* A ring of page colour that lifts a round button off what is behind it. */
+  --site-color-halo: rgba(10, 12, 16, 0.7);
+  /* The portrait's photo. */
+  --site-color-photo: var(--perron-palette-blue-300);
+
+  /* Project drawings: a ramp from the paper the drawing sits on to the ink of its labels. */
+  --site-color-art-paper: var(--perron-palette-neutral-900);
+  --site-color-art-paper-deep: var(--perron-palette-neutral-975);
+  --site-color-art-raised: var(--perron-palette-neutral-800);
+  --site-color-art-raised-2: var(--perron-palette-neutral-750);
+  --site-color-art-inset: var(--perron-palette-neutral-700);
+  --site-color-art-line-subtle: var(--perron-palette-neutral-690);
+  --site-color-art-line: var(--perron-palette-neutral-675);
+  --site-color-art-shape: var(--perron-palette-neutral-600);
+  --site-color-art-shape-strong: var(--perron-palette-neutral-650);
+  --site-color-art-ink-muted: var(--perron-palette-neutral-500);
+  --site-color-art-ink-soft: var(--perron-palette-neutral-300);
+  --site-color-art-ink: var(--perron-palette-neutral-100);
+  /* The sea chart (shipping drawings). */
+  --site-color-art-sea-grid: #13213a;
+  --site-color-art-sea-line: #1c2a44;
+  --site-color-art-sea-line-strong: #22365c;
+  --site-color-art-sea-wave: #2a426b;
+  --site-color-art-sea-mark: #3b5b94;
+  --site-color-art-sea-mark-deep: #1c2f52;
+  /* The teal water of the design system drawing. */
+  --site-color-art-teal-deep: #0c1a20;
+  --site-color-art-teal-line: #12232b;
+  --site-color-art-teal-line-strong: #16303a;
+  --site-color-art-teal: #2b6e80;
+}
+
+/* ---------- 2b. Light theme ---------- */
+[data-theme="light"] {
+  color-scheme: light;
+  --perron-color-text-primary: var(--perron-palette-neutral-900);
+  --perron-color-text-secondary: var(--perron-palette-neutral-650);
+  --perron-color-text-tertiary: var(--perron-palette-neutral-550);
+  --perron-color-text-inverse: var(--perron-palette-neutral-50);
+  --perron-color-text-success: var(--perron-palette-green-800);
+  --perron-color-text-warning: var(--perron-palette-yellow-700);
+  --perron-color-text-danger: var(--perron-palette-orange-700);
+  --perron-color-text-info: var(--perron-palette-blue-700);
+  --perron-color-text-brand: var(--perron-palette-green-700);
+  --perron-color-surface-default: var(--perron-palette-neutral-50);
+  --perron-color-surface-raised: var(--perron-palette-neutral-0);
+  --perron-color-surface-inset: var(--perron-palette-neutral-150);
+  --perron-color-surface-overlay: rgba(246, 247, 249, 0.9);
+  --perron-color-surface-hover: rgba(10, 12, 16, 0.05);
+  --perron-color-surface-selected: rgba(10, 12, 16, 0.08);
+  --perron-color-surface-inverse: var(--perron-palette-neutral-900);
+  --perron-color-surface-inverse-hover: var(--perron-palette-neutral-600);
+  --perron-color-surface-success: rgba(4, 120, 87, 0.1);
+  --perron-color-surface-warning: rgba(161, 98, 7, 0.12);
+  --perron-color-surface-danger: rgba(185, 28, 28, 0.1);
+  --perron-color-surface-info: rgba(29, 78, 216, 0.1);
+  --perron-color-surface-brand: var(--perron-palette-green-300);
+  --perron-color-surface-brand-hover: var(--perron-palette-green-350);
+  --perron-color-surface-brand-subtle: rgba(4, 120, 87, 0.1);
+  --perron-color-border-subtle: var(--perron-palette-neutral-200);
+  --perron-color-border-strong: var(--perron-palette-neutral-250);
+  --perron-color-border-control: var(--perron-palette-neutral-500);
+  --perron-color-border-brand: var(--perron-palette-green-700);
+  --perron-color-border-focus: var(--perron-palette-neutral-900);
+  --perron-color-status-success: var(--perron-palette-green-700);
+  --perron-color-status-warning: var(--perron-palette-yellow-700);
+  --perron-color-status-danger: var(--perron-palette-orange-700);
+  --perron-color-status-info: var(--perron-palette-blue-600);
+  --perron-color-scrim: rgba(10, 12, 16, 0.45);
+  --perron-color-map-water: #dce7f3;
+  --perron-color-map-land: #f4f6f9;
+  --perron-shadow-panel: 0px 1px 2px 0px rgba(10, 12, 16, 0.06), 0px 10px 30px 0px rgba(10, 12, 16, 0.1);
+  --perron-shadow-dialog: 0px 1px 2px 0px rgba(10, 12, 16, 0.08), 0px 24px 70px 0px rgba(10, 12, 16, 0.22);
+  --perron-shadow-card: 0 1px 2px rgba(10, 12, 16, 0.06), 0 12px 28px rgba(10, 12, 16, 0.12);
+
+  --site-color-accent-green: var(--perron-palette-green-700);
+  --site-color-accent-yellow: var(--perron-palette-yellow-700);
+  --site-color-accent-cyan: var(--perron-palette-cyan-700);
+  --site-color-accent-pink: var(--perron-palette-pink-700);
+  --site-color-accent-orange: var(--perron-palette-orange-700);
+  --site-color-accent-blue: var(--perron-palette-blue-600);
+  --site-color-accent-purple: var(--perron-palette-purple-700);
+  --site-color-accent-lime: var(--perron-palette-lime-700);
+  --site-color-accent-red: var(--perron-palette-red-700);
+  --site-color-accent-red-strong: var(--perron-palette-red-800);
+  --site-color-accent-yellow-strong: var(--perron-palette-yellow-800);
+  --site-color-text-on-accent: var(--perron-palette-neutral-0);
+  --site-color-halo: rgba(246, 247, 249, 0.7);
+  --site-color-photo: var(--perron-palette-blue-300);
+
+  --site-color-art-paper: var(--perron-palette-neutral-50);
+  --site-color-art-paper-deep: var(--perron-palette-neutral-150);
+  --site-color-art-raised: var(--perron-palette-neutral-0);
+  --site-color-art-raised-2: var(--perron-palette-neutral-100);
+  --site-color-art-inset: var(--perron-palette-neutral-150);
+  --site-color-art-line-subtle: var(--perron-palette-neutral-200);
+  --site-color-art-line: var(--perron-palette-neutral-250);
+  --site-color-art-shape: var(--perron-palette-neutral-275);
+  --site-color-art-shape-strong: var(--perron-palette-neutral-400);
+  --site-color-art-ink-muted: var(--perron-palette-neutral-550);
+  --site-color-art-ink-soft: var(--perron-palette-neutral-650);
+  --site-color-art-ink: var(--perron-palette-neutral-900);
+  --site-color-art-sea-grid: #c9d8ea;
+  --site-color-art-sea-line: #b3c6dd;
+  --site-color-art-sea-line-strong: #9db3d0;
+  --site-color-art-sea-wave: #7f99bf;
+  --site-color-art-sea-mark: #4a6fa5;
+  --site-color-art-sea-mark-deep: #9db3d0;
+  --site-color-art-teal-deep: #e0f0f4;
+  --site-color-art-teal-line: #cde4eb;
+  --site-color-art-teal-line-strong: #b5d6e0;
+  --site-color-art-teal: #4f93a6;
+}

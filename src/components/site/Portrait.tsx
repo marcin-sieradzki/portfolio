@@ -27,7 +27,7 @@ const FACE_PAUSE = 3200; /* ms between two visitor pulls */
 const FACE_BACK_OFF = 4000; /* ms the visitor stays away after a real person lets go */
 const FACE_REACH = 1; /* the prototype's "faceStretch" tweak, 0.4 to 1.6 */
 const FACE_WOBBLE = 0.6; /* the prototype's "faceWobble" tweak, 0 to 1 */
-const FACE_TINT = "#3DDC97";
+const FACE_TINT = "var(--site-color-accent-green)";
 /* The visitor's pulls. u, v: grab point as a share of the photo (1024 x 1284 px).
    dx, dy: pull as a share of the photo width, before the soft limit. */
 const FACE_GHOST = [
@@ -546,8 +546,9 @@ export class Portrait extends Component<object, { faceLive: boolean }> {
     const m = this.faceMask;
     if (m) {
       const fade = ctx.createLinearGradient(0, m.cy, 0, m.cy + FACE_FADE * this.faceW);
-      fade.addColorStop(0, "rgba(10,12,16,0)");
-      fade.addColorStop(1, "rgba(10,12,16,1)");
+      /* destination-out reads only the alpha, so the stop colours do not matter. */
+      fade.addColorStop(0, "transparent");
+      fade.addColorStop(1, "black");
       ctx.globalCompositeOperation = "destination-out";
       ctx.fillStyle = fade;
       ctx.beginPath();

@@ -2,116 +2,18 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+@import "./tokens.css";
+
 /* ---------- From the Version E prototype ---------- */
-/* Portfolio night theme. Token names are Perron's (0.10.1), so the real build can ship this as a Perron theme. Colour values are this site's own palette. Type, radius and spacing are Perron's. */
-:root {
-  color-scheme: dark;
-  --perron-palette-neutral-0: #ffffff;
-  --perron-palette-neutral-100: #f2f4f7;
-  --perron-palette-neutral-300: #a4adbb;
-  --perron-palette-neutral-400: #8d97a6;
-  --perron-palette-neutral-500: #7c8696;
-  --perron-palette-neutral-600: #3a4557;
-  --perron-palette-neutral-700: #1a202b;
-  --perron-palette-neutral-800: #10141b;
-  --perron-palette-neutral-900: #0a0c10;
-  --perron-palette-neutral-950: #07090c;
-  --perron-palette-blue-300: #4c8dff;
-  --perron-palette-blue-900: #121e36;
-  --perron-palette-green-300: #3ddc97;
-  --perron-palette-green-900: #102520;
-  --perron-palette-orange-300: #ffd166;
-  --perron-palette-orange-900: #33290f;
-  --perron-palette-red-300: #ff8a5b;
-  --perron-palette-red-900: #3a1d12;
-  --perron-palette-yellow-300: #ffd166;
-  --perron-palette-yellow-500: #e0b24a;
-  --perron-palette-yellow-900: #33290f;
-  --perron-color-text-primary: var(--perron-palette-neutral-100);
-  --perron-color-text-secondary: var(--perron-palette-neutral-300);
-  --perron-color-text-tertiary: var(--perron-palette-neutral-500);
-  --perron-color-text-inverse: var(--perron-palette-neutral-900);
-  --perron-color-text-success: var(--perron-palette-green-300);
-  --perron-color-text-warning: var(--perron-palette-orange-300);
-  --perron-color-text-danger: var(--perron-palette-red-300);
-  --perron-color-text-info: #8fb8ff;
-  --perron-color-text-brand: var(--perron-palette-green-300);
-  --perron-color-text-on-color-dark: var(--perron-palette-neutral-900);
-  --perron-color-text-on-color-light: var(--perron-palette-neutral-0);
-  --perron-color-surface-default: var(--perron-palette-neutral-900);
-  --perron-color-surface-raised: var(--perron-palette-neutral-800);
-  --perron-color-surface-inset: var(--perron-palette-neutral-700);
-  --perron-color-surface-overlay: rgba(10, 12, 16, 0.88);
-  --perron-color-surface-hover: rgba(242, 244, 247, 0.06);
-  --perron-color-surface-selected: rgba(242, 244, 247, 0.09);
-  --perron-color-surface-inverse: var(--perron-palette-neutral-100);
-  --perron-color-surface-inverse-hover: var(--perron-palette-neutral-300);
-  --perron-color-surface-success: rgba(61, 220, 151, 0.12);
-  --perron-color-surface-warning: var(--perron-palette-orange-900);
-  --perron-color-surface-danger: var(--perron-palette-red-900);
-  --perron-color-surface-info: rgba(76, 141, 255, 0.16);
-  --perron-color-surface-brand: var(--perron-palette-green-300);
-  --perron-color-surface-brand-hover: #35c487;
-  --perron-color-surface-brand-subtle: rgba(61, 220, 151, 0.12);
-  --perron-color-border-subtle: #232a36;
-  --perron-color-border-strong: #2e3746;
-  --perron-color-border-control: #4a5568;
-  --perron-color-border-brand: var(--perron-palette-green-300);
-  --perron-color-border-focus: var(--perron-palette-neutral-100);
-  --perron-color-status-success: var(--perron-palette-green-300);
-  --perron-color-status-warning: var(--perron-palette-orange-300);
-  --perron-color-status-danger: var(--perron-palette-red-300);
-  --perron-color-status-info: var(--perron-palette-blue-300);
-  --perron-color-transit-line-m1: #0b8a44;
-  --perron-color-transit-line-m2: #f0b400;
-  --perron-color-transit-line-m3: #e2231a;
-  --perron-color-transit-line-m4: #0090d0;
-  --perron-color-transit-line-a: #00a1de;
-  --perron-color-transit-line-b: #4ba046;
-  --perron-color-transit-line-c: #f18a00;
-  --perron-color-transit-line-e: #7d5aa6;
-  --perron-color-transit-line-f: #f5c200;
-  --perron-color-transit-line-h: #dd1f2a;
-  --perron-color-map-water: #0d1827;
-  --perron-color-map-land: #0b0f16;
-  --perron-color-map-park: #0e1a16;
-  --perron-color-map-street: #141a25;
-  --perron-color-map-rail: #2e3746;
-  --perron-color-map-label: #7c8696;
-  --perron-color-map-aircraft: #ff7eb6;
-  --perron-color-data-state-no-signal: #5a6474;
-  /* The three families are self-hosted by next/font (see layout.tsx), which sets --font-familjen, --font-schibsted and --font-jetbrains on <html>. */
-  --perron-font-family-display: var(--font-familjen), var(--font-schibsted), system-ui, sans-serif;
-  --perron-font-family-body: var(--font-schibsted), system-ui, -apple-system, "Segoe UI", "Roboto", sans-serif;
-  --perron-font-family-data: var(--font-jetbrains), ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
-  --perron-radius-xs: 4px;
-  --perron-radius-sm: 6px;
-  --perron-radius-md: 8px;
-  --perron-radius-lg: 12px;
-  --perron-radius-xl: 16px;
-  --perron-radius-full: 9999px;
-  --perron-space-050: 2px;
-  --perron-space-100: 4px;
-  --perron-space-150: 6px;
-  --perron-space-200: 8px;
-  --perron-space-300: 12px;
-  --perron-space-400: 16px;
-  --perron-space-500: 20px;
-  --perron-space-600: 24px;
-  --perron-space-800: 32px;
-  --perron-shadow-panel: 0px 1px 2px 0px rgba(0, 0, 0, 0.35), 0px 14px 40px 0px rgba(0, 0, 0, 0.5);
-  --perron-easing-sheet: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --perron-easing-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
-}
 body {
   margin: 0;
-  background: #0a0c10;
+  background: var(--perron-color-surface-default);
 }
 a {
-  color: #8fb8ff;
+  color: var(--perron-color-text-info);
 }
 a:hover {
-  color: #ffffff;
+  color: var(--perron-color-text-primary);
 }
 @keyframes sway {
   from {
@@ -437,7 +339,7 @@ html[data-motion="paused"] .cs-panel *::after {
   border: 1px solid var(--perron-color-border-strong);
   border-radius: 50%;
   background: var(--perron-color-surface-overlay);
-  box-shadow: 0 0 0 6px rgba(10, 12, 16, 0.7);
+  box-shadow: 0 0 0 6px var(--site-color-halo);
   color: var(--perron-color-text-primary);
   cursor: pointer;
 }
@@ -580,5 +482,46 @@ html[data-motion="paused"] .cs-panel *::after {
     gap: 8px !important;
     overflow-wrap: normal !important;
     white-space: nowrap;
+  }
+}
+
+/* ---------- Theme toggle (ThemeToggle.tsx) ---------- */
+/* An icon button in the header. It shows the theme a press brings: the sun in the dark theme, the moon in the light. */
+.th-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--perron-color-border-strong);
+  border-radius: 50%;
+  background: none;
+  color: var(--perron-color-text-secondary);
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+.th-toggle:hover {
+  background: var(--perron-color-surface-hover);
+  color: var(--perron-color-text-primary);
+}
+.th-toggle:focus-visible {
+  outline: 2px solid var(--perron-color-border-focus);
+  outline-offset: 2px;
+}
+.th-moon,
+[data-theme="light"] .th-sun {
+  display: none;
+}
+[data-theme="light"] .th-moon {
+  display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  .th-toggle {
+    transition: none;
   }
 }

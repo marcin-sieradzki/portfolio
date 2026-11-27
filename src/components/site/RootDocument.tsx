@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Familjen_Grotesk, JetBrains_Mono, Schibsted_Grotesk } from "next/font/google";
 import { LOCALE_PATH, LOCALES, OG_IMAGE, OG_LOCALE, SITE_TITLE, SITE_URL, type Locale } from "@/i18n/config";
 import { translator } from "@/i18n/translate";
+import { THEME_SCRIPT } from "@/lib/theme";
 import "@/app/globals.css";
 
 /* The <html> of every language's page. Each language has its own root layout (app/(en), app/(pl)), so the
@@ -65,14 +66,30 @@ export function siteMetadata(lang: Locale): Metadata {
   };
 }
 
+/* The browser bar follows the system theme. The colours are the two themes' --perron-color-surface-default
+   (app/tokens.css); metadata cannot read a CSS variable. */
 export const siteViewport: Viewport = {
-  colorScheme: "dark",
-  themeColor: "#0A0C10",
+  colorScheme: "dark light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f7f9" }, // color-check: allow
+    { media: "(prefers-color-scheme: dark)", color: "#0a0c10" }, // color-check: allow
+  ],
 };
 
 export function RootDocument({ lang, children }: { lang: Locale; children: ReactNode }) {
   return (
-    <html lang={lang} className={`${familjen.variable} ${schibsted.variable} ${jetbrains.variable}`}>
+    /* THEME_SCRIPT sets data-theme on <html> before React hydrates, hence suppressHydrationWarning. */
+    <html
+      lang={lang}
+      className={`${familjen.variable} ${schibsted.variable} ${jetbrains.variable}`}
+      suppressHydrationWarning
+    >
+      {/* The pattern in Next's own guide (node_modules/next/dist/docs/01-app/02-guides/preventing-flash-before-hydration.md, "Themes"). The lint rule is for the pages router. */}
+      {/* eslint-disable-next-line @next/next/no-head-element */}
+      <head>
+        {/* Sets the light or dark theme before the first paint, so the page never flashes the other one. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
       <body>
         {children}
         {/* Vercel Web Analytics: page views only, no cookies. Needs Analytics turned on in the Vercel project. */}

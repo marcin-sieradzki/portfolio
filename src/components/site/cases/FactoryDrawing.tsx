@@ -7,20 +7,20 @@ import type { ReactNode } from "react";
 import { useT } from "@/i18n/LocaleProvider";
 import { AGENTS } from "@/lib/works";
 
-const BG0 = "#0A0C10",
-  BG1 = "#10141B",
-  BG2 = "#141A25",
-  BG3 = "#1A202B";
-const L1 = "#232A36",
-  L2 = "#2E3746",
-  L3 = "#3A4557",
-  L4 = "#4A5568";
-const T1 = "#F2F4F7",
-  T2 = "#A4ADBB",
-  T3 = "#7C8696";
-const GREEN = "#3DDC97",
-  ORANGE = "#FF8A5B",
-  LIME = "#C8F560";
+const BG0 = "var(--site-color-art-paper)",
+  BG1 = "var(--site-color-art-raised)",
+  BG2 = "var(--site-color-art-raised-2)",
+  BG3 = "var(--site-color-art-inset)";
+const L1 = "var(--site-color-art-line-subtle)",
+  L2 = "var(--site-color-art-line)",
+  L3 = "var(--site-color-art-shape)",
+  L4 = "var(--site-color-art-shape-strong)";
+const T1 = "var(--site-color-art-ink)",
+  T2 = "var(--site-color-art-ink-soft)",
+  T3 = "var(--site-color-art-ink-muted)";
+const GREEN = "var(--site-color-accent-green)",
+  ORANGE = "var(--site-color-accent-orange)",
+  LIME = "var(--site-color-accent-lime)";
 const MONO = "JetBrains Mono, ui-monospace, Menlo, monospace";
 
 const Y = 166; /* the main line */
@@ -66,8 +66,8 @@ function Label({
       fontFamily={MONO}
       fontSize={size}
       fontWeight={weight}
-      fill={fill}
       letterSpacing={spacing}
+      style={{ fill: fill }}
     >
       {children}
     </text>
@@ -78,18 +78,24 @@ function Label({
 function Pipe({ d, color, w = 12, dur = "1.2s" }: { d: string; color: string; w?: number; dur?: string }) {
   return (
     <>
-      <path d={d} fill="none" stroke={L2} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
-      <path d={d} fill="none" stroke={BG0} strokeWidth={w - 4} strokeLinecap="round" strokeLinejoin="round" />
+      <path d={d} fill="none" strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" style={{ stroke: L2 }} />
       <path
         d={d}
         fill="none"
-        stroke={color}
+        strokeWidth={w - 4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        style={{ stroke: BG0 }}
+      />
+      <path
+        d={d}
+        fill="none"
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeDasharray="3 13"
         className="mv"
-        style={{ animation: `csFlow ${dur} linear infinite` }}
+        style={{ stroke: color, animation: `csFlow ${dur} linear infinite` }}
       />
     </>
   );
@@ -117,7 +123,7 @@ function Chip({
 }) {
   return (
     <>
-      <rect x={x} y={y} width={w} height={h} rx="8" fill={fill} stroke={stroke} strokeWidth="1.5" />
+      <rect x={x} y={y} width={w} height={h} rx="8" strokeWidth="1.5" style={{ fill: fill, stroke: stroke }} />
       <Label x={x + w / 2} y={y + h / 2 + 3.8} fill={color} size={10.5} weight={600}>
         {children}
       </Label>
@@ -129,16 +135,26 @@ function Chip({
 function Pump({ x, y, color, scale }: { x: number; y: number; color: string; scale: number }) {
   return (
     <g transform={`translate(${x} ${y}) scale(${scale})`}>
-      <rect x="-23" y="-15" width="46" height="30" rx="5" fill={BG3} stroke={L4} strokeWidth="1.5" />
-      <rect x="-29" y="-9" width="6" height="18" rx="1.5" fill={L2} stroke={L4} strokeWidth="1.5" />
-      <rect x="23" y="-9" width="6" height="18" rx="1.5" fill={L2} stroke={L4} strokeWidth="1.5" />
-      <rect x="-14" y="-78" width="28" height="63" rx="2" fill={BG2} stroke={L3} strokeWidth="1.5" />
-      <path d="M-14 -65.4h28M-14 -52.8h28M-14 -40.2h28M-14 -27.6h28" fill="none" stroke={L2} strokeWidth="1.5" />
-      <rect x="-20" y="-140" width="40" height="62" rx="6" fill={L1} stroke={L4} strokeWidth="1.5" />
-      <path d="M-16 -118h32M-16 -111h32M-16 -104h32M-16 -97h32M-16 -90h32" fill="none" stroke={L3} strokeWidth="1.5" />
-      <rect x="-20" y="-134" width="40" height="9" fill={color} />
-      <rect x="-12" y="-147" width="24" height="8" rx="3" fill={L2} stroke={L4} strokeWidth="1.5" />
-      <circle r="5" fill={color} className="mv" style={{ animation: "csPulse 3.2s ease-in-out infinite" }} />
+      <rect x="-23" y="-15" width="46" height="30" rx="5" strokeWidth="1.5" style={{ fill: BG3, stroke: L4 }} />
+      <rect x="-29" y="-9" width="6" height="18" rx="1.5" strokeWidth="1.5" style={{ fill: L2, stroke: L4 }} />
+      <rect x="23" y="-9" width="6" height="18" rx="1.5" strokeWidth="1.5" style={{ fill: L2, stroke: L4 }} />
+      <rect x="-14" y="-78" width="28" height="63" rx="2" strokeWidth="1.5" style={{ fill: BG2, stroke: L3 }} />
+      <path
+        d="M-14 -65.4h28M-14 -52.8h28M-14 -40.2h28M-14 -27.6h28"
+        fill="none"
+        strokeWidth="1.5"
+        style={{ stroke: L2 }}
+      />
+      <rect x="-20" y="-140" width="40" height="62" rx="6" strokeWidth="1.5" style={{ fill: L1, stroke: L4 }} />
+      <path
+        d="M-16 -118h32M-16 -111h32M-16 -104h32M-16 -97h32M-16 -90h32"
+        fill="none"
+        strokeWidth="1.5"
+        style={{ stroke: L3 }}
+      />
+      <rect x="-20" y="-134" width="40" height="9" style={{ fill: color }} />
+      <rect x="-12" y="-147" width="24" height="8" rx="3" strokeWidth="1.5" style={{ fill: L2, stroke: L4 }} />
+      <circle r="5" className="mv" style={{ fill: color, animation: "csPulse 3.2s ease-in-out infinite" }} />
     </g>
   );
 }
@@ -147,14 +163,14 @@ function Pump({ x, y, color, scale }: { x: number; y: number; color: string; sca
 function Brake({ x, name, note, children }: { x: number; name: string; note: string; children: ReactNode }) {
   return (
     <>
-      <circle cx={x} cy={Y} r="18" fill={BG1} stroke={L4} strokeWidth="1.5" />
+      <circle cx={x} cy={Y} r="18" strokeWidth="1.5" style={{ fill: BG1, stroke: L4 }} />
       <g
         transform={`translate(${x} ${Y})`}
         fill="none"
-        stroke={GREEN}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        style={{ stroke: GREEN }}
       >
         {children}
       </g>
@@ -195,10 +211,9 @@ export function FactoryDrawing() {
         width="262"
         height="46"
         rx="8"
-        fill={BG1}
-        stroke={L2}
         strokeWidth="1.5"
         strokeDasharray="4 5"
+        style={{ fill: BG1, stroke: L2 }}
       />
       <Label x={46} y={58} anchor="start" fill={T1} size={10.5} weight={600}>
         {t("side line: Component Factory")}
@@ -209,9 +224,11 @@ export function FactoryDrawing() {
           cx={50 + i * 12}
           cy={72}
           r="4"
-          fill={AGENTS[key].color}
           className="mv"
-          style={{ animation: `csPulse 3.2s ease-in-out ${(-3.2 + i * 0.4).toFixed(1)}s infinite` }}
+          style={{
+            fill: AGENTS[key].color,
+            animation: `csPulse 3.2s ease-in-out ${(-3.2 + i * 0.4).toFixed(1)}s infinite`,
+          }}
         />
       ))}
       <Label x={148} y={75.5} anchor="start">
@@ -237,8 +254,8 @@ export function FactoryDrawing() {
       </Chip>
 
       {/* the spec is cut into tickets */}
-      <rect x="184" y={Y - 25} width="84" height="34" rx="8" fill={BG1} stroke={L2} strokeWidth="1.5" />
-      <rect x="180" y={Y - 21} width="84" height="34" rx="8" fill={BG1} stroke={L2} strokeWidth="1.5" />
+      <rect x="184" y={Y - 25} width="84" height="34" rx="8" strokeWidth="1.5" style={{ fill: BG1, stroke: L2 }} />
+      <rect x="180" y={Y - 21} width="84" height="34" rx="8" strokeWidth="1.5" style={{ fill: BG1, stroke: L2 }} />
       <Chip x={176} y={Y - 17} w={84} h={34} stroke={L4}>
         {t("tickets")}
       </Chip>
@@ -255,7 +272,7 @@ export function FactoryDrawing() {
       </Label>
 
       {/* the three brakes */}
-      <path d={`M448 ${Y - 30}v-6h264v6`} fill="none" stroke={L4} strokeWidth="1.5" />
+      <path d={`M448 ${Y - 30}v-6h264v6`} fill="none" strokeWidth="1.5" style={{ stroke: L4 }} />
       <Label x={580} y={Y - 44} fill={T3} weight={600} spacing={0.9}>
         {t("THREE BRAKES ON EVERY TICKET")}
       </Label>
@@ -264,7 +281,7 @@ export function FactoryDrawing() {
       </Brake>
       <Brake x={580} name="review" note={t("the diff, cold")}>
         <path d="M-8 0q8 -9 16 0q-8 9 -16 0z" />
-        <circle r="2.2" fill={GREEN} stroke="none" />
+        <circle r="2.2" stroke="none" style={{ fill: GREEN }} />
       </Brake>
       <Brake x={690} name={t("verdict")} note={t("the running app")}>
         <path d="M-4.5 -7.5v15l11 -7.5z" />
@@ -273,23 +290,30 @@ export function FactoryDrawing() {
       {/* hand valve: the human review */}
       <path
         d={`M806 ${Y - 14}l22 28h-44zM806 ${Y + 14}l22 -28h-44z`}
-        fill={BG3}
-        stroke={L4}
         strokeWidth="1.5"
         strokeLinejoin="round"
+        style={{ fill: BG3, stroke: L4 }}
       />
-      <path d={`M806 ${Y - 12}V${Y - 26}`} fill="none" stroke={L4} strokeWidth="2" />
-      <path d={`M792 ${Y - 26}H820`} fill="none" stroke={T1} strokeWidth="3" strokeLinecap="round" />
+      <path d={`M806 ${Y - 12}V${Y - 26}`} fill="none" strokeWidth="2" style={{ stroke: L4 }} />
+      <path d={`M792 ${Y - 26}H820`} fill="none" strokeWidth="3" strokeLinecap="round" style={{ stroke: T1 }} />
       <Label x={806} y={Y + 38} fill={T1} weight={600}>
         {t("human review")}
       </Label>
 
-      <Chip x={866} y={Y - 16} w={116} h={32} stroke={GREEN} fill="rgba(61,220,151,0.12)" color={GREEN}>
+      <Chip
+        x={866}
+        y={Y - 16}
+        w={116}
+        h={32}
+        stroke={GREEN}
+        fill="color-mix(in srgb, var(--site-color-accent-green) 12%, transparent)"
+        color={GREEN}
+      >
         pull request
       </Chip>
 
       {/* ---------- the five layers of trust the factory stands on ---------- */}
-      <path d="M34 266H1006" fill="none" stroke={L2} strokeWidth="1.5" strokeDasharray="4 8" />
+      <path d="M34 266H1006" fill="none" strokeWidth="1.5" strokeDasharray="4 8" style={{ stroke: L2 }} />
       <Label x={40} y={LAYER_TOP + 8} fill={T3} anchor="start" weight={600} spacing={0.9}>
         {t("FIRST, THE")}
       </Label>
@@ -311,18 +335,20 @@ export function FactoryDrawing() {
               width={half * 2}
               height={LAYER_H - 3}
               rx="4"
-              fill={base ? "rgba(61,220,151,0.12)" : BG1}
-              stroke={base ? GREEN : L3}
               strokeWidth="1.5"
+              style={{
+                fill: base ? "color-mix(in srgb, var(--site-color-accent-green) 12%, transparent)" : BG1,
+                stroke: base ? GREEN : L3,
+              }}
             />
             <text x={570} y={y + 10.5} textAnchor="middle" fontFamily={MONO} fontSize="10">
-              <tspan fill={GREEN} fontWeight="600">
+              <tspan fontWeight="600" style={{ fill: GREEN }}>
                 {layer.no}
               </tspan>
-              <tspan fill={T1} fontWeight="600">
+              <tspan fontWeight="600" style={{ fill: T1 }}>
                 {" " + t(layer.name)}
               </tspan>
-              <tspan fill={T2}>{" · " + t(layer.note)}</tspan>
+              <tspan style={{ fill: T2 }}>{" · " + t(layer.note)}</tspan>
             </text>
           </g>
         );
@@ -331,10 +357,10 @@ export function FactoryDrawing() {
       <path
         d={`M1012 ${LAYER_TOP + 5 * LAYER_H - 6}V${LAYER_TOP + 30}m-4.5 6l4.5 -6l4.5 6`}
         fill="none"
-        stroke={L4}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
+        style={{ stroke: L4 }}
       />
     </svg>
   );

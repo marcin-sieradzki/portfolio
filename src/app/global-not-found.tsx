@@ -13,7 +13,6 @@ export default function GlobalNotFound() {
   return (
     <RootDocument lang="en">
       <main
-        data-theme="dark"
         style={{
           minHeight: "100vh",
           boxSizing: "border-box",

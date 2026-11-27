@@ -37,176 +37,190 @@ export function CaseGdsStudio() {
               <path
                 d="M206 214H432"
                 fill="none"
-                stroke="#2E3746"
                 strokeWidth="12"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-line)" }}
               />
               <path
                 d="M206 214H432"
                 fill="none"
-                stroke="#0A0C10"
                 strokeWidth="8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-paper)" }}
               />
               <path
                 d="M206 214H432"
                 fill="none"
-                stroke="#3DDC97"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeDasharray="3 13"
                 className="mv"
-                style={{ animation: "csFlow 1.1s linear infinite" }}
+                style={{ stroke: "var(--site-color-accent-green)", animation: "csFlow 1.1s linear infinite" }}
               />
               <path
                 d="M325 110V214"
                 fill="none"
-                stroke="#2E3746"
                 strokeWidth="12"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-line)" }}
               />
               <path
                 d="M325 110V214"
                 fill="none"
-                stroke="#0A0C10"
                 strokeWidth="8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-paper)" }}
               />
               <path
                 d="M325 110V214"
                 fill="none"
-                stroke="#A4ADBB"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeDasharray="3 13"
                 className="mv"
-                style={{ animation: "csFlow 1.4s linear infinite" }}
+                style={{ stroke: "var(--site-color-art-ink-soft)", animation: "csFlow 1.4s linear infinite" }}
               />
               <path
                 d="M568 214H640"
                 fill="none"
-                stroke="#2E3746"
                 strokeWidth="12"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-line)" }}
               />
               <path
                 d="M568 214H640"
                 fill="none"
-                stroke="#0A0C10"
                 strokeWidth="8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-paper)" }}
               />
               <path
                 d="M568 214H640"
                 fill="none"
-                stroke="#3DDC97"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeDasharray="3 13"
                 className="mv"
-                style={{ animation: "csFlow 1.1s linear infinite" }}
+                style={{ stroke: "var(--site-color-accent-green)", animation: "csFlow 1.1s linear infinite" }}
               />
               <path
                 d="M690 240V314H404V218"
                 fill="none"
-                stroke="#2E3746"
                 strokeWidth="9"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-line)" }}
               />
               <path
                 d="M690 240V314H404V218"
                 fill="none"
-                stroke="#0A0C10"
                 strokeWidth="5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-paper)" }}
               />
               <path
                 d="M690 240V314H404V218"
                 fill="none"
-                stroke="#3DDC97"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeDasharray="2 14"
                 className="mv"
-                style={{ animation: "csFlow 1.6s linear infinite" }}
+                style={{ stroke: "var(--site-color-accent-green)", animation: "csFlow 1.6s linear infinite" }}
               />
               <path
                 d="M734 214H792"
                 fill="none"
-                stroke="#2E3746"
                 strokeWidth="12"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-line)" }}
               />
               <path
                 d="M734 214H792"
                 fill="none"
-                stroke="#0A0C10"
                 strokeWidth="8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-paper)" }}
               />
               <path
                 d="M734 214H792"
                 fill="none"
-                stroke="#3DDC97"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeDasharray="3 13"
                 className="mv"
-                style={{ animation: "csFlow 1.1s linear infinite" }}
+                style={{ stroke: "var(--site-color-accent-green)", animation: "csFlow 1.1s linear infinite" }}
               />
-              <circle cx="325" cy="214" r="9" fill="#1A202B" stroke="#3A4557" strokeWidth="1.5" />
-              <circle cx="404" cy="214" r="7" fill="#1A202B" stroke="#3A4557" strokeWidth="1.5" />
+              <circle
+                cx="325"
+                cy="214"
+                r="9"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-inset)", stroke: "var(--site-color-art-shape)" }}
+              />
+              <circle
+                cx="404"
+                cy="214"
+                r="7"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-inset)", stroke: "var(--site-color-art-shape)" }}
+              />
               <text
                 x="40"
                 y="140"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 brief
               </text>
-              <rect x="40" y="150" width="168" height="128" rx="10" fill="#10141B" stroke="#2E3746" strokeWidth="1.5" />
-              <circle cx="62" cy="174" r="8" fill="#2E3746" />
-              <circle cx="62" cy="171.5" r="3" fill="#7C8696" />
-              <path d="M56 179.5a6 6 0 0 1 12 0" fill="#7C8696" />
-              <rect x="78" y="171" width="86" height="6" rx="3" fill="#3A4557" />
-              <rect x="56" y="186" width="124" height="6" rx="3" fill="#3A4557" />
-              <rect x="56" y="201" width="88" height="6" rx="3" fill="#3A4557" />
-              <rect x="56" y="216" width="112" height="6" rx="3" fill="#3A4557" />
-              <rect x="56" y="231" width="52" height="6" rx="3" fill="#3A4557" />
+              <rect
+                x="40"
+                y="150"
+                width="168"
+                height="128"
+                rx="10"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-raised)", stroke: "var(--site-color-art-line)" }}
+              />
+              <circle cx="62" cy="174" r="8" style={{ fill: "var(--site-color-art-line)" }} />
+              <circle cx="62" cy="171.5" r="3" style={{ fill: "var(--site-color-art-ink-muted)" }} />
+              <path d="M56 179.5a6 6 0 0 1 12 0" style={{ fill: "var(--site-color-art-ink-muted)" }} />
+              <rect x="78" y="171" width="86" height="6" rx="3" style={{ fill: "var(--site-color-art-shape)" }} />
+              <rect x="56" y="186" width="124" height="6" rx="3" style={{ fill: "var(--site-color-art-shape)" }} />
+              <rect x="56" y="201" width="88" height="6" rx="3" style={{ fill: "var(--site-color-art-shape)" }} />
+              <rect x="56" y="216" width="112" height="6" rx="3" style={{ fill: "var(--site-color-art-shape)" }} />
+              <rect x="56" y="231" width="52" height="6" rx="3" style={{ fill: "var(--site-color-art-shape)" }} />
               <rect
                 x="112"
                 y="229"
                 width="2"
                 height="10"
-                fill="#3DDC97"
                 className="mv"
-                style={{ animation: "blink 1.1s steps(1) infinite" }}
+                style={{ fill: "var(--site-color-accent-green)", animation: "blink 1.1s steps(1) infinite" }}
               />
-              <rect x="150" y="248" width="46" height="20" rx="10" fill="#3DDC97" />
+              <rect x="150" y="248" width="46" height="20" rx="10" style={{ fill: "var(--site-color-accent-green)" }} />
               <path
                 d="M166 258h13M175 254l4 4-4 4"
                 fill="none"
-                stroke="#0A0C10"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-art-paper)" }}
               />
               <text
                 x="250"
@@ -214,60 +228,146 @@ export function CaseGdsStudio() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 design system
               </text>
-              <rect x="250" y="42" width="150" height="68" rx="10" fill="#10141B" stroke="#2E3746" strokeWidth="1.5" />
-              <rect x="264" y="56" width="44" height="16" rx="5" fill="none" stroke="#A4ADBB" strokeWidth="1.5" />
-              <rect x="274" y="62" width="24" height="4" rx="2" fill="#A4ADBB" />
-              <rect x="318" y="57" width="26" height="14" rx="7" fill="none" stroke="#A4ADBB" strokeWidth="1.5" />
-              <circle cx="337" cy="64" r="4" fill="#A4ADBB" />
-              <rect x="354" y="56" width="32" height="16" rx="3" fill="none" stroke="#A4ADBB" strokeWidth="1.5" />
-              <path d="M360 60L360 68" fill="none" stroke="#A4ADBB" strokeWidth="1.5" />
-              <circle cx="271" cy="91" r="5" fill="#3DDC97" />
-              <circle cx="287" cy="91" r="5" fill="#5B9DFF" />
-              <circle cx="303" cy="91" r="5" fill="#FFD166" />
-              <circle cx="319" cy="91" r="5" fill="#FF8A5B" />
-              <circle cx="335" cy="91" r="5" fill="#FF7EB6" />
+              <rect
+                x="250"
+                y="42"
+                width="150"
+                height="68"
+                rx="10"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-raised)", stroke: "var(--site-color-art-line)" }}
+              />
+              <rect
+                x="264"
+                y="56"
+                width="44"
+                height="16"
+                rx="5"
+                fill="none"
+                strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-ink-soft)" }}
+              />
+              <rect x="274" y="62" width="24" height="4" rx="2" style={{ fill: "var(--site-color-art-ink-soft)" }} />
+              <rect
+                x="318"
+                y="57"
+                width="26"
+                height="14"
+                rx="7"
+                fill="none"
+                strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-ink-soft)" }}
+              />
+              <circle cx="337" cy="64" r="4" style={{ fill: "var(--site-color-art-ink-soft)" }} />
+              <rect
+                x="354"
+                y="56"
+                width="32"
+                height="16"
+                rx="3"
+                fill="none"
+                strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-ink-soft)" }}
+              />
+              <path
+                d="M360 60L360 68"
+                fill="none"
+                strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-ink-soft)" }}
+              />
+              <circle cx="271" cy="91" r="5" style={{ fill: "var(--site-color-accent-green)" }} />
+              <circle cx="287" cy="91" r="5" style={{ fill: "var(--site-color-accent-blue)" }} />
+              <circle cx="303" cy="91" r="5" style={{ fill: "var(--site-color-accent-yellow)" }} />
+              <circle cx="319" cy="91" r="5" style={{ fill: "var(--site-color-accent-orange)" }} />
+              <circle cx="335" cy="91" r="5" style={{ fill: "var(--site-color-accent-pink)" }} />
               <text
                 x="352"
                 y="95"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("tokens")}
               </text>
-              <rect x="482" y="138" width="36" height="22" rx="3" fill="#1A202B" stroke="#3A4557" strokeWidth="1.5" />
-              <rect x="464" y="58" width="72" height="82" rx="9" fill="#232A36" stroke="#4A5568" strokeWidth="1.5" />
+              <rect
+                x="482"
+                y="138"
+                width="36"
+                height="22"
+                rx="3"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-inset)", stroke: "var(--site-color-art-shape)" }}
+              />
+              <rect
+                x="464"
+                y="58"
+                width="72"
+                height="82"
+                rx="9"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-line-subtle)", stroke: "var(--site-color-art-shape-strong)" }}
+              />
               <path
                 d="M468 70H532M468 79H532M468 88H532M468 97H532M468 106H532M468 115H532M468 124H532M468 133H532"
                 fill="none"
-                stroke="#3A4557"
                 strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-shape)" }}
               />
-              <rect x="476" y="50" width="48" height="10" rx="4" fill="#2E3746" stroke="#4A5568" strokeWidth="1.5" />
-              <rect x="536" y="82" width="24" height="34" rx="4" fill="#232A36" stroke="#4A5568" strokeWidth="1.5" />
+              <rect
+                x="476"
+                y="50"
+                width="48"
+                height="10"
+                rx="4"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-line)", stroke: "var(--site-color-art-shape-strong)" }}
+              />
+              <rect
+                x="536"
+                y="82"
+                width="24"
+                height="34"
+                rx="4"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-line-subtle)", stroke: "var(--site-color-art-shape-strong)" }}
+              />
               <circle
                 cx="548"
                 cy="93"
                 r="3.5"
-                fill="#3DDC97"
                 className="mv"
-                style={{ animation: "csPulse 1.6s ease-in-out infinite" }}
+                style={{ fill: "var(--site-color-accent-green)", animation: "csPulse 1.6s ease-in-out infinite" }}
               />
-              <path d="M543 104L553 104" fill="none" stroke="#4A5568" strokeWidth="1.5" />
-              <path d="M543 109L553 109" fill="none" stroke="#4A5568" strokeWidth="1.5" />
-              <path d="M560 96H584" fill="none" stroke="#4A5568" strokeWidth="1" />
+              <path
+                d="M543 104L553 104"
+                fill="none"
+                strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-shape-strong)" }}
+              />
+              <path
+                d="M543 109L553 109"
+                fill="none"
+                strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-shape-strong)" }}
+              />
+              <path
+                d="M560 96H584"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-shape-strong)" }}
+              />
               <text
                 x="590"
                 y="92"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="600"
-                fill="#F2F4F7"
+                style={{ fill: "var(--site-color-art-ink)" }}
               >
                 agent
               </text>
@@ -277,120 +377,207 @@ export function CaseGdsStudio() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("sandbox, no network")}
               </text>
-              <rect x="430" y="194" width="10" height="40" rx="2" fill="#2E3746" stroke="#4A5568" strokeWidth="1.5" />
-              <rect x="560" y="194" width="10" height="40" rx="2" fill="#2E3746" stroke="#4A5568" strokeWidth="1.5" />
-              <circle cx="500" cy="214" r="60" fill="#141A25" stroke="#4A5568" strokeWidth="2" />
-              <circle cx="500" cy="214" r="46" fill="#0A0C10" stroke="#2E3746" strokeWidth="1.5" />
-              <circle cx="549" cy="234.3" r="2.2" fill="#4A5568" />
-              <circle cx="520.3" cy="263" r="2.2" fill="#4A5568" />
-              <circle cx="479.7" cy="263" r="2.2" fill="#4A5568" />
-              <circle cx="451" cy="234.3" r="2.2" fill="#4A5568" />
-              <circle cx="451" cy="193.7" r="2.2" fill="#4A5568" />
-              <circle cx="479.7" cy="165" r="2.2" fill="#4A5568" />
-              <circle cx="520.3" cy="165" r="2.2" fill="#4A5568" />
-              <circle cx="549" cy="193.7" r="2.2" fill="#4A5568" />
+              <rect
+                x="430"
+                y="194"
+                width="10"
+                height="40"
+                rx="2"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-line)", stroke: "var(--site-color-art-shape-strong)" }}
+              />
+              <rect
+                x="560"
+                y="194"
+                width="10"
+                height="40"
+                rx="2"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-line)", stroke: "var(--site-color-art-shape-strong)" }}
+              />
+              <circle
+                cx="500"
+                cy="214"
+                r="60"
+                strokeWidth="2"
+                style={{ fill: "var(--site-color-art-raised-2)", stroke: "var(--site-color-art-shape-strong)" }}
+              />
+              <circle
+                cx="500"
+                cy="214"
+                r="46"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-line)" }}
+              />
+              <circle cx="549" cy="234.3" r="2.2" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+              <circle cx="520.3" cy="263" r="2.2" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+              <circle cx="479.7" cy="263" r="2.2" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+              <circle cx="451" cy="234.3" r="2.2" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+              <circle cx="451" cy="193.7" r="2.2" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+              <circle cx="479.7" cy="165" r="2.2" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+              <circle cx="520.3" cy="165" r="2.2" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+              <circle cx="549" cy="193.7" r="2.2" style={{ fill: "var(--site-color-art-shape-strong)" }} />
               <g transform="translate(500 214)">
                 <g className="mv" style={{ animation: "csSpin 3.2s linear infinite" }}>
                   <path
                     d="M0 -9Q17 -18 9 -40"
                     fill="none"
-                    stroke="#3DDC97"
                     strokeWidth="3.5"
                     strokeLinecap="round"
                     transform="rotate(0)"
+                    style={{ stroke: "var(--site-color-accent-green)" }}
                   />
                   <path
                     d="M0 -9Q17 -18 9 -40"
                     fill="none"
-                    stroke="#3DDC97"
                     strokeWidth="3.5"
                     strokeLinecap="round"
                     transform="rotate(60)"
+                    style={{ stroke: "var(--site-color-accent-green)" }}
                   />
                   <path
                     d="M0 -9Q17 -18 9 -40"
                     fill="none"
-                    stroke="#3DDC97"
                     strokeWidth="3.5"
                     strokeLinecap="round"
                     transform="rotate(120)"
+                    style={{ stroke: "var(--site-color-accent-green)" }}
                   />
                   <path
                     d="M0 -9Q17 -18 9 -40"
                     fill="none"
-                    stroke="#3DDC97"
                     strokeWidth="3.5"
                     strokeLinecap="round"
                     transform="rotate(180)"
+                    style={{ stroke: "var(--site-color-accent-green)" }}
                   />
                   <path
                     d="M0 -9Q17 -18 9 -40"
                     fill="none"
-                    stroke="#3DDC97"
                     strokeWidth="3.5"
                     strokeLinecap="round"
                     transform="rotate(240)"
+                    style={{ stroke: "var(--site-color-accent-green)" }}
                   />
                   <path
                     d="M0 -9Q17 -18 9 -40"
                     fill="none"
-                    stroke="#3DDC97"
                     strokeWidth="3.5"
                     strokeLinecap="round"
                     transform="rotate(300)"
+                    style={{ stroke: "var(--site-color-accent-green)" }}
                   />
-                  <circle r="40" fill="none" stroke="#3A4557" strokeWidth="1.5" strokeDasharray="3 7" />
+                  <circle
+                    r="40"
+                    fill="none"
+                    strokeWidth="1.5"
+                    strokeDasharray="3 7"
+                    style={{ stroke: "var(--site-color-art-shape)" }}
+                  />
                 </g>
-                <circle r="9" fill="#1A202B" stroke="#3DDC97" strokeWidth="2" />
+                <circle
+                  r="9"
+                  strokeWidth="2"
+                  style={{ fill: "var(--site-color-art-inset)", stroke: "var(--site-color-accent-green)" }}
+                />
               </g>
-              <rect x="638" y="188" width="98" height="52" rx="9" fill="#10141B" stroke="#4A5568" strokeWidth="1.5" />
-              <circle cx="654" cy="207" r="7.5" fill="rgba(61,220,151,0.14)" stroke="#3DDC97" strokeWidth="1.5" />
+              <rect
+                x="638"
+                y="188"
+                width="98"
+                height="52"
+                rx="9"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-raised)", stroke: "var(--site-color-art-shape-strong)" }}
+              />
+              <circle
+                cx="654"
+                cy="207"
+                r="7.5"
+                strokeWidth="1.5"
+                style={{
+                  fill: "color-mix(in srgb, var(--site-color-accent-green) 14%, transparent)",
+                  stroke: "var(--site-color-accent-green)",
+                }}
+              />
               <path
                 d="M650.6 207l2.4 2.4 4.6-5"
                 fill="none"
-                stroke="#3DDC97"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="mv"
-                style={{ animation: "csPulse 2.4s ease-in-out -2.4s infinite" }}
+                style={{
+                  stroke: "var(--site-color-accent-green)",
+                  animation: "csPulse 2.4s ease-in-out -2.4s infinite",
+                }}
               />
-              <circle cx="676" cy="207" r="7.5" fill="rgba(61,220,151,0.14)" stroke="#3DDC97" strokeWidth="1.5" />
+              <circle
+                cx="676"
+                cy="207"
+                r="7.5"
+                strokeWidth="1.5"
+                style={{
+                  fill: "color-mix(in srgb, var(--site-color-accent-green) 14%, transparent)",
+                  stroke: "var(--site-color-accent-green)",
+                }}
+              />
               <path
                 d="M672.6 207l2.4 2.4 4.6-5"
                 fill="none"
-                stroke="#3DDC97"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="mv"
-                style={{ animation: "csPulse 2.4s ease-in-out -2s infinite" }}
+                style={{ stroke: "var(--site-color-accent-green)", animation: "csPulse 2.4s ease-in-out -2s infinite" }}
               />
-              <circle cx="698" cy="207" r="7.5" fill="rgba(61,220,151,0.14)" stroke="#3DDC97" strokeWidth="1.5" />
+              <circle
+                cx="698"
+                cy="207"
+                r="7.5"
+                strokeWidth="1.5"
+                style={{
+                  fill: "color-mix(in srgb, var(--site-color-accent-green) 14%, transparent)",
+                  stroke: "var(--site-color-accent-green)",
+                }}
+              />
               <path
                 d="M694.6 207l2.4 2.4 4.6-5"
                 fill="none"
-                stroke="#3DDC97"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="mv"
-                style={{ animation: "csPulse 2.4s ease-in-out -1.6s infinite" }}
+                style={{
+                  stroke: "var(--site-color-accent-green)",
+                  animation: "csPulse 2.4s ease-in-out -1.6s infinite",
+                }}
               />
-              <circle cx="720" cy="207" r="7.5" fill="rgba(61,220,151,0.14)" stroke="#3DDC97" strokeWidth="1.5" />
+              <circle
+                cx="720"
+                cy="207"
+                r="7.5"
+                strokeWidth="1.5"
+                style={{
+                  fill: "color-mix(in srgb, var(--site-color-accent-green) 14%, transparent)",
+                  stroke: "var(--site-color-accent-green)",
+                }}
+              />
               <path
                 d="M716.6 207l2.4 2.4 4.6-5"
                 fill="none"
-                stroke="#3DDC97"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="mv"
-                style={{ animation: "csPulse 2.4s ease-in-out -1.2s infinite" }}
+                style={{
+                  stroke: "var(--site-color-accent-green)",
+                  animation: "csPulse 2.4s ease-in-out -1.2s infinite",
+                }}
               />
               <text
                 x="687"
@@ -399,7 +586,7 @@ export function CaseGdsStudio() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="600"
-                fill="#F2F4F7"
+                style={{ fill: "var(--site-color-art-ink)" }}
               >
                 {t("system check")}
               </text>
@@ -409,7 +596,7 @@ export function CaseGdsStudio() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("validator · typecheck")}
               </text>
@@ -419,18 +606,26 @@ export function CaseGdsStudio() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("build · runtime sweep")}
               </text>
-              <rect x="494" y="303" width="112" height="22" rx="11" fill="#0A0C10" stroke="#2E3746" strokeWidth="1.5" />
+              <rect
+                x="494"
+                y="303"
+                width="112"
+                height="22"
+                rx="11"
+                strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-line)" }}
+              />
               <path
                 d="M509 317a5 5 0 1 1 5 -7M514 306.5v4h-4"
                 fill="none"
-                stroke="#3DDC97"
                 strokeWidth="1.6"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ stroke: "var(--site-color-accent-green)" }}
               />
               <text
                 x="524"
@@ -438,7 +633,7 @@ export function CaseGdsStudio() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("2 fix rounds")}
               </text>
@@ -448,7 +643,7 @@ export function CaseGdsStudio() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("working prototype")}
               </text>
@@ -458,48 +653,118 @@ export function CaseGdsStudio() {
                 width="212"
                 height="222"
                 rx="10"
-                fill="#10141B"
-                stroke="#2E3746"
                 strokeWidth="1.5"
+                style={{ fill: "var(--site-color-art-raised)", stroke: "var(--site-color-art-line)" }}
               />
-              <path d="M792 128H1004" fill="none" stroke="#2E3746" strokeWidth="1.5" />
-              <circle cx="806" cy="116" r="3" fill="#3A4557" />
-              <circle cx="818" cy="116" r="3" fill="#3A4557" />
-              <circle cx="830" cy="116" r="3" fill="#3A4557" />
+              <path d="M792 128H1004" fill="none" strokeWidth="1.5" style={{ stroke: "var(--site-color-art-line)" }} />
+              <circle cx="806" cy="116" r="3" style={{ fill: "var(--site-color-art-shape)" }} />
+              <circle cx="818" cy="116" r="3" style={{ fill: "var(--site-color-art-shape)" }} />
+              <circle cx="830" cy="116" r="3" style={{ fill: "var(--site-color-art-shape)" }} />
               <g className="mv" style={{ animation: "csAppear 7s linear -6.5s infinite" }}>
-                <rect x="802" y="138" width="40" height="178" rx="6" fill="#0A0C10" stroke="#232A36" strokeWidth="1" />
-                <rect x="810" y="150" width="24" height="5" rx="2.5" fill="#3A4557" />
-                <rect x="810" y="166" width="24" height="5" rx="2.5" fill="#3A4557" />
-                <rect x="810" y="182" width="24" height="5" rx="2.5" fill="#3A4557" />
-                <rect x="810" y="198" width="24" height="5" rx="2.5" fill="#3A4557" />
+                <rect
+                  x="802"
+                  y="138"
+                  width="40"
+                  height="178"
+                  rx="6"
+                  strokeWidth="1"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-line-subtle)" }}
+                />
+                <rect x="810" y="150" width="24" height="5" rx="2.5" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect x="810" y="166" width="24" height="5" rx="2.5" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect x="810" y="182" width="24" height="5" rx="2.5" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect x="810" y="198" width="24" height="5" rx="2.5" style={{ fill: "var(--site-color-art-shape)" }} />
               </g>
               <g className="mv" style={{ animation: "csAppear 7s linear -6s infinite" }}>
-                <rect x="852" y="138" width="142" height="20" rx="6" fill="#0A0C10" stroke="#232A36" strokeWidth="1" />
-                <rect x="860" y="145" width="60" height="6" rx="3" fill="#A4ADBB" />
+                <rect
+                  x="852"
+                  y="138"
+                  width="142"
+                  height="20"
+                  rx="6"
+                  strokeWidth="1"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-line-subtle)" }}
+                />
+                <rect x="860" y="145" width="60" height="6" rx="3" style={{ fill: "var(--site-color-art-ink-soft)" }} />
               </g>
               <g className="mv" style={{ animation: "csAppear 7s linear -5.5s infinite" }}>
-                <rect x="852" y="166" width="66" height="50" rx="6" fill="#0A0C10" stroke="#232A36" strokeWidth="1" />
-                <rect x="860" y="175" width="30" height="5" rx="2.5" fill="#3A4557" />
-                <rect x="860" y="188" width="44" height="12" rx="3" fill="#F2F4F7" />
+                <rect
+                  x="852"
+                  y="166"
+                  width="66"
+                  height="50"
+                  rx="6"
+                  strokeWidth="1"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-line-subtle)" }}
+                />
+                <rect x="860" y="175" width="30" height="5" rx="2.5" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect x="860" y="188" width="44" height="12" rx="3" style={{ fill: "var(--site-color-art-ink)" }} />
               </g>
               <g className="mv" style={{ animation: "csAppear 7s linear -5s infinite" }}>
-                <rect x="928" y="166" width="66" height="50" rx="6" fill="#0A0C10" stroke="#232A36" strokeWidth="1" />
-                <rect x="936" y="175" width="30" height="5" rx="2.5" fill="#3A4557" />
-                <rect x="936" y="188" width="36" height="12" rx="3" fill="#F2F4F7" />
+                <rect
+                  x="928"
+                  y="166"
+                  width="66"
+                  height="50"
+                  rx="6"
+                  strokeWidth="1"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-line-subtle)" }}
+                />
+                <rect x="936" y="175" width="30" height="5" rx="2.5" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect x="936" y="188" width="36" height="12" rx="3" style={{ fill: "var(--site-color-art-ink)" }} />
               </g>
               <g className="mv" style={{ animation: "csAppear 7s linear -4.5s infinite" }}>
-                <rect x="852" y="224" width="142" height="68" rx="6" fill="#0A0C10" stroke="#232A36" strokeWidth="1" />
-                <rect x="862" y="268" width="11" height="18" rx="2" fill="#3A4557" />
-                <rect x="881" y="256" width="11" height="30" rx="2" fill="#3A4557" />
-                <rect x="900" y="262" width="11" height="24" rx="2" fill="#3A4557" />
-                <rect x="919" y="246" width="11" height="40" rx="2" fill="#3A4557" />
-                <rect x="938" y="252" width="11" height="34" rx="2" fill="#3A4557" />
-                <rect x="957" y="236" width="11" height="50" rx="2" fill="#3DDC97" />
+                <rect
+                  x="852"
+                  y="224"
+                  width="142"
+                  height="68"
+                  rx="6"
+                  strokeWidth="1"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-line-subtle)" }}
+                />
+                <rect x="862" y="268" width="11" height="18" rx="2" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect x="881" y="256" width="11" height="30" rx="2" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect x="900" y="262" width="11" height="24" rx="2" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect x="919" y="246" width="11" height="40" rx="2" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect x="938" y="252" width="11" height="34" rx="2" style={{ fill: "var(--site-color-art-shape)" }} />
+                <rect
+                  x="957"
+                  y="236"
+                  width="11"
+                  height="50"
+                  rx="2"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
               </g>
               <g className="mv" style={{ animation: "csAppear 7s linear -4s infinite" }}>
-                <rect x="852" y="300" width="62" height="16" rx="5" fill="#3DDC97" />
-                <rect x="864" y="306" width="38" height="4" rx="2" fill="#0A0C10" opacity="0.7" />
-                <rect x="922" y="300" width="50" height="16" rx="5" fill="none" stroke="#4A5568" strokeWidth="1.5" />
+                <rect
+                  x="852"
+                  y="300"
+                  width="62"
+                  height="16"
+                  rx="5"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
+                <rect
+                  x="864"
+                  y="306"
+                  width="38"
+                  height="4"
+                  rx="2"
+                  opacity="0.7"
+                  style={{ fill: "var(--site-color-art-paper)" }}
+                />
+                <rect
+                  x="922"
+                  y="300"
+                  width="50"
+                  height="16"
+                  rx="5"
+                  fill="none"
+                  strokeWidth="1.5"
+                  style={{ stroke: "var(--site-color-art-shape-strong)" }}
+                />
               </g>
               <text
                 x="792"
@@ -507,7 +772,7 @@ export function CaseGdsStudio() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("streamed live")}
               </text>
@@ -536,7 +801,7 @@ export function CaseGdsStudio() {
               height: "8px",
               marginTop: "6px",
               borderRadius: "50%",
-              background: "#3DDC97",
+              background: "var(--site-color-accent-green)",
             }}
           />
           <span>
@@ -661,7 +926,7 @@ export function CaseGdsStudio() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#3DDC97",
+                      background: "var(--site-color-accent-green)",
                     }}
                   />
                   <span
@@ -694,7 +959,7 @@ export function CaseGdsStudio() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#3DDC97",
+                      background: "var(--site-color-accent-green)",
                     }}
                   />
                   <span
@@ -727,7 +992,7 @@ export function CaseGdsStudio() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#3DDC97",
+                      background: "var(--site-color-accent-green)",
                     }}
                   />
                   <span
@@ -764,7 +1029,7 @@ export function CaseGdsStudio() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#3DDC97",
+                      background: "var(--site-color-accent-green)",
                     }}
                   />
                   <span

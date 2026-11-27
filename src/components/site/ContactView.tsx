@@ -303,7 +303,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                               padding: "36px 22px 20px",
                               borderRadius: "var(--perron-radius-xl)",
                               background: "var(--perron-color-surface-inverse)",
-                              color: "var(--perron-color-text-on-color-dark)",
+                              color: "var(--perron-color-text-inverse)",
                               boxShadow: "var(--perron-shadow-panel)",
                               backfaceVisibility: "hidden",
                               WebkitBackfaceVisibility: "hidden",
@@ -413,7 +413,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   font: "600 10.5px/1.3 var(--perron-font-family-body)",
                                   letterSpacing: "0.6px",
                                   textTransform: "uppercase",
-                                  border: "1px solid var(--perron-color-text-on-color-dark)",
+                                  border: "1px solid var(--perron-color-text-inverse)",
                                 }}
                               >
                                 {t("AI agents")}
@@ -425,7 +425,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   font: "600 10.5px/1.3 var(--perron-font-family-body)",
                                   letterSpacing: "0.6px",
                                   textTransform: "uppercase",
-                                  border: "1px solid var(--perron-color-text-on-color-dark)",
+                                  border: "1px solid var(--perron-color-text-inverse)",
                                 }}
                               >
                                 {t("Design systems")}
@@ -437,7 +437,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   font: "600 10.5px/1.3 var(--perron-font-family-body)",
                                   letterSpacing: "0.6px",
                                   textTransform: "uppercase",
-                                  border: "1px solid var(--perron-color-text-on-color-dark)",
+                                  border: "1px solid var(--perron-color-text-inverse)",
                                 }}
                               >
                                 {t("Apps")}
@@ -462,7 +462,7 @@ export function ContactView({ v }: { v: ContactVals }) {
                                       <span
                                         style={{
                                           width: `${b.w}px`,
-                                          background: "var(--perron-color-text-on-color-dark)",
+                                          background: "var(--perron-color-text-inverse)",
                                         }}
                                       />
                                     </Fragment>
@@ -494,12 +494,12 @@ export function ContactView({ v }: { v: ContactVals }) {
                                   height="22"
                                   viewBox="0 0 16 16"
                                   fill="none"
-                                  stroke="#3DDC97"
                                   strokeWidth="2.2"
                                   strokeLinecap="round"
                                   strokeLinejoin="round"
                                   role="img"
                                   aria-label={t("Verified")}
+                                  style={{ stroke: "var(--site-color-accent-green)" }}
                                 >
                                   <path d="M3 8.5l3.2 3.2L13 4.8" />
                                 </svg>

@@ -35,36 +35,45 @@ export function CaseMaerskDesignSystem() {
               style={{ display: "block", width: "100%", height: "100%" }}
             >
               <g aria-hidden="true">
-                <circle cx="60" cy="40" r="1.6" fill="#4A5568" />
-                <circle cx="148" cy="86" r="1.1" fill="#4A5568" />
-                <circle cx="236" cy="30" r="1.1" fill="#4A5568" />
-                <circle cx="331" cy="62" r="1.6" fill="#4A5568" />
-                <circle cx="418" cy="26" r="1.1" fill="#4A5568" />
-                <circle cx="512" cy="54" r="1.1" fill="#4A5568" />
-                <circle cx="604" cy="22" r="1.6" fill="#4A5568" />
-                <circle cx="700" cy="70" r="1.1" fill="#4A5568" />
-                <circle cx="792" cy="34" r="1.1" fill="#4A5568" />
-                <circle cx="884" cy="58" r="1.6" fill="#4A5568" />
-                <circle cx="968" cy="28" r="1.1" fill="#4A5568" />
-                <circle cx="1010" cy="96" r="1.1" fill="#4A5568" />
-                <circle cx="30" cy="130" r="1.6" fill="#4A5568" />
-                <circle cx="990" cy="160" r="1.1" fill="#4A5568" />
+                <circle cx="60" cy="40" r="1.6" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="148" cy="86" r="1.1" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="236" cy="30" r="1.1" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="331" cy="62" r="1.6" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="418" cy="26" r="1.1" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="512" cy="54" r="1.1" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="604" cy="22" r="1.6" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="700" cy="70" r="1.1" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="792" cy="34" r="1.1" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="884" cy="58" r="1.6" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="968" cy="28" r="1.1" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="1010" cy="96" r="1.1" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="30" cy="130" r="1.6" style={{ fill: "var(--site-color-art-shape-strong)" }} />
+                <circle cx="990" cy="160" r="1.1" style={{ fill: "var(--site-color-art-shape-strong)" }} />
               </g>
-              <rect x="0" y="296" width="1040" height="84" fill="#0D1827" />
-              <path d="M0 296H1040" fill="none" stroke="#1B2A44" strokeWidth="1" />
+              <rect x="0" y="296" width="1040" height="84" style={{ fill: "var(--perron-color-map-water)" }} />
+              <path d="M0 296H1040" fill="none" strokeWidth="1" style={{ stroke: "var(--site-color-art-sea-line)" }} />
               <g
                 className="mv"
                 style={{ transformOrigin: "520px 300px", animation: "csBob 5.2s ease-in-out infinite alternate" }}
               >
                 <path
                   d="M118 238H934L900 302H148Q124 302 122 276Z"
-                  fill="#1A202B"
-                  stroke="#3A4557"
                   strokeWidth="1.5"
                   strokeLinejoin="round"
+                  style={{ fill: "var(--site-color-art-inset)", stroke: "var(--site-color-art-shape)" }}
                 />
-                <path d="M124 284H909" fill="none" stroke="#FFD166" strokeWidth="3" />
-                <path d="M118 238H934" fill="none" stroke="#4A5568" strokeWidth="2" />
+                <path
+                  d="M124 284H909"
+                  fill="none"
+                  strokeWidth="3"
+                  style={{ stroke: "var(--site-color-accent-yellow)" }}
+                />
+                <path
+                  d="M118 238H934"
+                  fill="none"
+                  strokeWidth="2"
+                  style={{ stroke: "var(--site-color-art-shape-strong)" }}
+                />
                 <text
                   x="540"
                   y="270"
@@ -72,700 +81,1590 @@ export function CaseMaerskDesignSystem() {
                   fontFamily="Familjen Grotesk, Schibsted Grotesk, system-ui, sans-serif"
                   fontSize="19"
                   fontWeight="700"
-                  fill="#F2F4F7"
                   letterSpacing="7"
+                  style={{ fill: "var(--site-color-art-ink)" }}
                 >
                   {t("ONE TOKEN SOURCE")}
                 </text>
-                <circle cx="892" cy="256" r="3" fill="none" stroke="#4A5568" strokeWidth="1.5" />
-                <path d="M888 238L888 204" fill="none" stroke="#4A5568" strokeWidth="2" />
+                <circle
+                  cx="892"
+                  cy="256"
+                  r="3"
+                  fill="none"
+                  strokeWidth="1.5"
+                  style={{ stroke: "var(--site-color-art-shape-strong)" }}
+                />
+                <path
+                  d="M888 238L888 204"
+                  fill="none"
+                  strokeWidth="2"
+                  style={{ stroke: "var(--site-color-art-shape-strong)" }}
+                />
                 <circle
                   cx="888"
                   cy="201"
                   r="2.4"
-                  fill="#FFD166"
                   className="mv"
-                  style={{ animation: "csPulse 2.4s ease-in-out infinite" }}
+                  style={{ fill: "var(--site-color-accent-yellow)", animation: "csPulse 2.4s ease-in-out infinite" }}
                 />
-                <rect x="132" y="178" width="22" height="60" rx="2" fill="#232A36" stroke="#3A4557" strokeWidth="1.5" />
-                <rect x="132" y="188" width="22" height="9" fill="#FFD166" />
-                <rect x="160" y="150" width="66" height="88" rx="2" fill="#232A36" stroke="#3A4557" strokeWidth="1.5" />
-                <rect x="167" y="160" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="178.5" y="160" width="6.5" height="5" rx="1" fill="#3A4557" opacity="1" />
-                <rect x="190" y="160" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="201.5" y="160" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="213" y="160" width="6.5" height="5" rx="1" fill="#3A4557" opacity="1" />
-                <rect x="167" y="174" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="178.5" y="174" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="190" y="174" width="6.5" height="5" rx="1" fill="#3A4557" opacity="1" />
-                <rect x="201.5" y="174" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="213" y="174" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="167" y="188" width="6.5" height="5" rx="1" fill="#3A4557" opacity="1" />
-                <rect x="178.5" y="188" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="190" y="188" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="201.5" y="188" width="6.5" height="5" rx="1" fill="#3A4557" opacity="1" />
-                <rect x="213" y="188" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="167" y="202" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="178.5" y="202" width="6.5" height="5" rx="1" fill="#3A4557" opacity="1" />
-                <rect x="190" y="202" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="201.5" y="202" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="213" y="202" width="6.5" height="5" rx="1" fill="#3A4557" opacity="1" />
-                <rect x="167" y="216" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="178.5" y="216" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="190" y="216" width="6.5" height="5" rx="1" fill="#3A4557" opacity="1" />
-                <rect x="201.5" y="216" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="213" y="216" width="6.5" height="5" rx="1" fill="#FFD166" opacity="0.85" />
-                <rect x="150" y="134" width="86" height="17" rx="3" fill="#2E3746" stroke="#4A5568" strokeWidth="1.5" />
-                <rect x="156" y="139" width="74" height="6" rx="1.5" fill="#8FB8FF" opacity="0.8" />
-                <path d="M193 134L193 104" fill="none" stroke="#4A5568" strokeWidth="2" />
-                <path d="M181 112L205 112" fill="none" stroke="#4A5568" strokeWidth="2" />
+                <rect
+                  x="132"
+                  y="178"
+                  width="22"
+                  height="60"
+                  rx="2"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-line-subtle)", stroke: "var(--site-color-art-shape)" }}
+                />
+                <rect x="132" y="188" width="22" height="9" style={{ fill: "var(--site-color-accent-yellow)" }} />
+                <rect
+                  x="160"
+                  y="150"
+                  width="66"
+                  height="88"
+                  rx="2"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-line-subtle)", stroke: "var(--site-color-art-shape)" }}
+                />
+                <rect
+                  x="167"
+                  y="160"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="178.5"
+                  y="160"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
+                <rect
+                  x="190"
+                  y="160"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="201.5"
+                  y="160"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="213"
+                  y="160"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
+                <rect
+                  x="167"
+                  y="174"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="178.5"
+                  y="174"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="190"
+                  y="174"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
+                <rect
+                  x="201.5"
+                  y="174"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="213"
+                  y="174"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="167"
+                  y="188"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
+                <rect
+                  x="178.5"
+                  y="188"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="190"
+                  y="188"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="201.5"
+                  y="188"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
+                <rect
+                  x="213"
+                  y="188"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="167"
+                  y="202"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="178.5"
+                  y="202"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
+                <rect
+                  x="190"
+                  y="202"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="201.5"
+                  y="202"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="213"
+                  y="202"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
+                <rect
+                  x="167"
+                  y="216"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="178.5"
+                  y="216"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="190"
+                  y="216"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
+                <rect
+                  x="201.5"
+                  y="216"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="213"
+                  y="216"
+                  width="6.5"
+                  height="5"
+                  rx="1"
+                  opacity="0.85"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
+                <rect
+                  x="150"
+                  y="134"
+                  width="86"
+                  height="17"
+                  rx="3"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-line)", stroke: "var(--site-color-art-shape-strong)" }}
+                />
+                <rect
+                  x="156"
+                  y="139"
+                  width="74"
+                  height="6"
+                  rx="1.5"
+                  opacity="0.8"
+                  style={{ fill: "var(--perron-color-text-info)" }}
+                />
+                <path
+                  d="M193 134L193 104"
+                  fill="none"
+                  strokeWidth="2"
+                  style={{ stroke: "var(--site-color-art-shape-strong)" }}
+                />
+                <path
+                  d="M181 112L205 112"
+                  fill="none"
+                  strokeWidth="2"
+                  style={{ stroke: "var(--site-color-art-shape-strong)" }}
+                />
                 <circle
                   cx="193"
                   cy="101"
                   r="2.4"
-                  fill="#F0616D"
                   className="mv"
-                  style={{ animation: "csPulse 2.4s ease-in-out -1.2s infinite" }}
+                  style={{ fill: "var(--site-color-accent-red)", animation: "csPulse 2.4s ease-in-out -1.2s infinite" }}
                 />
-                <rect x="262" y="214" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <rect
+                  x="262"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M272 217v14M282 217v14M292 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="262" y="192" width="40" height="20" rx="1.5" fill="#3DDC97" opacity="0.92" />
+                <rect
+                  x="262"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
                 <path
                   d="M272 195v14M282 195v14M292 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="262" y="170" width="40" height="20" rx="1.5" fill="#B58CFF" opacity="0.92" />
+                <rect
+                  x="262"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-purple)" }}
+                />
                 <path
                   d="M272 173v14M282 173v14M292 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="262" y="148" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="262"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M272 151v14M282 151v14M292 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="262" y="126" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.92" />
+                <rect
+                  x="262"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M272 129v14M282 129v14M292 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="304" y="214" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.92" />
+                <rect
+                  x="304"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M314 217v14M324 217v14M334 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="304" y="192" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="304"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M314 195v14M324 195v14M334 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="304" y="170" width="40" height="20" rx="1.5" fill="#3DDC97" opacity="0.42" />
+                <rect
+                  x="304"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
                 <path
                   d="M314 173v14M324 173v14M334 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="304" y="148" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <rect
+                  x="304"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M314 151v14M324 151v14M334 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="304" y="126" width="40" height="20" rx="1.5" fill="#B58CFF" opacity="0.92" />
+                <rect
+                  x="304"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-purple)" }}
+                />
                 <path
                   d="M314 129v14M324 129v14M334 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="315" y="132" width="18" height="8" rx="4" fill="none" stroke="#0A0C10" strokeWidth="1.4" />
-                <circle cx="329" cy="136" r="2.6" fill="#0A0C10" />
-                <rect x="304" y="104" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <rect
+                  x="315"
+                  y="132"
+                  width="18"
+                  height="8"
+                  rx="4"
+                  fill="none"
+                  strokeWidth="1.4"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
+                />
+                <circle cx="329" cy="136" r="2.6" style={{ fill: "var(--site-color-art-paper)" }} />
+                <rect
+                  x="304"
+                  y="104"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M314 107v14M324 107v14M334 107v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="346" y="214" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="346"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M356 217v14M366 217v14M376 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="346" y="192" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.42" />
+                <rect
+                  x="346"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M356 195v14M366 195v14M376 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="346" y="170" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.92" />
+                <rect
+                  x="346"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M356 173v14M366 173v14M376 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="346" y="148" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <rect
+                  x="346"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M356 151v14M366 151v14M376 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="346" y="126" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <rect
+                  x="346"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M356 129v14M366 129v14M376 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="346" y="104" width="40" height="20" rx="1.5" fill="#B58CFF" opacity="0.42" />
+                <rect
+                  x="346"
+                  y="104"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-purple)" }}
+                />
                 <path
                   d="M356 107v14M366 107v14M376 107v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="388" y="214" width="40" height="20" rx="1.5" fill="#3DDC97" opacity="0.42" />
+                <rect
+                  x="388"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
                 <path
                   d="M398 217v14M408 217v14M418 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="388" y="192" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <rect
+                  x="388"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M398 195v14M408 195v14M418 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="388" y="170" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.92" />
+                <rect
+                  x="388"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M398 173v14M408 173v14M418 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="388" y="148" width="40" height="20" rx="1.5" fill="#3DDC97" opacity="0.92" />
+                <rect
+                  x="388"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
                 <path
                   d="M398 151v14M408 151v14M418 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="388" y="126" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.42" />
+                <rect
+                  x="388"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M398 129v14M408 129v14M418 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="388" y="104" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.92" />
+                <rect
+                  x="388"
+                  y="104"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M398 107v14M408 107v14M418 107v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="396" y="109.5" width="24" height="9" rx="3" fill="#0A0C10" opacity="0.75" />
-                <rect x="430" y="214" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <rect
+                  x="396"
+                  y="109.5"
+                  width="24"
+                  height="9"
+                  rx="3"
+                  opacity="0.75"
+                  style={{ fill: "var(--site-color-art-paper)" }}
+                />
+                <rect
+                  x="430"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M440 217v14M450 217v14M460 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="430" y="192" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <rect
+                  x="430"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M440 195v14M450 195v14M460 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="430" y="170" width="40" height="20" rx="1.5" fill="#3DDC97" opacity="0.92" />
+                <rect
+                  x="430"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
                 <path
                   d="M440 173v14M450 173v14M460 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="445" y="175" width="10" height="10" rx="2" fill="none" stroke="#0A0C10" strokeWidth="1.4" />
+                <rect
+                  x="445"
+                  y="175"
+                  width="10"
+                  height="10"
+                  rx="2"
+                  fill="none"
+                  strokeWidth="1.4"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
+                />
                 <path
                   d="M447.4 180l2 2 3.4-4"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1.4"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="430" y="148" width="40" height="20" rx="1.5" fill="#B58CFF" opacity="0.42" />
+                <rect
+                  x="430"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-purple)" }}
+                />
                 <path
                   d="M440 151v14M450 151v14M460 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="430" y="126" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="430"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M440 129v14M450 129v14M460 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="430" y="104" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.92" />
+                <rect
+                  x="430"
+                  y="104"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M440 107v14M450 107v14M460 107v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="472" y="214" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.92" />
+                <rect
+                  x="472"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M482 217v14M492 217v14M502 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <path d="M480 224L504 224" fill="none" stroke="#0A0C10" strokeWidth="1.4" strokeLinecap="round" />
-                <circle cx="494" cy="224" r="3" fill="#0A0C10" />
-                <rect x="472" y="192" width="40" height="20" rx="1.5" fill="#B58CFF" opacity="0.92" />
+                <path
+                  d="M480 224L504 224"
+                  fill="none"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
+                />
+                <circle cx="494" cy="224" r="3" style={{ fill: "var(--site-color-art-paper)" }} />
+                <rect
+                  x="472"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-purple)" }}
+                />
                 <path
                   d="M482 195v14M492 195v14M502 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="472" y="170" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.42" />
+                <rect
+                  x="472"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M482 173v14M492 173v14M502 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="472" y="148" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.92" />
+                <rect
+                  x="472"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M482 151v14M492 151v14M502 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="472" y="126" width="40" height="20" rx="1.5" fill="#3DDC97" opacity="0.92" />
+                <rect
+                  x="472"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
                 <path
                   d="M482 129v14M492 129v14M502 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="514" y="214" width="40" height="20" rx="1.5" fill="#B58CFF" opacity="0.92" />
+                <rect
+                  x="514"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-purple)" }}
+                />
                 <path
                   d="M524 217v14M534 217v14M544 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="514" y="192" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.42" />
+                <rect
+                  x="514"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M524 195v14M534 195v14M544 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="514" y="170" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.92" />
+                <rect
+                  x="514"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M524 173v14M534 173v14M544 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="514" y="148" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <rect
+                  x="514"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M524 151v14M534 151v14M544 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="514" y="126" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <rect
+                  x="514"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M524 129v14M534 129v14M544 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="556" y="214" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.42" />
+                <rect
+                  x="556"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M566 217v14M576 217v14M586 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="556" y="192" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <rect
+                  x="556"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M566 195v14M576 195v14M586 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="556" y="170" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="556"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M566 173v14M576 173v14M586 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="556" y="148" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <rect
+                  x="556"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M566 151v14M576 151v14M586 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="556" y="126" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.42" />
+                <rect
+                  x="556"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M566 129v14M576 129v14M586 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="556" y="104" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="556"
+                  y="104"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M566 107v14M576 107v14M586 107v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="598" y="214" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.92" />
+                <rect
+                  x="598"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M608 217v14M618 217v14M628 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="598" y="192" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <rect
+                  x="598"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M608 195v14M618 195v14M628 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="598" y="170" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <rect
+                  x="598"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M608 173v14M618 173v14M628 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="598" y="148" width="40" height="20" rx="1.5" fill="#3DDC97" opacity="0.42" />
+                <rect
+                  x="598"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.42"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
                 <path
                   d="M608 151v14M618 151v14M628 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="598" y="126" width="40" height="20" rx="1.5" fill="#B58CFF" opacity="0.92" />
+                <rect
+                  x="598"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-purple)" }}
+                />
                 <path
                   d="M608 129v14M618 129v14M628 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="598" y="104" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="598"
+                  y="104"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M608 107v14M618 107v14M628 107v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="640" y="214" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="640"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M650 217v14M660 217v14M670 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="640" y="192" width="40" height="20" rx="1.5" fill="#3DDC97" opacity="0.92" />
+                <rect
+                  x="640"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
                 <path
                   d="M650 195v14M660 195v14M670 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="640" y="170" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <rect
+                  x="640"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M650 173v14M660 173v14M670 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="640" y="148" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.92" />
+                <rect
+                  x="640"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M650 151v14M660 151v14M670 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <circle cx="660" cy="158" r="4.6" fill="none" stroke="#0A0C10" strokeWidth="1.4" />
-                <circle cx="660" cy="158" r="1.9" fill="#0A0C10" />
-                <rect x="640" y="126" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <circle
+                  cx="660"
+                  cy="158"
+                  r="4.6"
+                  fill="none"
+                  strokeWidth="1.4"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
+                />
+                <circle cx="660" cy="158" r="1.9" style={{ fill: "var(--site-color-art-paper)" }} />
+                <rect
+                  x="640"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M650 129v14M660 129v14M670 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="682" y="214" width="40" height="20" rx="1.5" fill="#3DDC97" opacity="0.92" />
+                <rect
+                  x="682"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-green)" }}
+                />
                 <path
                   d="M692 217v14M702 217v14M712 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="682" y="192" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="682"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M692 195v14M702 195v14M712 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="682" y="170" width="40" height="20" rx="1.5" fill="#3A4557" opacity="1" />
+                <rect
+                  x="682"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape)" }}
+                />
                 <path
                   d="M692 173v14M702 173v14M712 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="682" y="148" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.92" />
+                <rect
+                  x="682"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M692 151v14M702 151v14M712 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="682" y="126" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.92" />
+                <rect
+                  x="682"
+                  y="126"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M692 129v14M702 129v14M712 129v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="693" y="132" width="18" height="8" rx="4" fill="none" stroke="#0A0C10" strokeWidth="1.4" />
-                <circle cx="707" cy="136" r="2.6" fill="#0A0C10" />
-                <rect x="724" y="214" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <rect
+                  x="693"
+                  y="132"
+                  width="18"
+                  height="8"
+                  rx="4"
+                  fill="none"
+                  strokeWidth="1.4"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
+                />
+                <circle cx="707" cy="136" r="2.6" style={{ fill: "var(--site-color-art-paper)" }} />
+                <rect
+                  x="724"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M734 217v14M744 217v14M754 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="724" y="192" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.92" />
+                <rect
+                  x="724"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M734 195v14M744 195v14M754 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="724" y="170" width="40" height="20" rx="1.5" fill="#B58CFF" opacity="0.92" />
+                <rect
+                  x="724"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-purple)" }}
+                />
                 <path
                   d="M734 173v14M744 173v14M754 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="739" y="175" width="10" height="10" rx="2" fill="none" stroke="#0A0C10" strokeWidth="1.4" />
+                <rect
+                  x="739"
+                  y="175"
+                  width="10"
+                  height="10"
+                  rx="2"
+                  fill="none"
+                  strokeWidth="1.4"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
+                />
                 <path
                   d="M741.4 180l2 2 3.4-4"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1.4"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="724" y="148" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <rect
+                  x="724"
+                  y="148"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M734 151v14M744 151v14M754 151v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="766" y="214" width="40" height="20" rx="1.5" fill="#5B9DFF" opacity="0.92" />
+                <rect
+                  x="766"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-blue)" }}
+                />
                 <path
                   d="M776 217v14M786 217v14M796 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="766" y="192" width="40" height="20" rx="1.5" fill="#FF8A5B" opacity="0.92" />
+                <rect
+                  x="766"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-orange)" }}
+                />
                 <path
                   d="M776 195v14M786 195v14M796 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <circle cx="786" cy="202" r="4.6" fill="none" stroke="#0A0C10" strokeWidth="1.4" />
-                <circle cx="786" cy="202" r="1.9" fill="#0A0C10" />
-                <rect x="766" y="170" width="40" height="20" rx="1.5" fill="#4A5568" opacity="1" />
+                <circle
+                  cx="786"
+                  cy="202"
+                  r="4.6"
+                  fill="none"
+                  strokeWidth="1.4"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
+                />
+                <circle cx="786" cy="202" r="1.9" style={{ fill: "var(--site-color-art-paper)" }} />
+                <rect
+                  x="766"
+                  y="170"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="1"
+                  style={{ fill: "var(--site-color-art-shape-strong)" }}
+                />
                 <path
                   d="M776 173v14M786 173v14M796 173v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="808" y="214" width="40" height="20" rx="1.5" fill="#B58CFF" opacity="0.92" />
+                <rect
+                  x="808"
+                  y="214"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-purple)" }}
+                />
                 <path
                   d="M818 217v14M828 217v14M838 217v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
-                <rect x="808" y="192" width="40" height="20" rx="1.5" fill="#FFD166" opacity="0.92" />
+                <rect
+                  x="808"
+                  y="192"
+                  width="40"
+                  height="20"
+                  rx="1.5"
+                  opacity="0.92"
+                  style={{ fill: "var(--site-color-accent-yellow)" }}
+                />
                 <path
                   d="M818 195v14M828 195v14M838 195v14"
                   fill="none"
-                  stroke="#0A0C10"
                   strokeWidth="1"
                   opacity="0.22"
+                  style={{ stroke: "var(--site-color-art-paper)" }}
                 />
               </g>
-              <rect x="0" y="303" width="1040" height="77" fill="#0D1827" opacity="0.86" />
+              <rect
+                x="0"
+                y="303"
+                width="1040"
+                height="77"
+                opacity="0.86"
+                style={{ fill: "var(--perron-color-map-water)" }}
+              />
               <path
                 d="M-80 303q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0q20 -5 40 0t40 0"
                 fill="none"
-                stroke="#2A426B"
                 strokeWidth="1.6"
                 strokeLinecap="round"
                 className="mv"
-                style={{ animation: "csDrift 5s linear infinite" }}
+                style={{ stroke: "var(--site-color-art-sea-wave)", animation: "csDrift 5s linear infinite" }}
               />
               <path
                 d="M-80 324q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0"
                 fill="none"
-                stroke="#1F3355"
                 strokeWidth="1.4"
                 strokeLinecap="round"
                 className="mv"
-                style={{ animation: "csDrift 7s linear infinite" }}
+                style={{ stroke: "var(--site-color-art-sea-line-strong)", animation: "csDrift 7s linear infinite" }}
               />
               <path
                 d="M-80 348q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0q20 -4 40 0t40 0"
                 fill="none"
-                stroke="#182846"
                 strokeWidth="1.2"
                 strokeLinecap="round"
                 className="mv"
-                style={{ animation: "csDrift 9s linear infinite" }}
+                style={{ stroke: "var(--site-color-art-sea-line)", animation: "csDrift 9s linear infinite" }}
               />
-              <path d="M556 96V60H590" fill="none" stroke="#4A5568" strokeWidth="1" />
-              <circle cx="556" cy="98" r="2.5" fill="#F2F4F7" />
+              <path
+                d="M556 96V60H590"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-shape-strong)" }}
+              />
+              <circle cx="556" cy="98" r="2.5" style={{ fill: "var(--site-color-art-ink)" }} />
               <text
                 x="598"
                 y="64"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("70 containers, 70 components")}
               </text>
-              <path d="M782 190L836 150H862" fill="none" stroke="#4A5568" strokeWidth="1" />
-              <circle cx="780" cy="191.5" r="2.5" fill="#F2F4F7" />
+              <path
+                d="M782 190L836 150H862"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-shape-strong)" }}
+              />
+              <circle cx="780" cy="191.5" r="2.5" style={{ fill: "var(--site-color-art-ink)" }} />
               <text
                 x="870"
                 y="154"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("5 colours, 5 brands")}
               </text>
@@ -794,7 +1693,7 @@ export function CaseMaerskDesignSystem() {
               height: "8px",
               marginTop: "6px",
               borderRadius: "50%",
-              background: "#FFD166",
+              background: "var(--site-color-accent-yellow)",
             }}
           />
           <span>
@@ -903,7 +1802,7 @@ export function CaseMaerskDesignSystem() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FFD166",
+                      background: "var(--site-color-accent-yellow)",
                     }}
                   />
                   <span
@@ -938,7 +1837,7 @@ export function CaseMaerskDesignSystem() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FFD166",
+                      background: "var(--site-color-accent-yellow)",
                     }}
                   />
                   <span
@@ -973,7 +1872,7 @@ export function CaseMaerskDesignSystem() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FFD166",
+                      background: "var(--site-color-accent-yellow)",
                     }}
                   />
                   <span

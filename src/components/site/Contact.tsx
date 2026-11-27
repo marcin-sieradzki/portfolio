@@ -22,8 +22,8 @@ const BADGE_TILT_REACH = 520; // px from the badge centre at which the tilt reac
 const BADGE_BARS = [
   2, 1, 3, 1, 2, 2, 1, 3, 1, 1, 2, 3, 1, 2, 1, 3, 2, 1, 1, 2, 3, 1, 2, 1, 2, 3, 1, 1, 2, 1, 3, 2, 1, 2, 1, 3,
 ];
-const BADGE_STRAP = "#3DDC97";
-const BADGE_PHOTO = "#4C8DFF";
+const BADGE_STRAP = "var(--perron-color-surface-brand)";
+const BADGE_PHOTO = "var(--site-color-photo)";
 
 function badgeClamp(v: number, lo: number, hi: number) {
   return v < lo ? lo : v > hi ? hi : v;

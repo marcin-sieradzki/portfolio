@@ -35,23 +35,29 @@ export function CaseSchedules() {
               )}
               style={{ display: "block", width: "100%", height: "100%" }}
             >
-              <rect x="0" y="0" width="1040" height="380" fill="#0D1827" />
+              <rect x="0" y="0" width="1040" height="380" style={{ fill: "var(--perron-color-map-water)" }} />
               <path
                 d="M80 0V246M200 0V246M320 0V246M440 0V246M560 0V246M680 0V246M800 0V246M920 0V246M0 60H1040M0 140H1040M0 220H1040"
                 fill="none"
-                stroke="#13213A"
                 strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-sea-grid)" }}
               />
               <path
                 d="M0 0H96C116 30 82 58 96 86S60 132 28 128S8 160 0 164ZM196 0H470C488 34 440 46 420 70S350 96 318 84S232 62 214 36ZM480 246C492 214 536 204 566 214S604 190 632 200S676 226 668 246ZM730 0H1040V40C1004 52 990 30 958 40S900 22 860 34S770 30 730 0ZM968 110C990 104 1022 116 1040 112V214C1012 220 986 196 978 170S952 124 968 110Z"
-                fill="#0B0F16"
-                stroke="#1C2A44"
                 strokeWidth="1.5"
                 strokeLinejoin="round"
+                style={{ fill: "var(--perron-color-map-land)", stroke: "var(--site-color-art-sea-line)" }}
               />
-              <circle cx="66" cy="204" r="15" fill="none" stroke="#22365C" strokeWidth="1.5" />
-              <path d="M66 185l4.5 19h-9z" fill="#3B5B94" />
-              <path d="M66 223l4.5-19h-9z" fill="#1C2F52" />
+              <circle
+                cx="66"
+                cy="204"
+                r="15"
+                fill="none"
+                strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-sea-line-strong)" }}
+              />
+              <path d="M66 185l4.5 19h-9z" style={{ fill: "var(--site-color-art-sea-mark)" }} />
+              <path d="M66 223l4.5-19h-9z" style={{ fill: "var(--site-color-art-sea-mark-deep)" }} />
               <text
                 x="66"
                 y="180"
@@ -59,58 +65,61 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9"
                 fontWeight="600"
-                fill="#3B5B94"
+                style={{ fill: "var(--site-color-art-sea-mark)" }}
               >
                 N
               </text>
               <path
                 d="M118 92C176 168 300 204 388 178S560 96 660 138S860 150 922 66"
                 fill="none"
-                stroke="#B58CFF"
                 strokeWidth="7"
                 opacity="0.16"
                 strokeLinecap="round"
+                style={{ stroke: "var(--site-color-accent-purple)" }}
               />
               <path
                 d="M118 92C176 168 300 204 388 178S560 96 660 138S860 150 922 66"
                 fill="none"
-                stroke="#B58CFF"
                 strokeWidth="2.5"
                 strokeDasharray="2 9"
                 strokeLinecap="round"
                 className="mv"
-                style={{ animation: "csFlow 2.4s linear infinite" }}
+                style={{ stroke: "var(--site-color-accent-purple)", animation: "csFlow 2.4s linear infinite" }}
               />
               <g className="mv cs-sail cs-sail-a" style={{ animationDelay: "0s" }}>
                 <g transform="scale(1.45)">
                   <path
                     d="M-18 -6.5H8L18 0L8 6.5H-18Z"
-                    fill="#F2F4F7"
-                    stroke="#0A0C10"
                     strokeWidth="1.5"
                     strokeLinejoin="round"
+                    style={{ fill: "var(--site-color-art-ink)", stroke: "var(--site-color-art-paper)" }}
                   />
-                  <rect x="-14" y="-4" width="6" height="8" fill="#B58CFF" />
-                  <rect x="-6.5" y="-4" width="6" height="8" fill="#FFD166" />
-                  <rect x="1" y="-4" width="6" height="8" fill="#5ED3F0" />
+                  <rect x="-14" y="-4" width="6" height="8" style={{ fill: "var(--site-color-accent-purple)" }} />
+                  <rect x="-6.5" y="-4" width="6" height="8" style={{ fill: "var(--site-color-accent-yellow)" }} />
+                  <rect x="1" y="-4" width="6" height="8" style={{ fill: "var(--site-color-accent-cyan)" }} />
                 </g>
               </g>
               <g className="mv cs-sail cs-sail-b" style={{ animationDelay: "-9s" }}>
                 <g transform="scale(1.45)">
                   <path
                     d="M-18 -6.5H8L18 0L8 6.5H-18Z"
-                    fill="#F2F4F7"
-                    stroke="#0A0C10"
                     strokeWidth="1.5"
                     strokeLinejoin="round"
+                    style={{ fill: "var(--site-color-art-ink)", stroke: "var(--site-color-art-paper)" }}
                   />
-                  <rect x="-14" y="-4" width="6" height="8" fill="#B58CFF" />
-                  <rect x="-6.5" y="-4" width="6" height="8" fill="#FFD166" />
-                  <rect x="1" y="-4" width="6" height="8" fill="#5ED3F0" />
+                  <rect x="-14" y="-4" width="6" height="8" style={{ fill: "var(--site-color-accent-purple)" }} />
+                  <rect x="-6.5" y="-4" width="6" height="8" style={{ fill: "var(--site-color-accent-yellow)" }} />
+                  <rect x="1" y="-4" width="6" height="8" style={{ fill: "var(--site-color-accent-cyan)" }} />
                 </g>
               </g>
-              <circle cx="118" cy="92" r="7" fill="#0D1827" stroke="#F2F4F7" strokeWidth="2.5" />
-              <rect x="134" y="70" width="52" height="20" rx="5" fill="#F2F4F7" />
+              <circle
+                cx="118"
+                cy="92"
+                r="7"
+                strokeWidth="2.5"
+                style={{ fill: "var(--perron-color-map-water)", stroke: "var(--site-color-art-ink)" }}
+              />
+              <rect x="134" y="70" width="52" height="20" rx="5" style={{ fill: "var(--site-color-art-ink)" }} />
               <text
                 x="160"
                 y="83.8"
@@ -118,12 +127,18 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="600"
-                fill="#0A0C10"
+                style={{ fill: "var(--site-color-art-paper)" }}
               >
                 NLRTM
               </text>
-              <circle cx="388" cy="178" r="7" fill="#0D1827" stroke="#F2F4F7" strokeWidth="2.5" />
-              <rect x="362" y="196" width="52" height="20" rx="5" fill="#F2F4F7" />
+              <circle
+                cx="388"
+                cy="178"
+                r="7"
+                strokeWidth="2.5"
+                style={{ fill: "var(--perron-color-map-water)", stroke: "var(--site-color-art-ink)" }}
+              />
+              <rect x="362" y="196" width="52" height="20" rx="5" style={{ fill: "var(--site-color-art-ink)" }} />
               <text
                 x="388"
                 y="209.8"
@@ -131,12 +146,18 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="600"
-                fill="#0A0C10"
+                style={{ fill: "var(--site-color-art-paper)" }}
               >
                 ESALG
               </text>
-              <circle cx="660" cy="138" r="7" fill="#0D1827" stroke="#F2F4F7" strokeWidth="2.5" />
-              <rect x="634" y="110" width="52" height="20" rx="5" fill="#F2F4F7" />
+              <circle
+                cx="660"
+                cy="138"
+                r="7"
+                strokeWidth="2.5"
+                style={{ fill: "var(--perron-color-map-water)", stroke: "var(--site-color-art-ink)" }}
+              />
+              <rect x="634" y="110" width="52" height="20" rx="5" style={{ fill: "var(--site-color-art-ink)" }} />
               <text
                 x="660"
                 y="123.8"
@@ -144,12 +165,18 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="600"
-                fill="#0A0C10"
+                style={{ fill: "var(--site-color-art-paper)" }}
               >
                 SGSIN
               </text>
-              <circle cx="922" cy="66" r="7" fill="#0D1827" stroke="#F2F4F7" strokeWidth="2.5" />
-              <rect x="854" y="82" width="52" height="20" rx="5" fill="#F2F4F7" />
+              <circle
+                cx="922"
+                cy="66"
+                r="7"
+                strokeWidth="2.5"
+                style={{ fill: "var(--perron-color-map-water)", stroke: "var(--site-color-art-ink)" }}
+              />
+              <rect x="854" y="82" width="52" height="20" rx="5" style={{ fill: "var(--site-color-art-ink)" }} />
               <text
                 x="880"
                 y="95.8"
@@ -157,7 +184,7 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="600"
-                fill="#0A0C10"
+                style={{ fill: "var(--site-color-art-paper)" }}
               >
                 CNSHA
               </text>
@@ -167,10 +194,9 @@ export function CaseSchedules() {
                 width="968"
                 height="116"
                 rx="10"
-                fill="#0A0C10"
-                stroke="#232A36"
                 strokeWidth="1.5"
                 opacity="0.96"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-line-subtle)" }}
               />
               <rect
                 x="50"
@@ -178,9 +204,11 @@ export function CaseSchedules() {
                 width="66"
                 height="22"
                 rx="11"
-                fill="rgba(181,140,255,0.16)"
-                stroke="#B58CFF"
                 strokeWidth="1.5"
+                style={{
+                  fill: "color-mix(in srgb, var(--site-color-accent-purple) 16%, transparent)",
+                  stroke: "var(--site-color-accent-purple)",
+                }}
               />
               <text
                 x="83"
@@ -189,11 +217,20 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="600"
-                fill="#B58CFF"
+                style={{ fill: "var(--site-color-accent-purple)" }}
               >
                 {t("Routes")}
               </text>
-              <rect x="124" y="256" width="128" height="22" rx="11" fill="none" stroke="#2E3746" strokeWidth="1.5" />
+              <rect
+                x="124"
+                y="256"
+                width="128"
+                height="22"
+                rx="11"
+                fill="none"
+                strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-line)" }}
+              />
               <text
                 x="188"
                 y="270.8"
@@ -201,11 +238,20 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("Vessel schedules")}
               </text>
-              <rect x="260" y="256" width="88" height="22" rx="11" fill="none" stroke="#2E3746" strokeWidth="1.5" />
+              <rect
+                x="260"
+                y="256"
+                width="88"
+                height="22"
+                rx="11"
+                fill="none"
+                strokeWidth="1.5"
+                style={{ stroke: "var(--site-color-art-line)" }}
+              />
               <text
                 x="304"
                 y="270.8"
@@ -213,7 +259,7 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("Port calls")}
               </text>
@@ -224,15 +270,15 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("2 brand builds · every view embeddable")}
               </text>
               <path
                 d="M176 288V350M291.4 288V350M406.9 288V350M522.3 288V350M637.7 288V350M753.1 288V350M868.6 288V350M984 288V350"
                 fill="none"
-                stroke="#232A36"
                 strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-line-subtle)" }}
               />
               <text
                 x="182"
@@ -240,7 +286,7 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("Mon")}
               </text>
@@ -250,7 +296,7 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("Tue")}
               </text>
@@ -260,7 +306,7 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("Wed")}
               </text>
@@ -270,7 +316,7 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("Thu")}
               </text>
@@ -280,7 +326,7 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("Fri")}
               </text>
@@ -290,7 +336,7 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("Sat")}
               </text>
@@ -300,7 +346,7 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("Sun")}
               </text>
@@ -310,59 +356,83 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("Vessel 1")}
               </text>
               <path
                 d="M216.4 318H932.1"
                 fill="none"
-                stroke="#B58CFF"
                 strokeWidth="4"
                 strokeLinecap="round"
                 opacity="0.9"
+                style={{ stroke: "var(--site-color-accent-purple)" }}
               />
-              <circle cx="216.4" cy="318" r="5" fill="#0A0C10" stroke="#F2F4F7" strokeWidth="2" />
+              <circle
+                cx="216.4"
+                cy="318"
+                r="5"
+                strokeWidth="2"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-ink)" }}
+              />
               <text
                 x="225.4"
                 y="311.5"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 NLRTM
               </text>
-              <circle cx="395.3" cy="318" r="5" fill="#0A0C10" stroke="#F2F4F7" strokeWidth="2" />
+              <circle
+                cx="395.3"
+                cy="318"
+                r="5"
+                strokeWidth="2"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-ink)" }}
+              />
               <text
                 x="404.3"
                 y="311.5"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 ESALG
               </text>
-              <circle cx="707" cy="318" r="5" fill="#0A0C10" stroke="#F2F4F7" strokeWidth="2" />
+              <circle
+                cx="707"
+                cy="318"
+                r="5"
+                strokeWidth="2"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-ink)" }}
+              />
               <text
                 x="716"
                 y="311.5"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 SGSIN
               </text>
-              <circle cx="932.1" cy="318" r="5" fill="#0A0C10" stroke="#F2F4F7" strokeWidth="2" />
+              <circle
+                cx="932.1"
+                cy="318"
+                r="5"
+                strokeWidth="2"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-ink)" }}
+              />
               <text
                 x="941.1"
                 y="311.5"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 CNSHA
               </text>
@@ -372,56 +442,81 @@ export function CaseSchedules() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("Vessel 2")}
               </text>
               <path
                 d="M314.5 340H839.7"
                 fill="none"
-                stroke="#5ED3F0"
                 strokeWidth="4"
                 strokeLinecap="round"
                 opacity="0.9"
+                style={{ stroke: "var(--site-color-accent-cyan)" }}
               />
-              <circle cx="314.5" cy="340" r="5" fill="#0A0C10" stroke="#F2F4F7" strokeWidth="2" />
+              <circle
+                cx="314.5"
+                cy="340"
+                r="5"
+                strokeWidth="2"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-ink)" }}
+              />
               <text
                 x="323.5"
                 y="333.5"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 CNSHA
               </text>
-              <circle cx="533.8" cy="340" r="5" fill="#0A0C10" stroke="#F2F4F7" strokeWidth="2" />
+              <circle
+                cx="533.8"
+                cy="340"
+                r="5"
+                strokeWidth="2"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-ink)" }}
+              />
               <text
                 x="542.8"
                 y="333.5"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 SGSIN
               </text>
-              <circle cx="839.7" cy="340" r="5" fill="#0A0C10" stroke="#F2F4F7" strokeWidth="2" />
+              <circle
+                cx="839.7"
+                cy="340"
+                r="5"
+                strokeWidth="2"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-ink)" }}
+              />
               <text
                 x="848.7"
                 y="333.5"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 ESALG
               </text>
               <g transform="translate(184 0)">
                 <g className="mv" style={{ "--cs-d": "792px", animation: "csSweep 18s linear infinite" }}>
-                  <path d="M0 286V352" fill="none" stroke="#F2F4F7" strokeWidth="1.5" />
+                  <path d="M0 286V352" fill="none" strokeWidth="1.5" style={{ stroke: "var(--site-color-art-ink)" }} />
                   {/* the pill grows with the word, so a longer translation of "now" still fits */}
-                  <rect x={-nowW / 2} y="279" width={nowW} height="13" rx="6.5" fill="#F2F4F7" />
+                  <rect
+                    x={-nowW / 2}
+                    y="279"
+                    width={nowW}
+                    height="13"
+                    rx="6.5"
+                    style={{ fill: "var(--site-color-art-ink)" }}
+                  />
                   <text
                     x="0"
                     y="288.6"
@@ -429,7 +524,7 @@ export function CaseSchedules() {
                     fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                     fontSize="9"
                     fontWeight="600"
-                    fill="#0A0C10"
+                    style={{ fill: "var(--site-color-art-paper)" }}
                   >
                     {t("now")}
                   </text>
@@ -460,7 +555,7 @@ export function CaseSchedules() {
               height: "8px",
               marginTop: "6px",
               borderRadius: "50%",
-              background: "#B58CFF",
+              background: "var(--site-color-accent-purple)",
             }}
           />
           <span>
@@ -571,7 +666,7 @@ export function CaseSchedules() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#B58CFF",
+                      background: "var(--site-color-accent-purple)",
                     }}
                   />
                   <span
@@ -606,7 +701,7 @@ export function CaseSchedules() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#B58CFF",
+                      background: "var(--site-color-accent-purple)",
                     }}
                   />
                   <span

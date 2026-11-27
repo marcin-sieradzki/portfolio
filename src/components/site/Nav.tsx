@@ -2,6 +2,7 @@
 
 import { LOCALE_NAME, LOCALE_PATH, type Locale } from "@/i18n/config";
 import { translator } from "@/i18n/translate";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Nav({ lang }: { lang: Locale }) {
   const t = translator(lang);
@@ -114,6 +115,7 @@ export function Nav({ lang }: { lang: Locale }) {
           </svg>
           {LOCALE_NAME[other]}
         </a>
+        <ThemeToggle />
         <a
           href="#contact"
           style={{

@@ -41,7 +41,12 @@ function Agent({ agent, side }: { agent: AgentKey; side: "left" | "right" }) {
         aria-hidden="true"
         style={{ position: "absolute", left: "-2px", top: "-2px", overflow: "visible" }}
       >
-        <path d={POINTER} fill={a.color} stroke="#0A0C10" strokeWidth="1.2" strokeLinejoin="round" />
+        <path
+          d={POINTER}
+          strokeWidth="1.2"
+          strokeLinejoin="round"
+          style={{ fill: a.color, stroke: "var(--site-color-art-paper)" }}
+        />
       </svg>
       <span
         style={{
@@ -51,7 +56,7 @@ function Agent({ agent, side }: { agent: AgentKey; side: "left" | "right" }) {
           padding: "3px 7px",
           borderRadius: "var(--perron-radius-xs)",
           background: a.color,
-          color: "var(--perron-color-text-on-color-dark)",
+          color: "var(--site-color-text-on-accent)",
           font: "600 11px/1.3 var(--perron-font-family-data)",
           whiteSpace: "nowrap",
         }}
@@ -309,7 +314,7 @@ export function WorkCard({
           boxSizing: "border-box",
           border: "1px solid var(--perron-color-border-brand)",
           borderRadius: "var(--perron-radius-lg)",
-          boxShadow: "0 1px 2px rgba(0, 0, 0, 0.3), 0 14px 32px rgba(0, 0, 0, 0.38)",
+          boxShadow: "var(--perron-shadow-card)",
           opacity: "0",
           pointerEvents: "none",
         }}
@@ -327,7 +332,7 @@ export function WorkCard({
             height: u.dg.h,
             border: `1.5px solid ${AGENTS.architect.color}`,
             borderRadius: "var(--perron-radius-lg)",
-            background: `${AGENTS.architect.color}1F`,
+            background: `color-mix(in srgb, ${AGENTS.architect.color} 12%, transparent)`,
             opacity: u.dg.o,
             transition: u.dtr,
             pointerEvents: "none",

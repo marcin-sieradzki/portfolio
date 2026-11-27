@@ -17,7 +17,6 @@ export function SitePage({ lang }: { lang: Locale }) {
     <LocaleProvider lang={lang}>
       <PersonJsonLd lang={lang} />
       <div
-        data-theme="dark"
         style={{
           background: "var(--perron-color-surface-default)",
           color: "var(--perron-color-text-primary)",

@@ -52,7 +52,7 @@ export function CaseSoftwareFactory() {
               height: "8px",
               marginTop: "6px",
               borderRadius: "50%",
-              background: "#FF8A5B",
+              background: "var(--site-color-accent-orange)",
             }}
           />
           <span>
@@ -165,7 +165,7 @@ export function CaseSoftwareFactory() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FF8A5B",
+                      background: "var(--site-color-accent-orange)",
                     }}
                   />
                   <span
@@ -202,7 +202,7 @@ export function CaseSoftwareFactory() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FF8A5B",
+                      background: "var(--site-color-accent-orange)",
                     }}
                   />
                   <span
@@ -239,7 +239,7 @@ export function CaseSoftwareFactory() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FF8A5B",
+                      background: "var(--site-color-accent-orange)",
                     }}
                   />
                   <span
@@ -276,7 +276,7 @@ export function CaseSoftwareFactory() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FF8A5B",
+                      background: "var(--site-color-accent-orange)",
                     }}
                   />
                   <span
@@ -352,7 +352,7 @@ export function CaseSoftwareFactory() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FF8A5B",
+                      background: "var(--site-color-accent-orange)",
                     }}
                   />
                   <span
@@ -387,7 +387,7 @@ export function CaseSoftwareFactory() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FF8A5B",
+                      background: "var(--site-color-accent-orange)",
                     }}
                   />
                   <span
@@ -422,7 +422,7 @@ export function CaseSoftwareFactory() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FF8A5B",
+                      background: "var(--site-color-accent-orange)",
                     }}
                   />
                   <span
@@ -459,7 +459,7 @@ export function CaseSoftwareFactory() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FF8A5B",
+                      background: "var(--site-color-accent-orange)",
                     }}
                   />
                   <span
@@ -496,7 +496,7 @@ export function CaseSoftwareFactory() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#FF8A5B",
+                      background: "var(--site-color-accent-orange)",
                     }}
                   />
                   <span

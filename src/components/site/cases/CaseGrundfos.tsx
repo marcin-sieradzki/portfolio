@@ -34,21 +34,35 @@ export function CaseGrundfos() {
               )}
               style={{ display: "block", width: "100%", height: "100%" }}
             >
-              <rect x="22" y="20" width="996" height="340" rx="6" fill="none" stroke="#16303A" strokeWidth="1" />
-              <path d="M60 178H752" fill="none" stroke="#2B6E80" strokeWidth="1" strokeDasharray="14 5 2 5" />
+              <rect
+                x="22"
+                y="20"
+                width="996"
+                height="340"
+                rx="6"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-teal-line-strong)" }}
+              />
+              <path
+                d="M60 178H752"
+                fill="none"
+                strokeWidth="1"
+                strokeDasharray="14 5 2 5"
+                style={{ stroke: "var(--site-color-art-teal)" }}
+              />
               <g className="mv" style={{ "--cs-d": "-8px", animation: "csShift 4.6s ease-in-out infinite alternate" }}>
                 <path
                   d="M92 132q-14 0-14 14v64q0 14 14 14h26v-92z"
-                  fill="#0C1A20"
-                  stroke="#5ED3F0"
                   strokeWidth="1.5"
                   strokeLinejoin="round"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
                 />
                 <path
                   d="M86 146h24M86 155h24M86 164h24M86 173h24M86 182h24M86 191h24M86 200h24M86 209h24"
                   fill="none"
-                  stroke="#2B6E80"
                   strokeWidth="1.5"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
                 />
                 <rect
                   x="118"
@@ -56,28 +70,48 @@ export function CaseGrundfos() {
                   width="152"
                   height="112"
                   rx="4"
-                  fill="#0C1A20"
-                  stroke="#5ED3F0"
                   strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
                 />
                 <path
                   d="M124 134h140M124 145h140M124 156h140M124 167h140M124 178h140M124 189h140M124 200h140M124 211h140M124 222h140"
                   fill="none"
-                  stroke="#2B6E80"
                   strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
                 />
-                <rect x="166" y="102" width="58" height="20" rx="3" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
-                <circle cx="180" cy="112" r="2.5" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
-                <circle cx="210" cy="112" r="2.5" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
+                <rect
+                  x="166"
+                  y="102"
+                  width="58"
+                  height="20"
+                  rx="3"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <circle
+                  cx="180"
+                  cy="112"
+                  r="2.5"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <circle
+                  cx="210"
+                  cy="112"
+                  r="2.5"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-accent-cyan)" }}
+                />
                 <rect
                   x="136"
                   y="234"
                   width="28"
                   height="12"
                   rx="1.5"
-                  fill="#0C1A20"
-                  stroke="#5ED3F0"
                   strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
                 />
                 <rect
                   x="224"
@@ -85,15 +119,41 @@ export function CaseGrundfos() {
                   width="28"
                   height="12"
                   rx="1.5"
-                  fill="#0C1A20"
-                  stroke="#5ED3F0"
                   strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
                 />
-                <rect x="270" y="132" width="10" height="92" rx="2" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
-                <rect x="280" y="172" width="34" height="12" rx="1" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
-                <path d="M196 60L196 102" fill="none" stroke="#2B6E80" strokeWidth="1" />
-                <circle cx="196" cy="102" r="2.2" fill="#5ED3F0" />
-                <circle cx="196" cy="60" r="11" fill="#0A0C10" stroke="#5ED3F0" strokeWidth="1.5" />
+                <rect
+                  x="270"
+                  y="132"
+                  width="10"
+                  height="92"
+                  rx="2"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <rect
+                  x="280"
+                  y="172"
+                  width="34"
+                  height="12"
+                  rx="1"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <path
+                  d="M196 60L196 102"
+                  fill="none"
+                  strokeWidth="1"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle cx="196" cy="102" r="2.2" style={{ fill: "var(--site-color-accent-cyan)" }} />
+                <circle
+                  cx="196"
+                  cy="60"
+                  r="11"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-accent-cyan)" }}
+                />
                 <text
                   x="196"
                   y="63.8"
@@ -101,18 +161,50 @@ export function CaseGrundfos() {
                   fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                   fontSize="10.5"
                   fontWeight="600"
-                  fill="#5ED3F0"
+                  style={{ fill: "var(--site-color-accent-cyan)" }}
                 >
                   1
                 </text>
               </g>
               <g className="mv" style={{ "--cs-d": "-5px", animation: "csShift 4.6s ease-in-out infinite alternate" }}>
-                <rect x="332" y="158" width="13" height="40" rx="2" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
-                <rect x="347" y="158" width="13" height="40" rx="2" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
-                <path d="M338 166v24M353 166v24" fill="none" stroke="#2B6E80" strokeWidth="1.2" />
-                <path d="M346 300L346 198" fill="none" stroke="#2B6E80" strokeWidth="1" />
-                <circle cx="346" cy="198" r="2.2" fill="#5ED3F0" />
-                <circle cx="346" cy="300" r="11" fill="#0A0C10" stroke="#5ED3F0" strokeWidth="1.5" />
+                <rect
+                  x="332"
+                  y="158"
+                  width="13"
+                  height="40"
+                  rx="2"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <rect
+                  x="347"
+                  y="158"
+                  width="13"
+                  height="40"
+                  rx="2"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <path
+                  d="M338 166v24M353 166v24"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <path
+                  d="M346 300L346 198"
+                  fill="none"
+                  strokeWidth="1"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle cx="346" cy="198" r="2.2" style={{ fill: "var(--site-color-accent-cyan)" }} />
+                <circle
+                  cx="346"
+                  cy="300"
+                  r="11"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-accent-cyan)" }}
+                />
                 <text
                   x="346"
                   y="303.8"
@@ -120,17 +212,43 @@ export function CaseGrundfos() {
                   fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                   fontSize="10.5"
                   fontWeight="600"
-                  fill="#5ED3F0"
+                  style={{ fill: "var(--site-color-accent-cyan)" }}
                 >
                   2
                 </text>
               </g>
               <g className="mv" style={{ "--cs-d": "-2px", animation: "csShift 4.6s ease-in-out infinite alternate" }}>
-                <ellipse cx="390" cy="178" rx="8" ry="25" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
-                <ellipse cx="390" cy="178" rx="3.5" ry="11" fill="none" stroke="#2B6E80" strokeWidth="1.2" />
-                <path d="M390 60L390 153" fill="none" stroke="#2B6E80" strokeWidth="1" />
-                <circle cx="390" cy="153" r="2.2" fill="#5ED3F0" />
-                <circle cx="390" cy="60" r="11" fill="#0A0C10" stroke="#5ED3F0" strokeWidth="1.5" />
+                <ellipse
+                  cx="390"
+                  cy="178"
+                  rx="8"
+                  ry="25"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <ellipse
+                  cx="390"
+                  cy="178"
+                  rx="3.5"
+                  ry="11"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <path
+                  d="M390 60L390 153"
+                  fill="none"
+                  strokeWidth="1"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle cx="390" cy="153" r="2.2" style={{ fill: "var(--site-color-accent-cyan)" }} />
+                <circle
+                  cx="390"
+                  cy="60"
+                  r="11"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-accent-cyan)" }}
+                />
                 <text
                   x="390"
                   y="63.8"
@@ -138,7 +256,7 @@ export function CaseGrundfos() {
                   fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                   fontSize="10.5"
                   fontWeight="600"
-                  fill="#5ED3F0"
+                  style={{ fill: "var(--site-color-accent-cyan)" }}
                 >
                   3
                 </text>
@@ -150,29 +268,88 @@ export function CaseGrundfos() {
                   width="12"
                   height="140"
                   rx="2"
-                  fill="#0C1A20"
-                  stroke="#5ED3F0"
                   strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
                 />
-                <circle cx="424" cy="120" r="2.4" fill="none" stroke="#2B6E80" strokeWidth="1.2" />
-                <circle cx="424" cy="146" r="2.4" fill="none" stroke="#2B6E80" strokeWidth="1.2" />
-                <circle cx="424" cy="210" r="2.4" fill="none" stroke="#2B6E80" strokeWidth="1.2" />
-                <circle cx="424" cy="236" r="2.4" fill="none" stroke="#2B6E80" strokeWidth="1.2" />
+                <circle
+                  cx="424"
+                  cy="120"
+                  r="2.4"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle
+                  cx="424"
+                  cy="146"
+                  r="2.4"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle
+                  cx="424"
+                  cy="210"
+                  r="2.4"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle
+                  cx="424"
+                  cy="236"
+                  r="2.4"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
               </g>
               <g className="mv" style={{ "--cs-d": "4px", animation: "csShift 4.6s ease-in-out infinite alternate" }}>
-                <ellipse cx="488" cy="178" rx="20" ry="62" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
-                <ellipse cx="476" cy="178" rx="20" ry="62" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
+                <ellipse
+                  cx="488"
+                  cy="178"
+                  rx="20"
+                  ry="62"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <ellipse
+                  cx="476"
+                  cy="178"
+                  rx="20"
+                  ry="62"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
                 <path
                   d="M476 122q14 20 2 46M462 140q16 14 14 30M460 196q12-14 16-10M468 228q14-16 8-42M490 150q-6 14-12 20M492 206q-8-10-14-20"
                   fill="none"
-                  stroke="#5ED3F0"
                   strokeWidth="1.2"
                   strokeLinecap="round"
+                  style={{ stroke: "var(--site-color-accent-cyan)" }}
                 />
-                <ellipse cx="476" cy="178" rx="6" ry="17" fill="#0A0C10" stroke="#5ED3F0" strokeWidth="1.5" />
-                <path d="M482 300L482 240" fill="none" stroke="#2B6E80" strokeWidth="1" />
-                <circle cx="482" cy="240" r="2.2" fill="#5ED3F0" />
-                <circle cx="482" cy="300" r="11" fill="#0A0C10" stroke="#5ED3F0" strokeWidth="1.5" />
+                <ellipse
+                  cx="476"
+                  cy="178"
+                  rx="6"
+                  ry="17"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <path
+                  d="M482 300L482 240"
+                  fill="none"
+                  strokeWidth="1"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle cx="482" cy="240" r="2.2" style={{ fill: "var(--site-color-accent-cyan)" }} />
+                <circle
+                  cx="482"
+                  cy="300"
+                  r="11"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-accent-cyan)" }}
+                />
                 <text
                   x="482"
                   y="303.8"
@@ -180,7 +357,7 @@ export function CaseGrundfos() {
                   fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                   fontSize="10.5"
                   fontWeight="600"
-                  fill="#5ED3F0"
+                  style={{ fill: "var(--site-color-accent-cyan)" }}
                 >
                   4
                 </text>
@@ -188,33 +365,105 @@ export function CaseGrundfos() {
               <g className="mv" style={{ "--cs-d": "8px", animation: "csShift 4.6s ease-in-out infinite alternate" }}>
                 <path
                   d="M616 104a74 74 0 1 0 74 74V88h-44v24"
-                  fill="#0C1A20"
-                  stroke="#5ED3F0"
                   strokeWidth="1.5"
                   strokeLinejoin="round"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
                 />
-                <rect x="638" y="76" width="60" height="12" rx="2" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
-                <circle cx="616" cy="178" r="34" fill="none" stroke="#2B6E80" strokeWidth="1.2" strokeDasharray="4 4" />
-                <circle cx="616" cy="178" r="14" fill="#0A0C10" stroke="#5ED3F0" strokeWidth="1.5" />
-                <path d="M616 104a74 74 0 0 1 52 22" fill="none" stroke="#5ED3F0" strokeWidth="1.5" />
-                <rect x="690" y="152" width="34" height="52" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
-                <rect x="724" y="138" width="12" height="80" rx="2" fill="#0C1A20" stroke="#5ED3F0" strokeWidth="1.5" />
+                <rect
+                  x="638"
+                  y="76"
+                  width="60"
+                  height="12"
+                  rx="2"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <circle
+                  cx="616"
+                  cy="178"
+                  r="34"
+                  fill="none"
+                  strokeWidth="1.2"
+                  strokeDasharray="4 4"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle
+                  cx="616"
+                  cy="178"
+                  r="14"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <path
+                  d="M616 104a74 74 0 0 1 52 22"
+                  fill="none"
+                  strokeWidth="1.5"
+                  style={{ stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <rect
+                  x="690"
+                  y="152"
+                  width="34"
+                  height="52"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
+                <rect
+                  x="724"
+                  y="138"
+                  width="12"
+                  height="80"
+                  rx="2"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
+                />
                 <rect
                   x="584"
                   y="252"
                   width="64"
                   height="12"
                   rx="1.5"
-                  fill="#0C1A20"
-                  stroke="#5ED3F0"
                   strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-teal-deep)", stroke: "var(--site-color-accent-cyan)" }}
                 />
-                <circle cx="564" cy="126" r="3" fill="none" stroke="#2B6E80" strokeWidth="1.2" />
-                <circle cx="668" cy="230" r="3" fill="none" stroke="#2B6E80" strokeWidth="1.2" />
-                <circle cx="564" cy="230" r="3" fill="none" stroke="#2B6E80" strokeWidth="1.2" />
-                <path d="M600 300L600 252" fill="none" stroke="#2B6E80" strokeWidth="1" />
-                <circle cx="600" cy="252" r="2.2" fill="#5ED3F0" />
-                <circle cx="600" cy="300" r="11" fill="#0A0C10" stroke="#5ED3F0" strokeWidth="1.5" />
+                <circle
+                  cx="564"
+                  cy="126"
+                  r="3"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle
+                  cx="668"
+                  cy="230"
+                  r="3"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle
+                  cx="564"
+                  cy="230"
+                  r="3"
+                  fill="none"
+                  strokeWidth="1.2"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <path
+                  d="M600 300L600 252"
+                  fill="none"
+                  strokeWidth="1"
+                  style={{ stroke: "var(--site-color-art-teal)" }}
+                />
+                <circle cx="600" cy="252" r="2.2" style={{ fill: "var(--site-color-accent-cyan)" }} />
+                <circle
+                  cx="600"
+                  cy="300"
+                  r="11"
+                  strokeWidth="1.5"
+                  style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-accent-cyan)" }}
+                />
                 <text
                   x="600"
                   y="303.8"
@@ -222,18 +471,17 @@ export function CaseGrundfos() {
                   fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                   fontSize="10.5"
                   fontWeight="600"
-                  fill="#5ED3F0"
+                  style={{ fill: "var(--site-color-accent-cyan)" }}
                 >
                   5
                 </text>
               </g>
               <path
                 d="M78 326H736M78 318v16M736 318v16M78 326l8-4v8zM736 326l-8-4v8z"
-                fill="#5ED3F0"
-                stroke="#2B6E80"
                 strokeWidth="1"
+                style={{ fill: "var(--site-color-accent-cyan)", stroke: "var(--site-color-art-teal)" }}
               />
-              <rect x="292" y="317" width="230" height="18" fill="#0A0C10" />
+              <rect x="292" y="317" width="230" height="18" style={{ fill: "var(--site-color-art-paper)" }} />
               <text
                 x="407"
                 y="330"
@@ -241,24 +489,44 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("built from zero · Dec 2024 to now")}
               </text>
-              <rect x="762" y="52" width="200" height="284" rx="4" fill="#0A0C10" stroke="#16303A" strokeWidth="1" />
+              <rect
+                x="762"
+                y="52"
+                width="200"
+                height="284"
+                rx="4"
+                strokeWidth="1"
+                style={{ fill: "var(--site-color-art-paper)", stroke: "var(--site-color-art-teal-line-strong)" }}
+              />
               <text
                 x="776"
                 y="73"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="600"
-                fill="#5ED3F0"
                 letterSpacing="0.9"
+                style={{ fill: "var(--site-color-accent-cyan)" }}
               >
                 {t("PARTS LIST")}
               </text>
-              <path d="M762 83H962" fill="none" stroke="#16303A" strokeWidth="1" />
-              <circle cx="785" cy="102" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
+              <path
+                d="M762 83H962"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-teal-line-strong)" }}
+              />
+              <circle
+                cx="785"
+                cy="102"
+                r="9"
+                fill="none"
+                strokeWidth="1.2"
+                style={{ stroke: "var(--site-color-accent-cyan)" }}
+              />
               <text
                 x="785"
                 y="105.6"
@@ -266,7 +534,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="600"
-                fill="#5ED3F0"
+                style={{ fill: "var(--site-color-accent-cyan)" }}
               >
                 1
               </text>
@@ -276,7 +544,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="600"
-                fill="#F2F4F7"
+                style={{ fill: "var(--site-color-art-ink)" }}
               >
                 React Aria
               </text>
@@ -286,12 +554,24 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("the base it is built on")}
               </text>
-              <path d="M776 126H948" fill="none" stroke="#12232B" strokeWidth="1" />
-              <circle cx="785" cy="141" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
+              <path
+                d="M776 126H948"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-teal-line)" }}
+              />
+              <circle
+                cx="785"
+                cy="141"
+                r="9"
+                fill="none"
+                strokeWidth="1.2"
+                style={{ stroke: "var(--site-color-accent-cyan)" }}
+              />
               <text
                 x="785"
                 y="144.6"
@@ -299,7 +579,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="600"
-                fill="#5ED3F0"
+                style={{ fill: "var(--site-color-accent-cyan)" }}
               >
                 2
               </text>
@@ -309,7 +589,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="600"
-                fill="#F2F4F7"
+                style={{ fill: "var(--site-color-art-ink)" }}
               >
                 {t("Token registry")}
               </text>
@@ -319,12 +599,24 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("machine-readable")}
               </text>
-              <path d="M776 165H948" fill="none" stroke="#12232B" strokeWidth="1" />
-              <circle cx="785" cy="180" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
+              <path
+                d="M776 165H948"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-teal-line)" }}
+              />
+              <circle
+                cx="785"
+                cy="180"
+                r="9"
+                fill="none"
+                strokeWidth="1.2"
+                style={{ stroke: "var(--site-color-accent-cyan)" }}
+              />
               <text
                 x="785"
                 y="183.6"
@@ -332,7 +624,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="600"
-                fill="#5ED3F0"
+                style={{ fill: "var(--site-color-accent-cyan)" }}
               >
                 3
               </text>
@@ -342,7 +634,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="600"
-                fill="#F2F4F7"
+                style={{ fill: "var(--site-color-art-ink)" }}
               >
                 {t("Validator")}
               </text>
@@ -352,12 +644,24 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("blocks unknown components")}
               </text>
-              <path d="M776 204H948" fill="none" stroke="#12232B" strokeWidth="1" />
-              <circle cx="785" cy="219" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
+              <path
+                d="M776 204H948"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-teal-line)" }}
+              />
+              <circle
+                cx="785"
+                cy="219"
+                r="9"
+                fill="none"
+                strokeWidth="1.2"
+                style={{ stroke: "var(--site-color-accent-cyan)" }}
+              />
               <text
                 x="785"
                 y="222.6"
@@ -365,7 +669,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="600"
-                fill="#5ED3F0"
+                style={{ fill: "var(--site-color-accent-cyan)" }}
               >
                 4
               </text>
@@ -375,7 +679,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="600"
-                fill="#F2F4F7"
+                style={{ fill: "var(--site-color-art-ink)" }}
               >
                 {t("Components")}
               </text>
@@ -385,12 +689,24 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("65 in the system")}
               </text>
-              <path d="M776 243H948" fill="none" stroke="#12232B" strokeWidth="1" />
-              <circle cx="785" cy="258" r="9" fill="none" stroke="#5ED3F0" strokeWidth="1.2" />
+              <path
+                d="M776 243H948"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-teal-line)" }}
+              />
+              <circle
+                cx="785"
+                cy="258"
+                r="9"
+                fill="none"
+                strokeWidth="1.2"
+                style={{ stroke: "var(--site-color-accent-cyan)" }}
+              />
               <text
                 x="785"
                 y="261.6"
@@ -398,7 +714,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="10"
                 fontWeight="600"
-                fill="#5ED3F0"
+                style={{ fill: "var(--site-color-accent-cyan)" }}
               >
                 5
               </text>
@@ -408,7 +724,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="11"
                 fontWeight="600"
-                fill="#F2F4F7"
+                style={{ fill: "var(--site-color-art-ink)" }}
               >
                 {t("Component registry")}
               </text>
@@ -418,18 +734,23 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("machine-readable")}
               </text>
-              <path d="M762 293H962" fill="none" stroke="#16303A" strokeWidth="1" />
+              <path
+                d="M762 293H962"
+                fill="none"
+                strokeWidth="1"
+                style={{ stroke: "var(--site-color-art-teal-line-strong)" }}
+              />
               <text
                 x="776"
                 y="311"
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#A4ADBB"
+                style={{ fill: "var(--site-color-art-ink-soft)" }}
               >
                 {t("Grundfos design system")}
               </text>
@@ -439,7 +760,7 @@ export function CaseGrundfos() {
                 fontFamily="JetBrains Mono, ui-monospace, Menlo, monospace"
                 fontSize="9.5"
                 fontWeight="500"
-                fill="#7C8696"
+                style={{ fill: "var(--site-color-art-ink-muted)" }}
               >
                 {t("sheet 4 of 8")}
               </text>
@@ -468,7 +789,7 @@ export function CaseGrundfos() {
               height: "8px",
               marginTop: "6px",
               borderRadius: "50%",
-              background: "#5ED3F0",
+              background: "var(--site-color-accent-cyan)",
             }}
           />
           <span>
@@ -577,7 +898,7 @@ export function CaseGrundfos() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#5ED3F0",
+                      background: "var(--site-color-accent-cyan)",
                     }}
                   />
                   <span
@@ -612,7 +933,7 @@ export function CaseGrundfos() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#5ED3F0",
+                      background: "var(--site-color-accent-cyan)",
                     }}
                   />
                   <span
@@ -686,7 +1007,7 @@ export function CaseGrundfos() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#5ED3F0",
+                      background: "var(--site-color-accent-cyan)",
                     }}
                   />
                   <span
@@ -721,7 +1042,7 @@ export function CaseGrundfos() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#5ED3F0",
+                      background: "var(--site-color-accent-cyan)",
                     }}
                   />
                   <span
@@ -756,7 +1077,7 @@ export function CaseGrundfos() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#5ED3F0",
+                      background: "var(--site-color-accent-cyan)",
                     }}
                   />
                   <span
@@ -791,7 +1112,7 @@ export function CaseGrundfos() {
                       top: "14px",
                       bottom: "-8px",
                       width: "2px",
-                      background: "#5ED3F0",
+                      background: "var(--site-color-accent-cyan)",
                     }}
                   />
                   <span

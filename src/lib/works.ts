@@ -25,14 +25,14 @@ export interface WorkBuild {
 
 /* The agents that build the cards. Each has a name and a colour of its own. */
 export const AGENTS = {
-  architect: { name: "Architect", color: "#FF8A5B" },
-  code: { name: "Code Writer", color: "#3DDC97" },
-  test: { name: "Test Author", color: "#FFD166" },
-  visual: { name: "Visual Reviewer", color: "#C8F560" },
-  a11y: { name: "A11y", color: "#FF7EB6" },
-  docs: { name: "Docs Author", color: "#5ED3F0" },
-  research: { name: "Researcher", color: "#B58CFF" },
-  capture: { name: "Source Capture", color: "#5B9DFF" },
+  architect: { name: "Architect", color: "var(--site-color-accent-orange)" },
+  code: { name: "Code Writer", color: "var(--site-color-accent-green)" },
+  test: { name: "Test Author", color: "var(--site-color-accent-yellow)" },
+  visual: { name: "Visual Reviewer", color: "var(--site-color-accent-lime)" },
+  a11y: { name: "A11y", color: "var(--site-color-accent-pink)" },
+  docs: { name: "Docs Author", color: "var(--site-color-accent-cyan)" },
+  research: { name: "Researcher", color: "var(--site-color-accent-purple)" },
+  capture: { name: "Source Capture", color: "var(--site-color-accent-blue)" },
 } as const;
 export type AgentKey = keyof typeof AGENTS;
 
@@ -72,7 +72,7 @@ export const PROJECTS: WorkProject[] = [
     ],
     build: {
       n: 8,
-      color: "#3DDC97",
+      color: "var(--site-color-accent-green)",
       shell: ["dragTL", 1],
       parts: { b: ["fade", 6], k: ["fade", 2], h: ["type", 3], p: ["wipe", 4], c: ["pop", 5] },
       drag: 1,
@@ -121,7 +121,7 @@ export const PROJECTS: WorkProject[] = [
     ],
     build: {
       n: 8,
-      color: "#5ED3F0",
+      color: "var(--site-color-accent-cyan)",
       shell: ["fade", 1],
       parts: { b: ["fade", 6], c: ["pop", 2], p: ["fade", 3], h: ["slide", 4], k: ["fade", 5] },
       drag: 0,
@@ -164,7 +164,7 @@ export const PROJECTS: WorkProject[] = [
     ],
     build: {
       n: 9,
-      color: "#FFD166",
+      color: "var(--site-color-accent-yellow)",
       shell: ["wipeL", 1],
       parts: { b: ["fade", 7], k: ["fade", 2], h: ["type", 3], p: ["wipe", 4], c: ["slideR", 5], x: ["fade", 6] },
       drag: 0,
@@ -211,7 +211,7 @@ export const PROJECTS: WorkProject[] = [
     ],
     build: {
       n: 9,
-      color: "#5B9DFF",
+      color: "var(--site-color-accent-blue)",
       shell: ["drop", 1],
       parts: { b: ["fade", 7], k: ["slideR", 2], h: ["type", 3], p: ["fade", 4], c: ["drop", 5], x: ["slide", 6] },
       drag: 0,
@@ -254,7 +254,7 @@ export const PROJECTS: WorkProject[] = [
     ],
     build: {
       n: 9,
-      color: "#B58CFF",
+      color: "var(--site-color-accent-purple)",
       shell: ["pop", 1],
       parts: { b: ["fade", 7], k: ["slide", 2], h: ["slide", 3], p: ["fade", 4], c: ["pop", 5], x: ["slide", 6] },
       drag: 0,
@@ -297,7 +297,7 @@ export const PROJECTS: WorkProject[] = [
     ],
     build: {
       n: 8,
-      color: "#FF7EB6",
+      color: "var(--site-color-accent-pink)",
       shell: ["dragBR", 1],
       parts: { b: ["fade", 6], h: ["pop", 3], k: ["fade", 4], p: ["wipe", 4], c: ["slide", 5] },
       drag: 1,
@@ -347,7 +347,7 @@ export const PROJECTS: WorkProject[] = [
     ],
     build: {
       n: 8,
-      color: "#FF8A5B",
+      color: "var(--site-color-accent-orange)",
       shell: ["dragTR", 1],
       parts: { b: ["fade", 6], k: ["fade", 2], h: ["type", 3], p: ["wipe", 4], c: ["drop", 5] },
       drag: 1,
@@ -397,7 +397,7 @@ export const PROJECTS: WorkProject[] = [
     ],
     build: {
       n: 8,
-      color: "#C8F560",
+      color: "var(--site-color-accent-lime)",
       shell: ["wipe", 1],
       parts: { b: ["fade", 6], k: ["fade", 2], h: ["type", 3], p: ["fade", 4], c: ["drop", 5] },
       drag: 0,

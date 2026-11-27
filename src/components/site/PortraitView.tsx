@@ -111,10 +111,9 @@ export function PortraitView({ v }: { v: PortraitVals }) {
           <svg width="16" height="20" viewBox="0 0 16 20" aria-hidden="true" style={{ flex: "none" }}>
             <path
               d="M2.2 1.6v15.2l4-3.6 2.7 5.6 2.6-1.2-2.6-5.5 5.3-.3z"
-              fill="#FF7EB6"
-              stroke="#0A0C10"
               strokeWidth="1.2"
               strokeLinejoin="round"
+              style={{ fill: "var(--site-color-accent-pink)", stroke: "var(--site-color-art-paper)" }}
             />
           </svg>
           <span
@@ -122,8 +121,8 @@ export function PortraitView({ v }: { v: PortraitVals }) {
               margin: "14px 0 0 -2px",
               padding: "3px 7px",
               borderRadius: "var(--perron-radius-xs)",
-              background: "#FF7EB6",
-              color: "var(--perron-color-text-on-color-dark)",
+              background: "var(--site-color-accent-pink)",
+              color: "var(--site-color-text-on-accent)",
               font: "600 11px/1.3 var(--perron-font-family-data)",
               whiteSpace: "nowrap",
             }}

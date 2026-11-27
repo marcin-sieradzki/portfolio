@@ -64,7 +64,7 @@ export function Experience({ lang }: { lang: Locale }) {
               height: "28px",
               borderRadius: "var(--perron-radius-sm)",
               background: "var(--perron-color-status-info)",
-              color: "var(--perron-color-text-on-color-dark)",
+              color: "var(--site-color-text-on-accent)",
               font: "700 16px/1 var(--perron-font-family-body)",
             }}
           >
